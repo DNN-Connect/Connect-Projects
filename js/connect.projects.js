@@ -86,6 +86,9 @@ mod.factory('projectsFactory', [function () {
 		projects: function (moduleId, success, fail) {
 			dataCall(moduleId, 'Projects', 'Projects', {}, success, fail);
 		},
+		projectTypes: function (moduleId, success, fail) {
+			dataCall(moduleId, 'ProjectTypes', 'Types', {}, success, fail);
+		},
 		project: function (moduleId, projectId, success, fail) {
 			dataCall(moduleId, 'Projects', 'Project', { id: projectId }, success, fail);
 		},
@@ -115,35 +118,40 @@ mod.controller('ProjectListCtrl', ['$scope', '$compile', 'projectsFactory', func
 				"projectlink": function (column, row) {
 					return '<a href="#Project/' + row.ProjectId + '">' + row.ProjectName + '</a>';
 				},
-				"lasttask": function (column, row) {
-					return row.LastTaskDisplay;
-				},
 				"editLink": function (column, row) {
 					return '<a href="#Project/Edit/' + row.ProjectId + '">' + 'edit' + '</a>';
-				},
-				"addLink": function (column, row) {
-					return '<a href="#" data-action="addTask" data-Project-id="' + row.ProjectId + '">' + 'add' + '</a>';
 				}
 			}
-		})
-		.on("loaded.rs.jquery.bootgrid", function (e) {
-			$('a[data-action="addTask"]').click(function () {
-				projectsFactory.view($scope.moduleId, 'Tasks', 'Add', 'AddTask', $(this).attr('data-Project-id'), function (data) {
-					$scope.newTask = {};
-					$('#cmModal').html(data);
-					$compile($('#cmModal'))($scope);
-					preparePopup();
-					$('#cmModal').modal();
-				});
-				return false;
-			});
 		});
-		$scope.addTask = function () {
-			projectsFactory.addTask($scope.moduleId, $scope.newTask, function (data) {
-			});
-		};
 	});
 }]);
+
+mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory', function ($scope, $routeParams, projectsFactory) {
+	$scope.accountId = $routeParams.accountId;
+	projectsFactory.project($scope.moduleId, $scope.projectId, function (data) {
+		$scope.project = data;
+		$scope.$apply();
+	});
+	$scope.updateProject = function (project) {
+		projectsFactory.updateProject($scope.moduleId, project, function (data) {
+			window.location.href = window.location.pathname + '#/Projects';
+		});
+		return false;
+	}
+}]);
+
+mod.directive('showErrors', function () {
+	return {
+		restrict: 'A',
+		link: function (scope, el, attrs) {
+			var inputEl = el[0].querySelector("[name]");
+			var inputNgEl = angular.element(inputEl);
+			inputNgEl.bind('blur', function () {
+				el.toggleClass('has-error', $(inputEl).hasClass('ng-invalid'));
+			});
+		}
+	}
+});
 
 function getTemplate(template) {
 	var moduleId = angular.element(document.getElementById('projectsModule')).scope().moduleId;

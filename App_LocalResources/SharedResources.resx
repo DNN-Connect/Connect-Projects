@@ -132,8 +132,14 @@
   <data name="Owners.Text" xml:space="preserve">
     <value>Owners</value>
   </data>
+  <data name="Project.Text" xml:space="preserve">
+    <value>Project</value>
+  </data>
   <data name="ProjectName.Text" xml:space="preserve">
     <value>Project Name</value>
+  </data>
+  <data name="Projects.Text" xml:space="preserve">
+    <value>Projects</value>
   </data>
   <data name="ProjectType.Text" xml:space="preserve">
     <value>Project Type</value>
@@ -149,5 +155,17 @@
   </data>
   <data name="Url.Text" xml:space="preserve">
     <value>Url</value>
+  </data>
+  <data name="Edit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ProjectName.Required" xml:space="preserve">
+    <value>A project name is required</value>
+  </data>
+  <data name="ProjectType.Required" xml:space="preserve">
+    <value>Please select a project type</value>
+  </data>
+  <data name="Url.Pattern" xml:space="preserve">
+    <value>Please specify a full url (http(s)://url/to/resource)</value>
   </data>
 </root>

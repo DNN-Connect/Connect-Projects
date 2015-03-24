@@ -1,1 +1,7 @@
-﻿
+﻿.dnnFormItem .help-block {
+  display: none;
+}
+
+.dnnFormItem.has-error .help-block {
+  display: block;
+}
