@@ -90,26 +90,31 @@ mod.factory('projectsFactory', [function () {
 			dataCall(moduleId, 'ProjectTypes', 'Types', {}, success, fail);
 		},
 		project: function (moduleId, projectId, success, fail) {
+			if (projectId == undefined) {
+				projectId = -1;
+			}
 			dataCall(moduleId, 'Projects', 'Project', { id: projectId }, success, fail);
 		},
 		updateProject: function (moduleId, project, success, fail) {
 			apiPostCall(moduleId, 'Projects', 'Put', {
 				ProjectId: project.ProjectId,
-				ContactUserId: project.ContactUserId
-			}, success, fail);
-		},
-		addTask: function (moduleId, task, success, fail) {
-			apiPostCall(moduleId, 'Tasks', 'Put', {
-				ProjectId: task.ProjectId,
-				Tariff: task.Tariff
+				ProjectName: project.ProjectName,
+				ProjectType: project.ProjectType,
+				Url1: project.Url1,
+				Url2: project.Url2,
+				Status: project.Status,
+				Owners: project.Owners,
+				Aims: project.Aims,
+				Description: project.Description,
+				Dependencies: project.Dependencies
 			}, success, fail);
 		}
 	}
 }]);
 
 mod.controller('ProjectListCtrl', ['$scope', '$compile', 'projectsFactory', function ($scope, $compile, projectsFactory) {
-	projectsFactory.Projects($scope.moduleId, function (data) {
-		$scope.Projects = data;
+	projectsFactory.projects($scope.moduleId, function (data) {
+		$scope.projects = data;
 		$scope.$apply();
 		$('.iw_bgt').bootgrid({
 			columnSelection: false,
@@ -127,7 +132,7 @@ mod.controller('ProjectListCtrl', ['$scope', '$compile', 'projectsFactory', func
 }]);
 
 mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory', function ($scope, $routeParams, projectsFactory) {
-	$scope.accountId = $routeParams.accountId;
+	$scope.projectId = $routeParams.ProjectId;
 	projectsFactory.project($scope.moduleId, $scope.projectId, function (data) {
 		$scope.project = data;
 		$scope.$apply();

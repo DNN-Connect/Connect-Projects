@@ -50,6 +50,7 @@ Namespace Common
     AddJavascriptFile("angular.min.js", 50)
     AddJavascriptFile("angular-route.min.js", 51)
     AddJavascriptFile("connect.projects.js", 70)
+    AddJavascriptFile("jquery.bootgrid.js", 70)
 
     ' Css
     AddCssFile("jquery.bootgrid.css")
