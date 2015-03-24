@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v2.1.dtd">
+<dotfuscator version="2.1">
+ <propertylist>
+  <property value="references" name="..\_References"/>
+  <property value="rawbuild" name="..\Bin"/>
+  <property value="outpath" name="..\_Dotfuscated"/>
+  <property value="mapname" name="map_01.00.00.xml"/>
+ </propertylist>
+  <global />
+  <input>
+    <loadpaths>
+   <file dir="${references}"/>
+    </loadpaths>
+    <asmlist>
+      <inputassembly>
+    <option>stripoa</option>
+    <option>library</option>
+        <file dir="${rawbuild}" name="Connect.DNN.Modules.Projects.dll" />
+        <loadpaths>
+     <file dir="${references}"/>
+        </loadpaths>
+      </inputassembly>
+    </asmlist>
+  </input>
+  <output>
+  <file dir="${outpath}"/>
+  </output>
+  <renaming>
+    <mapping>
+      <mapoutput overwrite="false">
+    <file dir="${outpath}" name="${mapname}"/>
+      </mapoutput>
+    </mapping>
+  </renaming>
+  <controlflow level="high" />
+  <stringencrypt />
+  <codeprotection />
+  <removal />
+  <licensing>
+    <permutation name="" />
+    <nolicenseaction name="showactivation" />
+    <unlockingfeature name="" />
+  </licensing>
+</dotfuscator>

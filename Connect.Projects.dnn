@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dotnetnuke xmlns:fo="http://www.w3.org/1999/XSL/Format" type="Package" version="5.0">
+ <packages>
+  <package type="Module" name="Connect_Projects" version="01.00.00">
+   <friendlyName>Connect Projects</friendlyName>
+   <description>DNN Connect projects module where users can register a project</description>
+   <owner>
+    <name>Peter Donker</name>
+    <organization>DNN Connect Association</organization>
+    <url>http://dnn-connect.org</url>
+    <email>info@dnn-connect.org</email>
+   </owner>
+   <license src="License.txt"/>
+   <releaseNotes src="ReleaseNotes.txt"/>
+   <dependencies>
+    <dependency type="CoreVersion">07.01.02</dependency>
+   </dependencies>
+   <components>
+    <component type="Module">
+     <desktopModule>
+      <moduleName>Connect_Projects</moduleName>
+      <foldername>Connect\Projects</foldername>
+      <moduleDefinitions>
+       <moduleDefinition>
+        <friendlyName>Projects</friendlyName>
+        <defaultCacheTime>0</defaultCacheTime>
+        <moduleControls>
+         <moduleControl>
+          <controlKey/>
+          <controlSrc>Connect.DNN.Modules.Projects.ModuleHome, CONNECT.DNN.MODULES.PROJECTS</controlSrc>
+          <supportsPartialRendering>false</supportsPartialRendering>
+          <controlTitle>Projects</controlTitle>
+          <controlType>View</controlType>
+         </moduleControl>
+         <moduleControl>
+          <controlKey>Settings</controlKey>
+          <controlSrc>DesktopModules/Connect/Projects/Settings.ascx</controlSrc>
+          <supportsPartialRendering/>
+          <controlTitle>Projects Settings</controlTitle>
+          <controlType>Edit</controlType>
+         </moduleControl>
+        </moduleControls>
+        <permissions/>
+       </moduleDefinition>
+      </moduleDefinitions>
+     </desktopModule>
+    </component>
+   </components>
+  </package>
+ </packages>
+</dotnetnuke>
