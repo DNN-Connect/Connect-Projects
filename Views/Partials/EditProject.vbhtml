@@ -86,6 +86,14 @@
    </div>
    <textarea cols="80" rows="5" data-ng-model="project.Dependencies"></textarea>
   </div>
+  <div class="dnnFormItem" data-ng-if="security.moderator == true">
+   <div class="dnnLabel">
+    <label>
+     <span>@Html.GetLocalizedString("Visible")</span>
+    </label>
+   </div>
+   <input type="checkbox" id="chkVisible" class="form-control" data-ng-model="project.Visible" />
+  </div>
  </fieldset>
 </div>
 
@@ -94,4 +102,14 @@
         data-ng-click="updateProject(project)"
         data-ng-disabled="frmEditProject.$invalid">
  @Html.GetLocalizedString("Submit")
+</button>
+<button type="button" class="btn btn-primary dnnSecondaryAction"
+        data-ng-click="approveProject(projectId)"
+        data-ng-if="security.moderator == true">
+ @Html.GetLocalizedString("Approve")
+</button>
+<button type="button" class="btn btn-primary dnnSecondaryAction"
+        data-ng-click="deleteProject(projectId, '@Html.GetLocalizedString("DeleteProject.Confirm")')"
+        data-ng-if="projectId != -1">
+ @Html.GetLocalizedString("Delete")
 </button>

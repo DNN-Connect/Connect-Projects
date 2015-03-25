@@ -98,6 +98,7 @@ mod.factory('projectsFactory', [function () {
 		updateProject: function (moduleId, project, success, fail) {
 			apiPostCall(moduleId, 'Projects', 'Put', {
 				ProjectId: project.ProjectId,
+				Visible: project.Visible,
 				ProjectName: project.ProjectName,
 				ProjectType: project.ProjectType,
 				Url1: project.Url1,
@@ -108,6 +109,12 @@ mod.factory('projectsFactory', [function () {
 				Description: project.Description,
 				Dependencies: project.Dependencies
 			}, success, fail);
+		},
+		approveProject: function (moduleId, projectId, approved, success, fail) {
+			dataCall(moduleId, 'Projects', 'Approve', { id: projectId, approved: approved }, success, fail);
+		},
+		deleteProject: function (moduleId, projectId, success, fail) {
+			dataCall(moduleId, 'Projects', 'Delete', { id: projectId }, success, fail);
 		}
 	}
 }]);
@@ -118,6 +125,16 @@ mod.controller('ProjectListCtrl', ['$scope', '$compile', 'projectsFactory', func
 		$scope.$apply();
 		$('.iw_bgt').stupidtable();
 	});
+	$scope.approveProject = function (projectId, approved, success, fail) {
+		projectsFactory.approveProject($scope.moduleId, projectId, approved, success, fail);
+		return false;
+	}
+	$scope.deleteProject = function (projectId, confirmMsg, success, fail) {
+		if (confirm(confirmMsg)) {
+			projectsFactory.deleteProject($scope.moduleId, projectId, success, fail);
+		}
+		return false;
+	}
 }]);
 
 mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory', function ($scope, $routeParams, projectsFactory) {
@@ -130,6 +147,19 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 		projectsFactory.updateProject($scope.moduleId, project, function (data) {
 			window.location.href = window.location.pathname + '#/Projects';
 		});
+		return false;
+	}
+	$scope.approveProject = function (projectId, approved) {
+		projectsFactory.approveProject($scope.moduleId, projectId, approved, function (data) {
+		});
+		return false;
+	}
+	$scope.deleteProject = function (projectId, confirmMsg) {
+		if (confirm(confirmMsg)) {
+			projectsFactory.deleteProject($scope.moduleId, projectId, function (data) {
+				window.location.href = window.location.pathname + '#/Projects';
+			});
+		}
 		return false;
 	}
 }]);
