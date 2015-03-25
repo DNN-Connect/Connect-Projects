@@ -11,4 +11,41 @@
  min-width: 400px;
  background-color: #eee;
  border: 2px dotted #666;
+ margin: 10px;
+}
+.cp_dropzone_hover {
+ background-color: #a3d3f6;
+}
+
+.cp_sortable { list-style-type: none; margin: 0; padding: 0;}
+.cp_sortable li {
+ display: inline-block;
+ width: 160px;
+ padding: 10px;
+ border: 1px solid #999;
+ border-radius: 5px;
+ margin: 10px;
+}
+.cp_sortable li div.delbutton {
+ width: 100%;
+ text-align: right;
+}
+.delbutton a, .delbutton a:hover {
+ text-decoration: none;
+}
+.cp_sortable div.imagetn {
+ width: 100%;
+ text-align: center;
+ padding-bottom: 10px;
+}
+.cp_sortable textarea {
+ width: 100%;
+ margin-bottom: 10px;
+}
+.cp_album_droptext {
+ width: 100%;
+ text-align: center;
+ padding: 20px;
+ font-size: large;
+ color: #999;
 }

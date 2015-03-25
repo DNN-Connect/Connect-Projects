@@ -152,6 +152,11 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 	projectsFactory.getAlbum($scope.moduleId, $scope.projectId, function (data) {
 		$scope.album = data;
 		$scope.$apply();
+		$('.cp_sortable').sortable({
+			update: function(event, ui) {
+				alert($(ui.item).attr('data-img-id'));
+			}
+		});
 	});
 	$scope.updateProject = function (project) {
 		projectsFactory.updateProject($scope.moduleId, project, function (data) {

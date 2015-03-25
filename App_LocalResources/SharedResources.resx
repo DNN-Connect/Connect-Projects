@@ -183,4 +183,7 @@
   <data name="Visible.Text" xml:space="preserve">
     <value>Visible</value>
   </data>
+  <data name="DropHere.Text" xml:space="preserve">
+    <value>Drop new images here</value>
+  </data>
 </root>

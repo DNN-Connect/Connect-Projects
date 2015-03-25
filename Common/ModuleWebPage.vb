@@ -30,6 +30,19 @@ Namespace Common
     Return _security
    End Get
   End Property
+
+  Private _settings As ModuleSettings
+  Public Property Settings() As ModuleSettings
+   Get
+    If _settings Is Nothing Then
+     _settings = ModuleSettings.GetSettings(Dnn.Module.ModuleID)
+    End If
+    Return _settings
+   End Get
+   Set(ByVal Value As ModuleSettings)
+    _settings = Value
+   End Set
+  End Property
  End Class
 
  Public MustInherit Class ModuleWebPage(Of T)
@@ -52,6 +65,19 @@ Namespace Common
     End If
     Return _security
    End Get
+  End Property
+
+  Private _settings As ModuleSettings
+  Public Property Settings() As ModuleSettings
+   Get
+    If _settings Is Nothing Then
+     _settings = ModuleSettings.GetSettings(Dnn.Module.ModuleID)
+    End If
+    Return _settings
+   End Get
+   Set(ByVal Value As ModuleSettings)
+    _settings = Value
+   End Set
   End Property
  End Class
 
