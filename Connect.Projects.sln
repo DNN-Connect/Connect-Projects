@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Connect.Projects", "Connect.Projects.vbproj", "{4DE0B824-49EE-4388-8214-12693F55FF92}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BootStrap", "_Css\BootStrap.vbproj", "{11600000-185B-4115-8A5E-BE01812ED008}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4DE0B824-49EE-4388-8214-12693F55FF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DE0B824-49EE-4388-8214-12693F55FF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DE0B824-49EE-4388-8214-12693F55FF92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11600000-185B-4115-8A5E-BE01812ED008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11600000-185B-4115-8A5E-BE01812ED008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11600000-185B-4115-8A5E-BE01812ED008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11600000-185B-4115-8A5E-BE01812ED008}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
