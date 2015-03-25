@@ -116,18 +116,7 @@ mod.controller('ProjectListCtrl', ['$scope', '$compile', 'projectsFactory', func
 	projectsFactory.projects($scope.moduleId, function (data) {
 		$scope.projects = data;
 		$scope.$apply();
-		$('.iw_bgt').bootgrid({
-			columnSelection: false,
-			caseSensitive: false,
-			formatters: {
-				"projectlink": function (column, row) {
-					return '<a href="#Project/' + row.ProjectId + '">' + row.ProjectName + '</a>';
-				},
-				"editLink": function (column, row) {
-					return '<a href="#Project/Edit/' + row.ProjectId + '">' + 'edit' + '</a>';
-				}
-			}
-		});
+		$('.iw_bgt').stupidtable();
 	});
 }]);
 
