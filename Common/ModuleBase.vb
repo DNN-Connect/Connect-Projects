@@ -53,7 +53,6 @@ Namespace Common
     AddJavascriptFile("jquery.bootgrid.js", 70)
 
     ' Css
-    AddCssFile("bootstrap.min.css")
     AddCssFile("jquery.bootgrid.css")
 
     Context.Items("ServiceAdded") = True
