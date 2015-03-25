@@ -13,12 +13,10 @@
     <a href="#Project/{{project.ProjectId}}">{{project.ProjectName}}</a>
    </td>
    <td>
-    <a href="#Project/Edit/{{project.ProjectId}}">@Html.GetLocalizedString("Edit")</a>
+    <a href="#Project/Edit/{{project.ProjectId}}" data-ng-if="security.moderator == true || project.CreatedByUserID == @Dnn.User.UserID">@Html.GetLocalizedString("Edit")</a>
    </td>
   </tr>
  </tbody>
 </table>
 
-@If Security.Submitter Then
- @<a href="#/Project/Edit/-1" class="dnnPrimaryAction">@Html.GetLocalizedString("Add")</a>
-End If
+<a href="#/Project/Edit/-1" class="dnnPrimaryAction" data-ng-if="security.submitter == true">@Html.GetLocalizedString("Add")</a>
