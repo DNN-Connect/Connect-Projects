@@ -137,6 +137,7 @@
   <ItemGroup>
     <Compile Include="Common\AuditableEntity.vb" />
     <Compile Include="Common\Globals.vb" />
+    <Compile Include="Common\ModuleApiController.vb" />
     <Compile Include="Common\ModuleWebPage.vb" />
     <Compile Include="Common\RazorControl.vb" />
     <Compile Include="Common\RouteMapper.vb" />
