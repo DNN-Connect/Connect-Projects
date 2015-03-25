@@ -1,6 +1,5 @@
 Imports DotNetNuke.Entities.Modules
 Imports DotNetNuke.Common.Utilities.DictionaryExtensions
-Imports ModuleController = Connect.DNN.Modules.Projects.Controllers.ModuleController
 
 Namespace Common
  Public Class ModuleSettings
@@ -8,24 +7,40 @@ Namespace Common
 #Region " Properties "
   Private Property ModuleId As Integer = -1
   Private Property Settings As Hashtable
+  Public Property Width As Integer = 80
+  Public Property Height As Integer = 80
+  Public Property ZoomWidth As Integer = 400
+  Public Property ZoomHeight As Integer = 300
+  Public Property FitType As String = "Crop"
+  Public Property ZoomFitType As String = "Shrink"
 #End Region
 
 #Region " Constructors "
   Public Sub New(moduleId As Integer)
 
-   _ModuleId = moduleId
-   _Settings = (New DotNetNuke.Entities.Modules.ModuleController).GetModuleSettings(moduleId)
-   ' Property = _Settings.GetValue(Of Integer)("Property", Property)
+   Me.ModuleId = moduleId
+   Settings = (New DotNetNuke.Entities.Modules.ModuleController).GetModuleSettings(moduleId)
+   Width = Settings.GetValue(Of Integer)("Width", Width)
+   Height = Settings.GetValue(Of Integer)("Height", Height)
+   ZoomWidth = Settings.GetValue(Of Integer)("ZoomWidth", ZoomWidth)
+   ZoomHeight = Settings.GetValue(Of Integer)("ZoomHeight", ZoomHeight)
+   FitType = Settings.GetValue(Of String)("FitType", FitType)
+   ZoomFitType = Settings.GetValue(Of String)("ZoomFitType", ZoomFitType)
 
   End Sub
 #End Region
 
 #Region " Public Members "
-  Public Sub SaveSettings(portalHomeDirMapPath As String, moduleId As Integer)
+  Public Sub SaveSettings()
 
    Dim objModules As New ModuleController
-   ' objModules.UpdateModuleSetting(ModuleId, "Property", Me.Property.ToString)
-   DotNetNuke.Common.Utilities.DataCache.SetCache(CacheKey(moduleId), Me)
+   objModules.UpdateModuleSetting(ModuleId, "Width", Me.Width.ToString)
+   objModules.UpdateModuleSetting(ModuleId, "Height", Me.Height.ToString)
+   objModules.UpdateModuleSetting(ModuleId, "ZoomWidth", Me.ZoomWidth.ToString)
+   objModules.UpdateModuleSetting(ModuleId, "ZoomHeight", Me.ZoomHeight.ToString)
+   objModules.UpdateModuleSetting(ModuleId, "FitType", Me.FitType)
+   objModules.UpdateModuleSetting(ModuleId, "ZoomFitType", Me.ZoomFitType)
+   DotNetNuke.Common.Utilities.DataCache.SetCache(CacheKey(ModuleId), Me)
 
   End Sub
 

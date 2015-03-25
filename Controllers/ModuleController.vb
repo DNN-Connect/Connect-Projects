@@ -37,6 +37,20 @@ Namespace Controllers
    Return res
   End Function
 
+  <HttpGet()>
+  <DnnModuleAuthorize(PermissionKey:="SUBMITTER")>
+  <ValidateAntiForgeryToken()>
+  Public Function CommitFile(id As Integer, fileName As String) As HttpResponseMessage
+   Dim localFile As String = GetImageMapPath(id) & fileName
+   If IO.File.Exists(localFile) Then
+    Dim r As New Resizer(Settings)
+    r.Process(localFile)
+   End If
+   Dim res As New ImageCollection(GetImageMapPath(id), GetImagePath(id))
+   res.Recheck()
+   Return Request.CreateResponse(HttpStatusCode.OK, res)
+  End Function
+
   Private Function WriteJsonIframeSafe(context As HttpContext, statuses As List(Of FilesStatus)) As String
    context.Response.AddHeader("Vary", "Accept")
    Try

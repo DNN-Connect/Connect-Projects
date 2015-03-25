@@ -115,6 +115,12 @@ mod.factory('projectsFactory', [function () {
 		},
 		deleteProject: function (moduleId, projectId, success, fail) {
 			dataCall(moduleId, 'Projects', 'Delete', { id: projectId }, success, fail);
+		},
+		getAlbum: function (moduleId, projectId, success, fail) {
+			dataCall(moduleId, 'Projects', 'Album', { id: projectId }, success, fail);
+		},
+		commitFile: function (moduleId, projectId, fileName, success, fail) {
+			dataCall(moduleId, 'Module', 'CommitFile', { id: projectId, fileName: fileName }, success, fail);
 		}
 	}
 }]);
@@ -141,6 +147,10 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 	$scope.projectId = $routeParams.ProjectId;
 	projectsFactory.project($scope.moduleId, $scope.projectId, function (data) {
 		$scope.project = data;
+		$scope.$apply();
+	});
+	projectsFactory.getAlbum($scope.moduleId, $scope.projectId, function (data) {
+		$scope.album = data;
 		$scope.$apply();
 	});
 	$scope.updateProject = function (project) {
@@ -178,6 +188,12 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 			return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1;
 		}
 	});
+	uploader.onSuccessItem = function (fileItem, response, status, headers) {
+		projectsFactory.commitFile($scope.moduleId, $scope.projectId, response[0].name + response[0].ext, function(data) {
+			$scope.album = data;
+			$scope.$apply();
+		});
+	};
 }]);
 
 mod.directive('showErrors', function () {

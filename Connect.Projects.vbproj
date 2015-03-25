@@ -138,9 +138,12 @@
     <Compile Include="Common\AuditableEntity.vb" />
     <Compile Include="Common\FilesStatus.vb" />
     <Compile Include="Common\Globals.vb" />
+    <Compile Include="Common\Image.vb" />
+    <Compile Include="Common\ImageCollection.vb" />
     <Compile Include="Common\ModuleApiController.vb" />
     <Compile Include="Common\ModuleWebPage.vb" />
     <Compile Include="Common\RazorControl.vb" />
+    <Compile Include="Common\Resizer.vb" />
     <Compile Include="Common\RouteMapper.vb" />
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController.vb" />
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController_Services.vb" />
