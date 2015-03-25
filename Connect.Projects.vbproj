@@ -100,6 +100,11 @@
       <HintPath>_References\System.Web.Http.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_References\System.Web.WebPages.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -132,6 +137,7 @@
   <ItemGroup>
     <Compile Include="Common\AuditableEntity.vb" />
     <Compile Include="Common\Globals.vb" />
+    <Compile Include="Common\ModuleWebPage.vb" />
     <Compile Include="Common\RazorControl.vb" />
     <Compile Include="Common\RouteMapper.vb" />
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController.vb" />
@@ -149,7 +155,15 @@
     <Compile Include="Repositories\ProjectsRepository.vb" />
     <Compile Include="Repositories\ProjectTypesBaseRepository.vb" />
     <Compile Include="Repositories\ProjectTypesRepository.vb" />
+    <Compile Include="Settings.ascx.designer.vb">
+      <DependentUpon>Settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.ascx.vb">
+      <DependentUpon>Settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Content Include="js\connect.projects.js" />
+    <Content Include="Settings.ascx" />
     <Content Include="Views\Home.vbhtml" />
     <Content Include="Views\Partials\ProjectList.vbhtml" />
     <Content Include="Views\Partials\EditProject.vbhtml" />

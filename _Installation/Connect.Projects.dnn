@@ -40,7 +40,10 @@
           <controlType>Edit</controlType>
          </moduleControl>
         </moduleControls>
-        <permissions/>
+        <permissions>
+         <permission code="CONNECT_PROJECTS_MODULE" key="MODERATOR" name="Moderators"/>
+         <permission code="CONNECT_PROJECTS_MODULE" key="SUBMITTER" name="Submitters"/>
+        </permissions>
        </moduleDefinition>
       </moduleDefinitions>
      </desktopModule>

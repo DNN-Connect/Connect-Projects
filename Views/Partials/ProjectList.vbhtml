@@ -1,4 +1,5 @@
-﻿<h3>@Html.GetLocalizedString("Projects")</h3>
+﻿@Inherits Connect.DNN.Modules.Projects.Common.ModuleWebPage
+<h3>@Html.GetLocalizedString("Projects")</h3>
 <table class="dnnGrid iw_bgt">
  <thead>
   <tr class="dnnGridHeader">
@@ -18,4 +19,6 @@
  </tbody>
 </table>
 
-<a href="#/Project/Edit/-1" class="dnnPrimaryAction">@Html.GetLocalizedString("Add")</a>
+@If Security.Submitter Then
+ @<a href="#/Project/Edit/-1" class="dnnPrimaryAction">@Html.GetLocalizedString("Add")</a>
+End If
