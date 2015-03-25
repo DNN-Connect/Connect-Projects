@@ -97,7 +97,7 @@
  </fieldset>
 </div>
 
-<a href="#/Accounts" class="btn btn-default dnnSecondaryAction">@Html.GetLocalizedString("Return")</a>
+<a href="#/Projects" class="btn btn-default dnnSecondaryAction">@Html.GetLocalizedString("Return")</a>
 <button type="button" class="btn btn-primary dnnPrimaryAction"
         data-ng-click="updateProject(project)"
         data-ng-disabled="frmEditProject.$invalid">

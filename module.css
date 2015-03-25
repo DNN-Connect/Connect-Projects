@@ -5,3 +5,10 @@
 .dnnFormItem.has-error .help-block {
   display: block;
 }
+
+.cp_dropzone {
+ min-height: 200px;
+ min-width: 400px;
+ background-color: #eee;
+ border: 2px dotted #666;
+}

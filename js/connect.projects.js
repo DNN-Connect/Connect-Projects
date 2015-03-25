@@ -1,4 +1,4 @@
-﻿var mod = angular.module('projectsModule', ['ngRoute']);
+﻿var mod = angular.module('projectsModule', ['ngRoute', 'angularFileUpload']);
 
 mod.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider.when('/Projects', {
@@ -9,7 +9,7 @@ mod.config(['$routeProvider', function ($routeProvider) {
 	});
 	$routeProvider.when('/Project/:ProjectId', {
 		template: function () {
-			return getTemplate('Project');
+			return getTemplate('ProjectDetails');
 		},
 		controller: 'ProjectDetailCtrl'
 	});
@@ -137,7 +137,7 @@ mod.controller('ProjectListCtrl', ['$scope', '$compile', 'projectsFactory', func
 	}
 }]);
 
-mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory', function ($scope, $routeParams, projectsFactory) {
+mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory', 'FileUploader', function ($scope, $routeParams, projectsFactory, FileUploader) {
 	$scope.projectId = $routeParams.ProjectId;
 	projectsFactory.project($scope.moduleId, $scope.projectId, function (data) {
 		$scope.project = data;
@@ -162,6 +162,22 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 		}
 		return false;
 	}
+	var uploader = $scope.uploader = new FileUploader({
+		url: $.dnnSF($scope.moduleId).getServiceRoot('Connect/Projects') + 'Module/UploadFile/' + $scope.projectId,
+		autoUpload: true,
+		headers: {
+			moduleId: $scope.moduleId,
+			tabId: $scope.tabId,
+			RequestVerificationToken: $('[name="__RequestVerificationToken"]').val()
+		}
+	});
+	uploader.filters.push({
+		name: 'imageFilter',
+		fn: function (item /*{File|FileLikeObject}*/, options) {
+			var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
+			return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1;
+		}
+	});
 }]);
 
 mod.directive('showErrors', function () {

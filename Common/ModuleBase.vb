@@ -51,6 +51,9 @@ Namespace Common
     AddJavascriptFile("angular-route.min.js", 51)
     AddJavascriptFile("connect.projects.js", 70)
     AddJavascriptFile("stupidtable.min.js", 70)
+    AddJavascriptFile("es5-shim.min.js", 70)
+    AddJavascriptFile("es5-sham.min.js", 70)
+    AddJavascriptFile("angular-file-upload.min.js", 70)
 
     ' Css
 

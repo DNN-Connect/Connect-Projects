@@ -4,6 +4,8 @@
  <thead>
   <tr class="dnnGridHeader">
    <th data-sort="string">@Html.GetLocalizedString("ProjectName")</th>
+   <th data-sort="string">@Html.GetLocalizedString("ProjectType")</th>
+   <th data-sort="string">@Html.GetLocalizedString("Owners")</th>
    <th data-column-id="Edit" data-formatter="editLink">@Html.GetLocalizedString("Edit")</th>
   </tr>
  </thead>
@@ -12,6 +14,8 @@
    <td>
     <a href="#Project/{{project.ProjectId}}">{{project.ProjectName}}</a>
    </td>
+   <td>{{project.TypeDescription}}</td>
+   <td>{{project.Owners}}</td>
    <td>
     <a href="#Project/Edit/{{project.ProjectId}}" data-ng-if="security.moderator == true || project.CreatedByUserID == @Dnn.User.UserID">@Html.GetLocalizedString("Edit")</a>
    </td>

@@ -2,9 +2,7 @@
 @Imports Connect.DNN.Modules.Projects.Models.Projects
 @Imports Connect.DNN.Modules.Projects.Controllers.Projects
 
-<h2>@Html.GetLocalizedString("Projects")</h2>
-
-<div data-ng-app="projectsModule" data-ng-init="moduleId = @Dnn.Module.ModuleId; security = {moderator: @Security.Moderator.ToString.ToLower, submitter: @Security.Submitter.ToString.ToLower};" id="projectsModule">
+<div data-ng-app="projectsModule" data-ng-init="moduleId = @Dnn.Module.ModuleId; tabId = @Dnn.Tab.TabID; security = {moderator: @Security.Moderator.ToString.ToLower, submitter: @Security.Submitter.ToString.ToLower};" id="projectsModule">
  <div data-ng-view>
 
  </div>

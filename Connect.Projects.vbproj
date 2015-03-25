@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\AuditableEntity.vb" />
+    <Compile Include="Common\FilesStatus.vb" />
     <Compile Include="Common\Globals.vb" />
     <Compile Include="Common\ModuleApiController.vb" />
     <Compile Include="Common\ModuleWebPage.vb" />
@@ -168,6 +169,7 @@
     <Content Include="Views\Home.vbhtml" />
     <Content Include="Views\Partials\ProjectList.vbhtml" />
     <Content Include="Views\Partials\EditProject.vbhtml" />
+    <Content Include="Views\Partials\ProjectDetails.vbhtml" />
     <None Include="_Installation\Connect.Projects.dnn" />
     <Compile Include="Common\ContextSecurity.vb" />
     <Compile Include="Common\ModuleBase.vb">
