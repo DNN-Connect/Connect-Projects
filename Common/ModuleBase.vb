@@ -54,8 +54,10 @@ Namespace Common
     AddJavascriptFile("es5-shim.min.js", 70)
     AddJavascriptFile("es5-sham.min.js", 70)
     AddJavascriptFile("angular-file-upload.min.js", 70)
+    AddJavascriptFile("jquery.colorbox.js", 70)
 
     ' Css
+    AddCssFile("colorbox.css")
 
     Context.Items("ServiceAdded") = True
    End If

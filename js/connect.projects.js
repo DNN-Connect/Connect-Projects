@@ -176,6 +176,7 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 				$scope.$apply();
 			}
 		});
+		$('a[href$=".gif"], a[href$=".jpg"], a[href$=".png"], a[href$=".bmp"]').colorbox();
 	});
 	$scope.updateProject = function (project) {
 		projectsFactory.updateProject($scope.moduleId, project, function (data) {

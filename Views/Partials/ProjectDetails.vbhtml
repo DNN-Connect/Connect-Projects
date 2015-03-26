@@ -30,7 +30,7 @@
  </div>
  <div class="cp_column">
   <div data-ng-repeat="image in album.Images | orderBy:'Order'" class="cp_img">
-   <img src="{{album.ImagePath}}{{image.File}}_med{{image.Extension}}" alt="{{image.Title}}" />
+   <a href="{{album.ImagePath}}{{image.File}}_zoom{{image.Extension}}"><img src="{{album.ImagePath}}{{image.File}}_med{{image.Extension}}" alt="{{image.Title}}" /></a>
    <span>{{image.Remarks}}</span>
   </div>
  </div>
