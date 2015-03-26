@@ -5,13 +5,15 @@
  <div class="cp_column">
   <dl class="cp_dl_horizontal">
    <dt>@Html.GetLocalizedString("ProjectType")</dt>
-   <dd>{{project.TypeDescription}}&nbsp;</dd><div style="clear:both"></div>
+   <dd>{{project.TypeDescription}}&nbsp;</dd>
+   <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("Owners")</dt>
-   <dd>{{project.Owners}}&nbsp;</dd><div style="clear:both"></div>
+   <dd>{{project.Owners}}&nbsp;</dd>
+   <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("Status")</dt>
    <dd>{{project.Status}}&nbsp;</dd>
    <dt data-ng-if="project.Url1 != ''">Url</dt>
-   <dd data-ng-if ="project.Url1 != ''"><a href="{{project.Url1}}">{{project.Url1}}</a></dd>
+   <dd data-ng-if="project.Url1 != ''"><a href="{{project.Url1}}">{{project.Url1}}</a></dd>
    <dt data-ng-if="project.Url2 != ''">Url</dt>
    <dd data-ng-if="project.Url2 != ''"><a href="{{project.Url2}}">{{project.Url2}}</a></dd>
   </dl>
@@ -37,7 +39,7 @@
  <div style="clear:both"></div>
 </div>
 
-
+<a href="@(GetModuleUrl("API/Projects/Pdf"))/{{projectId}}?moduleId=@Dnn.Module.ModuleId&tabId=@Dnn.Tab.TabId" class="dnnSecondaryAction">PDF</a>
 
 
 <div nv-file-drop="" uploader="uploader" data-ng-if="security.moderator == true || project.CreatedByUserID == @Dnn.User.UserID">

@@ -79,6 +79,10 @@
       <HintPath>_References\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_References\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Core">
       <HintPath>_References\Syncfusion.Core.dll</HintPath>
     </Reference>
@@ -154,6 +158,7 @@
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController.vb" />
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController_Services.vb" />
     <Compile Include="Data\RepositoryImpl.vb" />
+    <Compile Include="Documents\ProjectDocument.vb" />
     <Compile Include="Models\Projects\Project_Interfaces.vb" />
     <Compile Include="Models\Projects\Project_Properties.vb" />
     <Compile Include="Models\ProjectTypes\ProjectType.vb" />

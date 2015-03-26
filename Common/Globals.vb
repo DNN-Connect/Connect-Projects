@@ -10,6 +10,11 @@ Namespace Common
    arr(arr.Length - 1) = item
   End Sub
 
+  <Extension()>
+  Public Function MillimetersToPoints(mm As Single) As Single
+   Return CSng(mm * 2.840626)
+  End Function
+
   Public Function GetUploadedFileName(folder As String, originalFilename As String) As String
    For Each f As String In IO.Directory.GetFiles(folder, "*.resources")
     If ReadFile(f) = originalFilename Then

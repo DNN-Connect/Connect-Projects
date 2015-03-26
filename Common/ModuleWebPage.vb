@@ -8,7 +8,7 @@ Namespace Common
   Inherits DotNetNukeWebPage
 
   Public Function GetModuleUrl(relativeUrl As String) As String
-   Return DotNetNuke.Common.ResolveUrl("~/DesktopModules/FormaMed/CourseManager/" & relativeUrl)
+   Return DotNetNuke.Common.ResolveUrl("~/DesktopModules/Connect/Projects/" & relativeUrl)
   End Function
 
   Public Function EditUrl(controlKey As String, ParamArray additionParameters() As String) As String
@@ -49,7 +49,7 @@ Namespace Common
   Inherits DotNetNukeWebPage(Of T)
 
   Public Function GetModuleUrl(relativeUrl As String) As String
-   Return DotNetNuke.Common.ResolveUrl("~/DesktopModules/FormaMed/CourseManager/" & relativeUrl)
+   Return DotNetNuke.Common.ResolveUrl("~/DesktopModules/Connect/Projects/" & relativeUrl)
   End Function
 
   Public Function EditUrl(controlKey As String, ParamArray additionParameters() As String) As String
