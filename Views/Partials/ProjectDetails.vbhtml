@@ -1,7 +1,12 @@
 ﻿@Inherits Connect.DNN.Modules.Projects.Common.ModuleWebPage
 <h2>{{project.ProjectName}}</h2>
 
-<div nv-file-drop="" uploader="uploader">
+<ul>
+ <li data-ng-repeat="image in album.Images | orderBy:'Order'">{{image.File}} {{image.Order}} {{image.Remarks}}</li>
+</ul>
+
+
+<div nv-file-drop="" uploader="uploader" data-ng-if="security.moderator == true || project.CreatedByUserID == @Dnn.User.UserID">
  <div nv-file-over="" uploader="uploader" over-class="cp_dropzone_hover" class="cp_dropzone">
   <ul class="cp_sortable">
    <li data-ng-repeat="image in album.Images | orderBy:'Order'" data-img-id="{{image.File}}">

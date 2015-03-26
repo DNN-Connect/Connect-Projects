@@ -26,7 +26,6 @@ Namespace Controllers
 
   Public Class AlbumPutDTO
    Public Property album As String
-   Public Property sortOrder As List(Of String)
   End Class
   <HttpPost()>
   <DnnModuleAuthorize(PermissionKey:="SUBMITTER")>
@@ -38,9 +37,6 @@ Namespace Controllers
     Return Request.CreateResponse(HttpStatusCode.BadRequest, False)
    End If
    Dim album As ImageCollection = JsonConvert.DeserializeObject(Of ImageCollection)(data.album)
-   For Each i As Image In album.Images
-    i.Order = data.sortOrder.FindIndex(Function(f) f = i.File)
-   Next
    album.Save(GetImageMapPath(id) & "album.xml")
    Return Request.CreateResponse(HttpStatusCode.OK, True)
   End Function

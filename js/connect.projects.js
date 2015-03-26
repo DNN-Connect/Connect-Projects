@@ -123,10 +123,9 @@ mod.factory('projectsFactory', [function () {
 		getAlbum: function (moduleId, projectId, success, fail) {
 			dataCall(moduleId, 'Album', 'Get', { id: projectId }, success, fail);
 		},
-		updateAlbum: function (moduleId, projectId, album, sortOrder, success, fail) {
+		updateAlbum: function (moduleId, projectId, album, success, fail) {
 			apiPostCall(moduleId, 'Album', 'Put', projectId, {
-				album: JSON.stringify(album),
-				sortOrder: sortOrder
+				album: JSON.stringify(album)
 			}, success, fail);
 		},
 		commitFile: function (moduleId, projectId, fileName, success, fail) {
@@ -162,7 +161,18 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 	projectsFactory.getAlbum($scope.moduleId, $scope.projectId, function (data) {
 		$scope.album = data;
 		$scope.$apply();
-		$('.cp_sortable').sortable();
+		$('.cp_sortable').sortable({
+			update: function (e, ui) {
+				var imgOrder = [];
+				$('.cp_sortable li').each(function (i, el) {
+					imgOrder.push($(el).attr('data-img-id'));
+				});
+				$scope.album.Images.forEach(function (el) {
+					el.Order = imgOrder.indexOf(el.File);
+				});
+				$scope.$apply();
+			}
+		});
 	});
 	$scope.updateProject = function (project) {
 		projectsFactory.updateProject($scope.moduleId, project, function (data) {
@@ -200,7 +210,7 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 		}
 	});
 	uploader.onSuccessItem = function (fileItem, response, status, headers) {
-		projectsFactory.commitFile($scope.moduleId, $scope.projectId, response[0].name + response[0].ext, function(data) {
+		projectsFactory.commitFile($scope.moduleId, $scope.projectId, response[0].name + response[0].ext, function (data) {
 			$scope.album = data;
 			$scope.$apply();
 		});
@@ -209,11 +219,7 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 		$scope.saveAlbum($scope.album);
 	};
 	$scope.saveAlbum = function (album) {
-		var imgOrder = [];
-		$('.cp_sortable li').each(function(i, el) {
-			imgOrder.push($(el).attr('data-img-id'));
-		});
-		projectsFactory.updateAlbum($scope.moduleId, $scope.projectId, album, imgOrder, function() {
+		projectsFactory.updateAlbum($scope.moduleId, $scope.projectId, album, function () {
 			alert('Saved');
 		});
 		return false;
