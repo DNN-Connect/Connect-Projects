@@ -24,8 +24,9 @@ Namespace Common
     Dim saveFilename As String = Left(originalFile, originalFile.Length - ext.Length)
 
     ' Resize Image
-    ResizeImage(thisImage, imgFormat, originalWidth, originalHeight, imgRatio, Settings.Width, Settings.Height, Settings.FitType, saveFilename & "_tn" & ext)
-    ResizeImage(thisImage, imgFormat, originalWidth, originalHeight, imgRatio, Settings.ZoomWidth, Settings.ZoomHeight, Settings.ZoomFitType, saveFilename & "_zoom" & ext)
+    ResizeImage(thisImage, imgFormat, originalWidth, originalHeight, imgRatio, Settings.TnWidth, Settings.TnHeight, Settings.TnFit, saveFilename & "_tn" & ext)
+    ResizeImage(thisImage, imgFormat, originalWidth, originalHeight, imgRatio, Settings.MedWidth, Settings.MedHeight, Settings.MedFit, saveFilename & "_med" & ext)
+    ResizeImage(thisImage, imgFormat, originalWidth, originalHeight, imgRatio, Settings.ZoomWidth, Settings.ZoomHeight, Settings.ZoomFit, saveFilename & "_zoom" & ext)
 
    End Using
 

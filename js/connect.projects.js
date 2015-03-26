@@ -123,13 +123,16 @@ mod.factory('projectsFactory', [function () {
 		getAlbum: function (moduleId, projectId, success, fail) {
 			dataCall(moduleId, 'Album', 'Get', { id: projectId }, success, fail);
 		},
+		deleteImage: function (moduleId, projectId, imageName, success, fail) {
+			dataCall(moduleId, 'Album', 'DeleteImage', { id: projectId, image: imageName }, success, fail);
+		},
 		updateAlbum: function (moduleId, projectId, album, success, fail) {
 			apiPostCall(moduleId, 'Album', 'Put', projectId, {
 				album: JSON.stringify(album)
 			}, success, fail);
 		},
 		commitFile: function (moduleId, projectId, fileName, success, fail) {
-			dataCall(moduleId, 'Module', 'CommitFile', { id: projectId, fileName: fileName }, success, fail);
+			dataCall(moduleId, 'Album', 'CommitFile', { id: projectId, fileName: fileName }, success, fail);
 		}
 	}
 }]);
@@ -216,13 +219,23 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 		});
 	};
 	uploader.onAfterAddingFile = function (fileItem) {
-		$scope.saveAlbum($scope.album);
+		$scope.saveAlbum($scope.album, false);
 	};
-	$scope.saveAlbum = function (album) {
+	$scope.saveAlbum = function (album, confirmSuccess) {
 		projectsFactory.updateAlbum($scope.moduleId, $scope.projectId, album, function () {
-			alert('Saved');
+			if (confirmSuccess) {
+				alert('Saved');
+			}
 		});
 		return false;
+	};
+	$scope.deleteImage = function (image) {
+		if (confirm('Delete this image?')) {
+			projectsFactory.deleteImage($scope.moduleId, $scope.projectId, image.File, function(data) {
+				$scope.album = data;
+				$scope.$apply();
+			});
+		};
 	};
 }]);
 

@@ -40,6 +40,26 @@ Namespace Controllers
    album.Save(GetImageMapPath(id) & "album.xml")
    Return Request.CreateResponse(HttpStatusCode.OK, True)
   End Function
+
+  <HttpGet()>
+  <DnnModuleAuthorize(PermissionKey:="SUBMITTER")>
+  <ValidateAntiForgeryToken()>
+  Public Function DeleteImage(id As Integer, image As String) As HttpResponseMessage
+   Dim p As Project = ProjectsController.GetProject(ActiveModule.ModuleID, id)
+   If p Is Nothing Then Return Request.CreateResponse(HttpStatusCode.BadRequest, False)
+   If p.CreatedByUserID <> UserInfo.UserID AndAlso Not Security.Moderator Then
+    Return Request.CreateResponse(HttpStatusCode.BadRequest, False)
+   End If
+   For Each f As String In IO.Directory.GetFiles(GetImageMapPath(id), image & "*.*")
+    Try
+     IO.File.Delete(f)
+    Catch ex As Exception
+    End Try
+   Next
+   Dim res As New ImageCollection(GetImageMapPath(id), GetImagePath(id))
+   res.Recheck()
+   Return Request.CreateResponse(HttpStatusCode.OK, res)
+  End Function
 #End Region
 
 #Region " Upload Handler "

@@ -30,7 +30,7 @@
  </div>
  <div class="cp_column">
   <div data-ng-repeat="image in album.Images | orderBy:'Order'" class="cp_img">
-   <img src="{{album.ImagePath}}{{image.File}}_tn{{image.Extension}}" width="{{settings.tnWidth}}" height="{{settings.tnHeight}}" alt="{{image.Title}}" />
+   <img src="{{album.ImagePath}}{{image.File}}_med{{image.Extension}}" alt="{{image.Title}}" />
    <span>{{image.Remarks}}</span>
   </div>
  </div>
@@ -45,7 +45,7 @@
   <ul class="cp_sortable">
    <li data-ng-repeat="image in album.Images | orderBy:'Order'" data-img-id="{{image.File}}">
     <div class="delbutton">
-     <a class="yag-close" href="#">&times;</a>
+     <a class="yag-close" href="#/Project/{{projectId}}" data-ng-click="deleteImage(image)">&times;</a>
     </div>
     <div class="imagetn">
      <img src="{{album.ImagePath}}{{image.File}}_tn{{image.Extension}}" width="{{settings.tnWidth}}" height="{{settings.tnHeight}}" alt="{{image.Title}}" />
@@ -58,7 +58,7 @@
   </div>
  </div>
  <div class="btnright">
-  <a href="#/Project/{{projectId}}" class="btn btn-default dnnPrimaryAction" data-ng-click="saveAlbum(album)">@Html.GetLocalizedString("SaveChanges")</a>
+  <a href="#/Project/{{projectId}}" class="btn btn-default dnnPrimaryAction" data-ng-click="saveAlbum(album, true)">@Html.GetLocalizedString("SaveChanges")</a>
  </div>
 </div>
 

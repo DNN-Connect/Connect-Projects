@@ -7,12 +7,15 @@ Namespace Common
 #Region " Properties "
   Private Property ModuleId As Integer = -1
   Private Property Settings As Hashtable
-  Public Property Width As Integer = 80
-  Public Property Height As Integer = 80
-  Public Property ZoomWidth As Integer = 400
-  Public Property ZoomHeight As Integer = 300
-  Public Property FitType As String = "Crop"
-  Public Property ZoomFitType As String = "Shrink"
+  Public Property TnWidth As Integer = 100
+  Public Property TnHeight As Integer = 100
+  Public Property MedWidth As Integer = 480
+  Public Property MedHeight As Integer = 234
+  Public Property ZoomWidth As Integer = 1920
+  Public Property ZoomHeight As Integer = 1080
+  Public Property TnFit As String = "Crop"
+  Public Property MedFit As String = "Shrink"
+  Public Property ZoomFit As String = "Shrink"
 #End Region
 
 #Region " Constructors "
@@ -20,12 +23,15 @@ Namespace Common
 
    Me.ModuleId = moduleId
    Settings = (New DotNetNuke.Entities.Modules.ModuleController).GetModuleSettings(moduleId)
-   Width = Settings.GetValue(Of Integer)("Width", Width)
-   Height = Settings.GetValue(Of Integer)("Height", Height)
+   TnWidth = Settings.GetValue(Of Integer)("TnWidth", TnWidth)
+   TnHeight = Settings.GetValue(Of Integer)("TnHeight", TnHeight)
+   MedWidth = Settings.GetValue(Of Integer)("MedWidth", MedWidth)
+   MedHeight = Settings.GetValue(Of Integer)("MedHeight", MedHeight)
    ZoomWidth = Settings.GetValue(Of Integer)("ZoomWidth", ZoomWidth)
    ZoomHeight = Settings.GetValue(Of Integer)("ZoomHeight", ZoomHeight)
-   FitType = Settings.GetValue(Of String)("FitType", FitType)
-   ZoomFitType = Settings.GetValue(Of String)("ZoomFitType", ZoomFitType)
+   TnFit = Settings.GetValue(Of String)("TnFit", TnFit)
+   MedFit = Settings.GetValue(Of String)("MedFit", MedFit)
+   ZoomFit = Settings.GetValue(Of String)("ZoomFit", ZoomFit)
 
   End Sub
 #End Region
@@ -34,12 +40,15 @@ Namespace Common
   Public Sub SaveSettings()
 
    Dim objModules As New ModuleController
-   objModules.UpdateModuleSetting(ModuleId, "Width", Me.Width.ToString)
-   objModules.UpdateModuleSetting(ModuleId, "Height", Me.Height.ToString)
+   objModules.UpdateModuleSetting(ModuleId, "TnWidth", Me.TnWidth.ToString)
+   objModules.UpdateModuleSetting(ModuleId, "TnHeight", Me.TnHeight.ToString)
+   objModules.UpdateModuleSetting(ModuleId, "MedWidth", Me.MedWidth.ToString)
+   objModules.UpdateModuleSetting(ModuleId, "MedHeight", Me.MedHeight.ToString)
    objModules.UpdateModuleSetting(ModuleId, "ZoomWidth", Me.ZoomWidth.ToString)
    objModules.UpdateModuleSetting(ModuleId, "ZoomHeight", Me.ZoomHeight.ToString)
-   objModules.UpdateModuleSetting(ModuleId, "FitType", Me.FitType)
-   objModules.UpdateModuleSetting(ModuleId, "ZoomFitType", Me.ZoomFitType)
+   objModules.UpdateModuleSetting(ModuleId, "TnFit", Me.TnFit)
+   objModules.UpdateModuleSetting(ModuleId, "MedFit", Me.MedFit)
+   objModules.UpdateModuleSetting(ModuleId, "ZoomFit", Me.ZoomFit)
    DotNetNuke.Common.Utilities.DataCache.SetCache(CacheKey(ModuleId), Me)
 
   End Sub
