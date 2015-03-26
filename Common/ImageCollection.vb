@@ -15,17 +15,17 @@ Namespace Common
   <DataMember()>
   Public Property ImagePath As String = ""
 
-  Private _albumFile As String = ""
+  Private Property AlbumFile As String = ""
   Private _imagesMapPath As String = ""
 
   Public Sub New(imagesMapPath As String, imagesPath As String)
    MyBase.New()
    ImagePath = imagesPath
-   _albumFile = imagesMapPath & "album.xml"
+   AlbumFile = imagesMapPath & "album.xml"
    _imagesMapPath = imagesMapPath
    Dim x As New System.Xml.Serialization.XmlSerializer(GetType(ImageCollection))
-   If IO.File.Exists(_albumFile) Then
-    Using rdr As New IO.StreamReader(_albumFile)
+   If IO.File.Exists(AlbumFile) Then
+    Using rdr As New IO.StreamReader(AlbumFile)
      Dim a As ImageCollection = CType(x.Deserialize(rdr), ImageCollection)
      Me.Images = a.Images
     End Using
@@ -35,9 +35,12 @@ Namespace Common
   End Sub
 
   Public Sub Save()
-   'WriteOrder()
+   Save(AlbumFile)
+  End Sub
+
+  Public Sub Save(filePath As String)
    Dim x As New System.Xml.Serialization.XmlSerializer(GetType(ImageCollection))
-   Using w As New IO.StreamWriter(_albumFile, False, System.Text.Encoding.UTF8)
+   Using w As New IO.StreamWriter(filePath, False, System.Text.Encoding.UTF8)
     x.Serialize(w, Me)
    End Using
   End Sub

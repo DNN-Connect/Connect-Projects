@@ -1,11 +1,13 @@
 ﻿.dnnFormItem .help-block {
   display: none;
 }
-
 .dnnFormItem.has-error .help-block {
   display: block;
 }
-
+.btnright {
+ width: 100%;
+ text-align: right;
+}
 .cp_dropzone {
  min-height: 200px;
  min-width: 400px;
@@ -16,7 +18,6 @@
 .cp_dropzone_hover {
  background-color: #a3d3f6;
 }
-
 .cp_sortable { list-style-type: none; margin: 0; padding: 0;}
 .cp_sortable li {
  display: inline-block;

@@ -62,10 +62,14 @@ mod.factory('projectsFactory', [function () {
 		});
 	}
 
-	var apiPostCall = function (moduleId, controller, action, data, success, fail) {
+	var apiPostCall = function (moduleId, controller, action, id, data, success, fail) {
+		var postUrl = $.dnnSF(moduleId).getServiceRoot('Connect/Projects') + controller + '/' + action;
+		if (id != null) {
+			postUrl += '/' + id;
+		}
 		$.ajax({
 			type: "POST",
-			url: $.dnnSF(moduleId).getServiceRoot('Connect/Projects') + controller + '/' + action,
+			url: postUrl,
 			beforeSend: $.dnnSF(moduleId).setModuleHeaders,
 			data: data
 		}).done(function (retdata) {
@@ -96,7 +100,7 @@ mod.factory('projectsFactory', [function () {
 			dataCall(moduleId, 'Projects', 'Project', { id: projectId }, success, fail);
 		},
 		updateProject: function (moduleId, project, success, fail) {
-			apiPostCall(moduleId, 'Projects', 'Put', {
+			apiPostCall(moduleId, 'Projects', 'Put', null, {
 				ProjectId: project.ProjectId,
 				Visible: project.Visible,
 				ProjectName: project.ProjectName,
@@ -117,7 +121,13 @@ mod.factory('projectsFactory', [function () {
 			dataCall(moduleId, 'Projects', 'Delete', { id: projectId }, success, fail);
 		},
 		getAlbum: function (moduleId, projectId, success, fail) {
-			dataCall(moduleId, 'Projects', 'Album', { id: projectId }, success, fail);
+			dataCall(moduleId, 'Album', 'Get', { id: projectId }, success, fail);
+		},
+		updateAlbum: function (moduleId, projectId, album, sortOrder, success, fail) {
+			apiPostCall(moduleId, 'Album', 'Put', projectId, {
+				album: JSON.stringify(album),
+				sortOrder: sortOrder
+			}, success, fail);
 		},
 		commitFile: function (moduleId, projectId, fileName, success, fail) {
 			dataCall(moduleId, 'Module', 'CommitFile', { id: projectId, fileName: fileName }, success, fail);
@@ -152,11 +162,7 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 	projectsFactory.getAlbum($scope.moduleId, $scope.projectId, function (data) {
 		$scope.album = data;
 		$scope.$apply();
-		$('.cp_sortable').sortable({
-			update: function(event, ui) {
-				alert($(ui.item).attr('data-img-id'));
-			}
-		});
+		$('.cp_sortable').sortable();
 	});
 	$scope.updateProject = function (project) {
 		projectsFactory.updateProject($scope.moduleId, project, function (data) {
@@ -178,7 +184,7 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 		return false;
 	}
 	var uploader = $scope.uploader = new FileUploader({
-		url: $.dnnSF($scope.moduleId).getServiceRoot('Connect/Projects') + 'Module/UploadFile/' + $scope.projectId,
+		url: $.dnnSF($scope.moduleId).getServiceRoot('Connect/Projects') + 'Album/UploadFile/' + $scope.projectId,
 		autoUpload: true,
 		headers: {
 			moduleId: $scope.moduleId,
@@ -198,6 +204,19 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 			$scope.album = data;
 			$scope.$apply();
 		});
+	};
+	uploader.onAfterAddingFile = function (fileItem) {
+		$scope.saveAlbum($scope.album);
+	};
+	$scope.saveAlbum = function (album) {
+		var imgOrder = [];
+		$('.cp_sortable li').each(function(i, el) {
+			imgOrder.push($(el).attr('data-img-id'));
+		});
+		projectsFactory.updateAlbum($scope.moduleId, $scope.projectId, album, imgOrder, function() {
+			alert('Saved');
+		});
+		return false;
 	};
 }]);
 

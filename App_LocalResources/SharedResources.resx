@@ -186,4 +186,7 @@
   <data name="DropHere.Text" xml:space="preserve">
     <value>Drop new images here</value>
   </data>
+  <data name="SaveChanges.Text" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
 </root>

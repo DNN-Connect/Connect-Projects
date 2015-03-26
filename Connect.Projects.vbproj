@@ -74,6 +74,11 @@
       <HintPath>_References\Microsoft.ApplicationBlocks.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_References\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Syncfusion.Core">
       <HintPath>_References\Syncfusion.Core.dll</HintPath>
     </Reference>
@@ -145,6 +150,7 @@
     <Compile Include="Common\RazorControl.vb" />
     <Compile Include="Common\Resizer.vb" />
     <Compile Include="Common\RouteMapper.vb" />
+    <Compile Include="Controllers\AlbumController.vb" />
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController.vb" />
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController_Services.vb" />
     <Compile Include="Data\RepositoryImpl.vb" />
