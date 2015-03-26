@@ -239,6 +239,12 @@ mod.directive('showErrors', function () {
 	}
 });
 
+mod.filter('newlines', function () {
+	return function (text) {
+		return text.replace(/\n/g, '<br/>');
+	};
+});
+
 function getTemplate(template) {
 	var moduleId = angular.element(document.getElementById('projectsModule')).scope().moduleId;
 	var res = '';
