@@ -6,6 +6,7 @@ Namespace Common
  Public Module Globals
   Public Const SharedResourceFileName As String = "~/DesktopModules/Connect/Projects/App_LocalResources/SharedResources.resx"
   Public Const Pt As Single = 0.352777778
+  Public Const ModulePath As String = "~/DesktopModules/Connect/Projects/"
 
   <Extension()>
   Public Sub Add(Of T)(ByRef arr As T(), item As T)
