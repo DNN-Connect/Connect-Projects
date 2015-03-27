@@ -1,0 +1,99 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Connect_Projects_Projects](
+	[ProjectId] [int] IDENTITY(1,1) NOT NULL,
+	[ModuleId] [int] NOT NULL,
+	[Visible] [bit] NOT NULL,
+	[ProjectName] [nvarchar](1000) NOT NULL,
+	[ProjectType] [int] NOT NULL,
+	[Url1] [nvarchar](500) NULL,
+	[Url2] [nvarchar](500) NULL,
+	[Status] [nvarchar](500) NULL,
+	[Owners] [nvarchar](1000) NULL,
+	[Aims] [nvarchar](max) NULL,
+	[Description] [nvarchar](max) NULL,
+	[Dependencies] [nvarchar](max) NULL,
+	[CreatedByUserID] [int] NOT NULL,
+	[CreatedOnDate] [datetime] NOT NULL,
+	[LastModifiedByUserID] [int] NOT NULL,
+	[LastModifiedOnDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_Connect_Projects_Projects] PRIMARY KEY CLUSTERED 
+(
+	[ProjectId] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTypes]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Connect_Projects_ProjectTypes](
+	[ProjectTypeId] [int] IDENTITY(1,1) NOT NULL,
+	[TypeDescription] [nvarchar](300) NOT NULL,
+	[ProjectColor] [varchar](10) NOT NULL,
+ CONSTRAINT [PK_Connect_Projects_ProjectTypes] PRIMARY KEY CLUSTERED 
+(
+	[ProjectTypeId] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+
+
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_ProjectTypes]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
+ALTER TABLE [dbo].[Connect_Projects_Projects]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_Projects_ProjectTypes] FOREIGN KEY([ProjectType])
+REFERENCES [dbo].[Connect_Projects_ProjectTypes] ([ProjectTypeId])
+ON DELETE CASCADE
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_ProjectTypes]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
+ALTER TABLE [dbo].[Connect_Projects_Projects] CHECK CONSTRAINT [FK_Connect_Projects_Projects_ProjectTypes]
+GO
+
+
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_Modules]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
+ALTER TABLE [dbo].[Connect_Projects_Projects]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_Projects_Modules] FOREIGN KEY([ModuleId])
+REFERENCES [dbo].[Modules] ([ModuleID])
+ON DELETE CASCADE
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_Modules]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
+ALTER TABLE [dbo].[Connect_Projects_Projects] CHECK CONSTRAINT [FK_Connect_Projects_Projects_Modules]
+GO
+
+
+
+IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[vw_Connect_Projects_Projects]'))
+DROP VIEW [dbo].[vw_Connect_Projects_Projects]
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+
+
+
+CREATE VIEW [dbo].[vw_Connect_Projects_Projects]
+AS
+SELECT
+ p.*,
+ pt.TypeDescription,
+ pt.ProjectColor,
+ uc.DisplayName AS CreatedByUser,
+ um.DisplayName AS LastModifiedByUser
+FROM dbo.Connect_Projects_Projects p
+ INNER JOIN dbo.Connect_Projects_ProjectTypes pt ON p.ProjectType=pt.ProjectTypeId
+ LEFT JOIN dbo.Users uc ON uc.UserID = p.CreatedByUserID
+ LEFT JOIN dbo.Users um ON um.UserID = p.LastModifiedByUserID
+
+
+
+GO
+
+
+

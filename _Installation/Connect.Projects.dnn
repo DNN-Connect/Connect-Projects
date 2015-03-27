@@ -3,7 +3,7 @@
  <packages>
   <package type="Module" name="Connect_Projects" version="01.00.00">
    <friendlyName>Connect Projects</friendlyName>
-   <description>DNN Connect projects module where users can register a project</description>
+   <description>DNN Connect projects module where users can register a project and we can share these</description>
    <owner>
     <name>Peter Donker</name>
     <organization>DNN Connect Association</organization>
