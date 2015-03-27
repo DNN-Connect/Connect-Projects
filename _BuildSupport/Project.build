@@ -1,5 +1,14 @@
 <?xml version="1.0"?>
 <!-- targets to be executed, when omitted from command line default is run -->
-<project name="Projects" default="all" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nant.sf.net/release/0.91/nant.xsd H:\Programs\nant\schema\nant.xsd" xmlns="http://nant.sf.net/release/0.91/nant.xsd">
+<project name="Projects" default="all" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nant.sf.net/release/0.91/nant.xsd D:\Programs\nant\schema\nant.xsd" xmlns="http://nant.sf.net/release/0.91/nant.xsd">
  <include buildfile="D:\Programs\Nant\Bring2mind.build" />
+ <property value="Projects" name="modulename" />
+ <property value="Connect.DNN.Modules.Projects" name="backupdir" />
+ <property value="Install,Source" name="packages" />
+ <call target="set.parameters" />
+ <property value="Connect.DNN.Modules" name="prefix" />
+ <property value="${basedirectory}_Installation" name="installationdir"/>
+ <property value="Connect.DNN.Modules.Projects.dll" name="mainassemblyfilename"/>
+ <property name="packagename" value="Connect.Projects"/>
+ <property value="" name="excludejsfiles" />
 </project>

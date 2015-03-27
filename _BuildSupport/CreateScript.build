@@ -4,7 +4,7 @@
  <target name="create.script">
   <createscript 
    isdropscript="false" 
-   modulequalifier="Projects" 
+   modulequalifier="Connect_Projects" 
    postscript="" 
    prescript="" 
    renamekeys="true"
@@ -12,7 +12,7 @@
    originalscriptoutput="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_BuildSupport\InstallOrig.00.00.00.SqlDataProvider"/>
   <createscript 
    isdropscript="true" 
-   modulequalifier="Projects" 
+   modulequalifier="Connect_Projects" 
    postscript="" 
    prescript="" 
    renamekeys="true"
