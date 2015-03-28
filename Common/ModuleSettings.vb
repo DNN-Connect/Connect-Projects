@@ -23,15 +23,15 @@ Namespace Common
 
    Me.ModuleId = moduleId
    Settings = (New DotNetNuke.Entities.Modules.ModuleController).GetModuleSettings(moduleId)
-   TnWidth = Settings.GetValue(Of Integer)("TnWidth", TnWidth)
-   TnHeight = Settings.GetValue(Of Integer)("TnHeight", TnHeight)
-   MedWidth = Settings.GetValue(Of Integer)("MedWidth", MedWidth)
-   MedHeight = Settings.GetValue(Of Integer)("MedHeight", MedHeight)
-   ZoomWidth = Settings.GetValue(Of Integer)("ZoomWidth", ZoomWidth)
-   ZoomHeight = Settings.GetValue(Of Integer)("ZoomHeight", ZoomHeight)
-   TnFit = Settings.GetValue(Of String)("TnFit", TnFit)
-   MedFit = Settings.GetValue(Of String)("MedFit", MedFit)
-   ZoomFit = Settings.GetValue(Of String)("ZoomFit", ZoomFit)
+   Settings.ReadValue("TnWidth", TnWidth)
+   Settings.ReadValue("TnHeight", TnHeight)
+   Settings.ReadValue("MedWidth", MedWidth)
+   Settings.ReadValue("MedHeight", MedHeight)
+   Settings.ReadValue("ZoomWidth", ZoomWidth)
+   Settings.ReadValue("ZoomHeight", ZoomHeight)
+   Settings.ReadValue("TnFit", TnFit)
+   Settings.ReadValue("MedFit", MedFit)
+   Settings.ReadValue("ZoomFit", ZoomFit)
 
   End Sub
 #End Region

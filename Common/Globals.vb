@@ -95,5 +95,77 @@ Namespace Common
    End Try
   End Sub
 
+#Region " Read Value Extensions "
+  <Extension()>
+  Public Sub ReadValue(ByRef valueTable As NameValueCollection, valueName As String, ByRef variable As Integer)
+   If Not valueTable.Item(valueName) Is Nothing Then
+    Try
+     variable = CType(valueTable.Item(valueName), Integer)
+    Catch ex As Exception
+    End Try
+   End If
+  End Sub
+
+  <Extension()>
+  Public Sub ReadValue(ByRef valueTable As NameValueCollection, valueName As String, ByRef variable As String)
+   If Not valueTable.Item(valueName) Is Nothing Then
+    Try
+     variable = valueTable.Item(valueName)
+    Catch ex As Exception
+    End Try
+   End If
+  End Sub
+
+  <Extension()>
+  Public Sub ReadValue(ByRef valueTable As NameValueCollection, valueName As String, ByRef variable As Boolean)
+   If Not valueTable.Item(valueName) Is Nothing Then
+    Try
+     Select Case valueTable.Item(valueName).ToLower()
+      Case "true", "on", "1", "yes"
+       variable = True
+      Case Else
+       variable = False
+     End Select
+    Catch ex As Exception
+    End Try
+   End If
+  End Sub
+
+  <Extension()>
+  Public Sub ReadValue(ByRef valueTable As Hashtable, valueName As String, ByRef variable As Integer)
+   If Not valueTable.Item(valueName) Is Nothing Then
+    Try
+     variable = CType(valueTable.Item(valueName), Integer)
+    Catch ex As Exception
+    End Try
+   End If
+  End Sub
+
+  <Extension()>
+  Public Sub ReadValue(ByRef valueTable As Hashtable, valueName As String, ByRef variable As String)
+   If Not valueTable.Item(valueName) Is Nothing Then
+    Try
+     variable = CStr(valueTable.Item(valueName))
+    Catch ex As Exception
+    End Try
+   End If
+  End Sub
+
+  <Extension()>
+  Public Sub ReadValue(ByRef valueTable As Hashtable, valueName As String, ByRef variable As Boolean)
+   If Not valueTable.Item(valueName) Is Nothing Then
+    Try
+     Select Case CStr(valueTable.Item(valueName)).ToLower()
+      Case "true", "on", "1", "yes"
+       variable = True
+      Case Else
+       variable = False
+     End Select
+    Catch ex As Exception
+    End Try
+   End If
+  End Sub
+#End Region
+
  End Module
 End Namespace
