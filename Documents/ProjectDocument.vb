@@ -35,6 +35,8 @@ Namespace Documents
     contrastColor = Color.Black
    End If
    Dim bannerColor As New PdfColor(projectColor)
+   Dim titleFontSize As Single = 18
+   Dim bodyFontSize As Single = 12
 
    PageGraphics.DrawRectangle(New PdfSolidBrush(bannerColor), 0.0F, 0.0F.MillimetersToPoints(), 297.0F.MillimetersToPoints(), 25.0F.MillimetersToPoints())
    Dim font As PdfFont = GetHelvetica(30, True)
@@ -45,32 +47,32 @@ Namespace Documents
    te.Draw(Page, New RectangleF(10.0F.MillimetersToPoints(), 20.0F.MillimetersToPoints() - (font.MeasureString(te.Text).Height), 200.0F.MillimetersToPoints(), font.MeasureString(te.Text).Height))
 
    Dim y As Single = 40.0F
-   DrawTextBlock("Project Type", GetHelvetica(22, False), projectColor, y, 10.0F, 130.0F)
-   DrawTextBlock(project.TypeDescription, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
+   DrawTextBlock("Project Type", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   DrawTextBlock(project.TypeDescription, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    y += 2
-   DrawTextBlock("Owners", GetHelvetica(22, False), projectColor, y, 10.0F, 130.0F)
-   DrawTextBlock(project.Owners, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
+   DrawTextBlock("Owners", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   DrawTextBlock(project.Owners, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    y += 2
-   DrawTextBlock("People/Authors", GetHelvetica(22, False), projectColor, y, 10.0F, 130.0F)
-   DrawTextBlock(project.People, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
+   DrawTextBlock("People/Authors", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   DrawTextBlock(project.People, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    y += 2
-   DrawTextBlock("Status", GetHelvetica(22, False), projectColor, y, 10.0F, 130.0F)
-   DrawTextBlock(project.Status, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
+   DrawTextBlock("Status", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   DrawTextBlock(project.Status, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    y += 2
-   DrawTextBlock("Url", GetHelvetica(22, False), projectColor, y, 10.0F, 130.0F)
-   DrawTextBlock(project.Url1, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
+   DrawTextBlock("Url", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   DrawTextBlock(project.Url1, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    If project.Url2 <> "" Then
-    DrawTextBlock(project.Url2, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
+    DrawTextBlock(project.Url2, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    End If
    y += 2
-   DrawTextBlock("Aims", GetHelvetica(22, False), projectColor, y, 10.0F, 130.0F)
-   DrawTextBlock(project.Aims, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
+   DrawTextBlock("Aims", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   DrawTextBlock(project.Aims, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    y += 2
-   DrawTextBlock("Description", GetHelvetica(22, False), projectColor, y, 10.0F, 130.0F)
-   DrawTextBlock(project.Description, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
+   DrawTextBlock("Description", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   DrawTextBlock(project.Description, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    y += 2
-   DrawTextBlock("Dependencies", GetHelvetica(22, False), projectColor, y, 10.0F, 130.0F)
-   DrawTextBlock(project.Dependencies, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
+   DrawTextBlock("Dependencies", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   DrawTextBlock(project.Dependencies, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
 
    Dim imageMapPath As String = String.Format("{0}Connect\Projects\{1}\{2}\", PortalSettings.Current.HomeDirectoryMapPath, moduleId, projectId)
    Dim album As New ImageCollection(imageMapPath, "")
@@ -117,7 +119,7 @@ Namespace Documents
    te.StringFormat = New PdfStringFormat(align)
    te.Font = font
    te.Brush = New PdfSolidBrush(fontColor)
-   Dim res As PdfLayoutResult = te.Draw(Page, New RectangleF(left.MillimetersToPoints(), top.MillimetersToPoints(), width.MillimetersToPoints(), (297.0F - top).MillimetersToPoints()))
+   Dim res As PdfLayoutResult = te.Draw(Page, New RectangleF(left.MillimetersToPoints(), top.MillimetersToPoints(), width.MillimetersToPoints(), (420.0F - top).MillimetersToPoints()))
    top = top + (Pt * res.Bounds.Height)
 
   End Sub
