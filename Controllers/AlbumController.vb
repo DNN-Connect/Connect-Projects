@@ -31,12 +31,14 @@ Namespace Controllers
   <DnnModuleAuthorize(PermissionKey:="SUBMITTER")>
   <ValidateAntiForgeryToken()>
   Public Function Put(id As Integer, data As AlbumPutDTO) As HttpResponseMessage
-   Dim p As Project = ProjectsController.GetProject(ActiveModule.ModuleID, id)
-   If p Is Nothing Then Return Request.CreateResponse(HttpStatusCode.BadRequest, False)
-   If p.CreatedByUserID <> UserInfo.UserID AndAlso Not Security.Moderator Then
-    Return Request.CreateResponse(HttpStatusCode.BadRequest, False)
-   End If
+   Dim p As ProjectBase = CheckPermission(id)
+   If p Is Nothing Then Return New HttpResponseMessage(HttpStatusCode.BadRequest)
    Dim album As ImageCollection = JsonConvert.DeserializeObject(Of ImageCollection)(data.album)
+   Dim firstImage As String = album.GetFirstImageName()
+   If p.FirstImage <> firstImage Then
+    p.FirstImage = firstImage
+    ProjectsController.UpdateProject(p, UserInfo.UserID)
+   End If
    album.Save(GetImageMapPath(id) & "album.xml")
    Return Request.CreateResponse(HttpStatusCode.OK, True)
   End Function
@@ -45,20 +47,22 @@ Namespace Controllers
   <DnnModuleAuthorize(PermissionKey:="SUBMITTER")>
   <ValidateAntiForgeryToken()>
   Public Function DeleteImage(id As Integer, image As String) As HttpResponseMessage
-   Dim p As Project = ProjectsController.GetProject(ActiveModule.ModuleID, id)
-   If p Is Nothing Then Return Request.CreateResponse(HttpStatusCode.BadRequest, False)
-   If p.CreatedByUserID <> UserInfo.UserID AndAlso Not Security.Moderator Then
-    Return Request.CreateResponse(HttpStatusCode.BadRequest, False)
-   End If
+   Dim p As ProjectBase = CheckPermission(id)
+   If p Is Nothing Then Return New HttpResponseMessage(HttpStatusCode.BadRequest)
    For Each f As String In IO.Directory.GetFiles(GetImageMapPath(id), image & "*.*")
     Try
      IO.File.Delete(f)
     Catch ex As Exception
     End Try
    Next
-   Dim res As New ImageCollection(GetImageMapPath(id), GetImagePath(id))
-   res.Recheck()
-   Return Request.CreateResponse(HttpStatusCode.OK, res)
+   Dim album As New ImageCollection(GetImageMapPath(id), GetImagePath(id))
+   album.Recheck()
+   Dim firstImage As String = album.GetFirstImageName()
+   If p.FirstImage <> firstImage Then
+    p.FirstImage = firstImage
+    ProjectsController.UpdateProject(p, UserInfo.UserID)
+   End If
+   Return Request.CreateResponse(HttpStatusCode.OK, album)
   End Function
 #End Region
 
@@ -69,6 +73,8 @@ Namespace Controllers
   <DnnModuleAuthorize(PermissionKey:="SUBMITTER")>
   <ValidateAntiForgeryToken()>
   Public Function UploadFile(id As Integer) As HttpResponseMessage
+   Dim p As ProjectBase = CheckPermission(id)
+   If p Is Nothing Then Return New HttpResponseMessage(HttpStatusCode.BadRequest)
    Dim res As New HttpResponseMessage(HttpStatusCode.OK)
    Dim statuses As New List(Of FilesStatus)
    HandleUploadFile(System.Web.HttpContext.Current, id, statuses)
@@ -81,6 +87,8 @@ Namespace Controllers
   <DnnModuleAuthorize(PermissionKey:="SUBMITTER")>
   <ValidateAntiForgeryToken()>
   Public Function CommitFile(id As Integer, fileName As String) As HttpResponseMessage
+   Dim p As ProjectBase = CheckPermission(id)
+   If p Is Nothing Then Return New HttpResponseMessage(HttpStatusCode.BadRequest)
    Dim localFile As String = GetImageMapPath(id) & fileName
    If IO.File.Exists(localFile) Then
     Dim r As New Resizer(Settings)
@@ -88,6 +96,10 @@ Namespace Controllers
    End If
    Dim res As New ImageCollection(GetImageMapPath(id), GetImagePath(id))
    res.Recheck()
+   If p.FirstImage = "" Then
+    p.FirstImage = fileName
+    ProjectsController.UpdateProject(p, UserInfo.UserID)
+   End If
    Return Request.CreateResponse(HttpStatusCode.OK, res)
   End Function
 
@@ -179,6 +191,16 @@ Namespace Controllers
     res &= i.ToString
    End If
    Return res
+  End Function
+#End Region
+
+#Region " Private Methods "
+  Private Function CheckPermission(projectId As Integer) As ProjectBase
+   Dim projectToCheck As ProjectBase = ProjectsController.GetProject(ActiveModule.ModuleID, projectId).GetProjectBase()
+   If projectToCheck.CreatedByUserID = UserInfo.UserID Or Security.Moderator Then
+    Return projectToCheck
+   End If
+   Return Nothing
   End Function
 #End Region
 

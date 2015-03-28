@@ -17,6 +17,7 @@ CREATE TABLE {databaseOwner}{objectQualifier}Connect_Projects_Projects(
  [Aims] [nvarchar](max) NULL,
  [Description] [nvarchar](max) NULL,
  [Dependencies] [nvarchar](max) NULL,
+ [FirstImage] [varchar](50) NULL,
  [CreatedByUserID] [int] NOT NULL,
  [CreatedOnDate] [datetime] NOT NULL,
  [LastModifiedByUserID] [int] NOT NULL,

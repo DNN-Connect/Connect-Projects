@@ -59,6 +59,14 @@ Namespace Common
                End Function)
   End Sub
 
+  Public Function GetFirstImageName() As String
+   Me.Sort()
+   If Images.Count > 0 Then
+    Return Images(0).File
+   End If
+   Return ""
+  End Function
+
   Public Sub Delete(file As String)
    Try
     Dim i As Image = (From x In Images Select x Where x.File = file)(0)
