@@ -94,13 +94,13 @@ Namespace Controllers
     Dim r As New Resizer(Settings)
     r.Process(localFile)
    End If
-   Dim res As New ImageCollection(GetImageMapPath(id), GetImagePath(id))
-   res.Recheck()
+   Dim album As New ImageCollection(GetImageMapPath(id), GetImagePath(id))
+   album.Recheck()
    If p.FirstImage = "" Then
-    p.FirstImage = fileName
+    p.FirstImage = album.GetFirstImageName()
     ProjectsController.UpdateProject(p, UserInfo.UserID)
    End If
-   Return Request.CreateResponse(HttpStatusCode.OK, res)
+   Return Request.CreateResponse(HttpStatusCode.OK, album)
   End Function
 
   Private Function WriteJsonIframeSafe(context As HttpContext, statuses As List(Of FilesStatus)) As String

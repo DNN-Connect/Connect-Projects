@@ -95,6 +95,11 @@ Namespace Common
    End Try
   End Sub
 
+  <Extension()>
+  Public Function AddImageSize(fileName As String, sizeQual As String) As String
+   Return fileName.Substring(0, 15) & sizeQual & fileName.Substring(15)
+  End Function
+
 #Region " Read Value Extensions "
   <Extension()>
   Public Sub ReadValue(ByRef valueTable As NameValueCollection, valueName As String, ByRef variable As Integer)

@@ -141,7 +141,6 @@ mod.controller('ProjectListCtrl', ['$scope', '$compile', 'projectsFactory', func
 	projectsFactory.projects($scope.moduleId, function (data) {
 		$scope.projects = data;
 		$scope.$apply();
-		$('.iw_bgt').stupidtable();
 	});
 	$scope.approveProject = function (projectId, approved, success, fail) {
 		projectsFactory.approveProject($scope.moduleId, projectId, approved, success, fail);
@@ -152,6 +151,12 @@ mod.controller('ProjectListCtrl', ['$scope', '$compile', 'projectsFactory', func
 			projectsFactory.deleteProject($scope.moduleId, projectId, success, fail);
 		}
 		return false;
+	}
+	$scope.random = function () {
+		return 0.5 - Math.random();
+	}
+	$scope.gotoProject = function (projectId) {
+		window.location.href = window.location.pathname + '#/Project/' + projectId;
 	}
 }]);
 
@@ -232,7 +237,7 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 	};
 	$scope.deleteImage = function (image) {
 		if (confirm('Delete this image?')) {
-			projectsFactory.deleteImage($scope.moduleId, $scope.projectId, image.File, function(data) {
+			projectsFactory.deleteImage($scope.moduleId, $scope.projectId, image.File, function (data) {
 				$scope.album = data;
 				$scope.$apply();
 			});
@@ -272,3 +277,7 @@ function getTemplate(template) {
 		}, false);
 	return res;
 }
+
+String.prototype.AddImageSize = function (size) {
+	return this.substring(0, 15) + size + this.substring(15);
+};

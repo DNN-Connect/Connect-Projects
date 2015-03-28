@@ -62,7 +62,7 @@ Namespace Common
   Public Function GetFirstImageName() As String
    Me.Sort()
    If Images.Count > 0 Then
-    Return Images(0).File
+    Return Images(0).File & Images(0).Extension
    End If
    Return ""
   End Function
