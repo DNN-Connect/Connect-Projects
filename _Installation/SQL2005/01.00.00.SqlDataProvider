@@ -63,7 +63,6 @@ IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databa
 ALTER TABLE {databaseOwner}{objectQualifier}Connect_Projects_Projects CHECK CONSTRAINT FK_{objectQualifier}Connect_Projects_Projects_Modules
 GO
 
-/******* TRIGGERS *******/
 /******* VIEWS *******/
 IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'{databaseOwner}{objectQualifier}vw_Connect_Projects_Projects'))
 DROP VIEW {databaseOwner}{objectQualifier}vw_Connect_Projects_Projects
@@ -87,5 +86,11 @@ FROM {databaseOwner}{objectQualifier}Connect_Projects_Projects p
  LEFT JOIN {databaseOwner}{objectQualifier}Users um ON um.UserID = p.LastModifiedByUserID
 GO
 
-/******* FUNCTIONS *******/
-/******* SPROCS *******/
+/******* DATA *******/
+INSERT INTO {databaseOwner}{objectQualifier}Connect_Projects_ProjectTypes ([TypeDescription],[ProjectColor]) VALUES ('MIT/BSD Open Source', '8767A6');
+INSERT INTO {databaseOwner}{objectQualifier}Connect_Projects_ProjectTypes ([TypeDescription],[ProjectColor]) VALUES ('GPL/LGPL Open Source', '22B5BF');
+INSERT INTO {databaseOwner}{objectQualifier}Connect_Projects_ProjectTypes ([TypeDescription],[ProjectColor]) VALUES ('Commercial Closed Source', 'E98813');
+INSERT INTO {databaseOwner}{objectQualifier}Connect_Projects_ProjectTypes ([TypeDescription],[ProjectColor]) VALUES ('Commercial Open Source', 'F7C808');
+INSERT INTO {databaseOwner}{objectQualifier}Connect_Projects_ProjectTypes ([TypeDescription],[ProjectColor]) VALUES ('Freemium', 'D2315D');
+GO
+
