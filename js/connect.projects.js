@@ -154,10 +154,13 @@ mod.controller('ProjectListCtrl', ['$scope', '$compile', 'projectsFactory', func
 	}
 }]);
 
-mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory', 'FileUploader', function ($scope, $routeParams, projectsFactory, FileUploader) {
+mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory', 'FileUploader', '$sce', function ($scope, $routeParams, projectsFactory, FileUploader, $sce) {
 	$scope.projectId = $routeParams.ProjectId;
 	projectsFactory.project($scope.moduleId, $scope.projectId, function (data) {
 		$scope.project = data;
+		$scope.ProjectAims = $sce.trustAsHtml($scope.project.Aims.replace(/\n/g, '<br/>'));
+		$scope.ProjectDescription = $sce.trustAsHtml($scope.project.Description.replace(/\n/g, '<br/>'));
+		$scope.ProjectDependencies = $sce.trustAsHtml($scope.project.Dependencies.replace(/\n/g, '<br/>'));
 		$scope.$apply();
 	});
 	projectsFactory.getAlbum($scope.moduleId, $scope.projectId, function (data) {

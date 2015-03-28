@@ -20,16 +20,13 @@
    <dd data-ng-if="project.Url2 != ''"><a href="{{project.Url2}}">{{project.Url2}}</a></dd>
   </dl>
   <h3>@Html.GetLocalizedString("Aims")</h3>
-  <div class="cp_para">
-   {{project.Aims | newlines}}
+  <div class="cp_para" data-ng-bind-html="ProjectAims">
   </div>
   <h3>@Html.GetLocalizedString("Description")</h3>
-  <div class="cp_para">
-   {{project.Description | newlines}}
+  <div class="cp_para" data-ng-bind-html="ProjectDescription">
   </div>
   <h3>@Html.GetLocalizedString("Dependencies")</h3>
-  <div class="cp_para">
-   {{project.Dependencies | newlines}}
+  <div class="cp_para" data-ng-bind-html="ProjectDependencies">
   </div>
  </div>
  <div class="cp_column">
