@@ -12,9 +12,11 @@ CREATE TABLE [dbo].[Connect_Projects_Projects](
 	[Url2] [nvarchar](500) NULL,
 	[Status] [nvarchar](500) NULL,
 	[Owners] [nvarchar](1000) NULL,
+	[People] [nvarchar](1000) NULL,
 	[Aims] [nvarchar](max) NULL,
 	[Description] [nvarchar](max) NULL,
 	[Dependencies] [nvarchar](max) NULL,
+	[FirstImage] [varchar](50) NULL,
 	[CreatedByUserID] [int] NOT NULL,
 	[CreatedOnDate] [datetime] NOT NULL,
 	[LastModifiedByUserID] [int] NOT NULL,
@@ -78,6 +80,8 @@ SET QUOTED_IDENTIFIER ON
 
 
 
+
+
 CREATE VIEW [dbo].[vw_Connect_Projects_Projects]
 AS
 SELECT
@@ -90,6 +94,8 @@ FROM dbo.Connect_Projects_Projects p
  INNER JOIN dbo.Connect_Projects_ProjectTypes pt ON p.ProjectType=pt.ProjectTypeId
  LEFT JOIN dbo.Users uc ON uc.UserID = p.CreatedByUserID
  LEFT JOIN dbo.Users um ON um.UserID = p.LastModifiedByUserID
+
+
 
 
 
