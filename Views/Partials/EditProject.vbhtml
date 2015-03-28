@@ -172,11 +172,6 @@
  @Html.GetLocalizedString("Submit")
 </button>
 <button type="button" class="btn btn-primary dnnSecondaryAction"
-        data-ng-click="approveProject(projectId)"
-        data-ng-if="security.moderator == true">
- @Html.GetLocalizedString("Approve")
-</button>
-<button type="button" class="btn btn-primary dnnSecondaryAction"
         data-ng-click="deleteProject(projectId, '@Html.GetLocalizedString("DeleteProject.Confirm")')"
         data-ng-if="projectId != -1">
  @Html.GetLocalizedString("Delete")

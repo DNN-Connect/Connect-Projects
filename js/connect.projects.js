@@ -115,9 +115,6 @@ mod.factory('projectsFactory', [function () {
 				Dependencies: project.Dependencies
 			}, success, fail);
 		},
-		approveProject: function (moduleId, projectId, approved, success, fail) {
-			dataCall(moduleId, 'Projects', 'Approve', { id: projectId, approved: approved }, success, fail);
-		},
 		deleteProject: function (moduleId, projectId, success, fail) {
 			dataCall(moduleId, 'Projects', 'Delete', { id: projectId }, success, fail);
 		},
@@ -143,10 +140,6 @@ mod.controller('ProjectListCtrl', ['$scope', '$compile', 'projectsFactory', func
 		$scope.projects = data;
 		$scope.$apply();
 	});
-	$scope.approveProject = function (projectId, approved, success, fail) {
-		projectsFactory.approveProject($scope.moduleId, projectId, approved, success, fail);
-		return false;
-	}
 	$scope.deleteProject = function (projectId, confirmMsg, success, fail) {
 		if (confirm(confirmMsg)) {
 			projectsFactory.deleteProject($scope.moduleId, projectId, success, fail);
@@ -187,11 +180,6 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 	$scope.updateProject = function (project) {
 		projectsFactory.updateProject($scope.moduleId, project, function (data) {
 			window.location.href = window.location.pathname + '#/Projects';
-		});
-		return false;
-	}
-	$scope.approveProject = function (projectId, approved) {
-		projectsFactory.approveProject($scope.moduleId, projectId, approved, function (data) {
 		});
 		return false;
 	}
