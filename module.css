@@ -1,5 +1,9 @@
 ﻿.dnnFormItem .help-block {
  display: none;
+ color: red;
+ font-weight: bold;
+ margin-left: 32.075%;
+ padding-left: 40px;
 }
 
 .dnnFormItem.has-error .help-block {
@@ -29,19 +33,20 @@
  padding: 0;
 }
 
- .cp_sortable li {
-  display: inline-block;
-  width: 160px;
-  padding: 10px;
-  border: 1px solid #999;
-  border-radius: 5px;
-  margin: 10px;
- }
+.cp_sortable li {
+ display: inline-block;
+ width: 160px;
+ padding: 10px;
+ border: 1px solid #999;
+ border-radius: 5px;
+ margin: 10px;
+ background-color: #eee;
+}
 
-  .cp_sortable li div.delbutton {
-   width: 100%;
-   text-align: right;
-  }
+.cp_sortable li div.delbutton {
+ width: 100%;
+ text-align: right;
+}
 
 .delbutton a, .delbutton a:hover {
  text-decoration: none;
@@ -54,7 +59,7 @@
 }
 
 .cp_sortable textarea {
- width: 100%;
+ width: 140px;
  margin-bottom: 10px;
 }
 
@@ -79,26 +84,28 @@
 
 dl.cp_dl_horizontal {
  margin-bottom: 15px;
- overflow:hidden;
+ overflow: hidden;
 }
 
-dl.cp_dl_horizontal dt {
- float: left;
- font-weight: bold;
- margin-right: 10px;
- padding: 5px;
- width: 100px;
-}
+ dl.cp_dl_horizontal dt {
+  float: left;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 5px;
+  width: 100px;
+ }
 
-dl.cp_dl_horizontal dd {
- margin:2px 0;
- padding:5px 0;
-}
+ dl.cp_dl_horizontal dd {
+  margin: 2px 0;
+  padding: 5px 0;
+ }
+
 .cp_img {
  width: 100%;
  padding: 20px;
- text-align: center; 
+ text-align: center;
 }
+
 .cp_img span {
  display: block;
  font-size: smaller;
