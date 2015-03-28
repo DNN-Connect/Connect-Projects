@@ -51,6 +51,9 @@ Namespace Documents
    DrawTextBlock("Owners", GetHelvetica(22, False), projectColor, y, 10.0F, 130.0F)
    DrawTextBlock(project.Owners, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
    y += 2
+   DrawTextBlock("People/Authors", GetHelvetica(22, False), projectColor, y, 10.0F, 130.0F)
+   DrawTextBlock(project.People, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
+   y += 2
    DrawTextBlock("Status", GetHelvetica(22, False), projectColor, y, 10.0F, 130.0F)
    DrawTextBlock(project.Status, GetCourier(18, False), Color.Black, y, 10.0F, 130.0F)
    y += 2

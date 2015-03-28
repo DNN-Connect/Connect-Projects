@@ -14,6 +14,7 @@ CREATE TABLE {databaseOwner}{objectQualifier}Connect_Projects_Projects(
  [Url2] [nvarchar](500) NULL,
  [Status] [nvarchar](500) NULL,
  [Owners] [nvarchar](1000) NULL,
+ [People] [nvarchar](1000) NULL,
  [Aims] [nvarchar](max) NULL,
  [Description] [nvarchar](max) NULL,
  [Dependencies] [nvarchar](max) NULL,

@@ -109,6 +109,7 @@ mod.factory('projectsFactory', [function () {
 				Url2: project.Url2,
 				Status: project.Status,
 				Owners: project.Owners,
+				People: project.People,
 				Aims: project.Aims,
 				Description: project.Description,
 				Dependencies: project.Dependencies

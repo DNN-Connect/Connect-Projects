@@ -9,6 +9,8 @@
    <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("Owners")</dt>
    <dd>{{project.Owners}}&nbsp;</dd>
+   <dt>@Html.GetLocalizedString("People")</dt>
+   <dd>{{project.People}}&nbsp;</dd>
    <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("Status")</dt>
    <dd>{{project.Status}}&nbsp;</dd>
