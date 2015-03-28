@@ -8,6 +8,12 @@
     <label>
      <span>@Html.GetLocalizedString("ProjectName")</span>
     </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("ProjectName.Help")</span>
+     </div>
+    </div>
    </div>
    <input type="text" id="txtProjectName" name="ProjectName" class="form-control" data-ng-model="project.ProjectName"
           required />
@@ -18,6 +24,12 @@
     <label>
      <span>@Html.GetLocalizedString("ProjectType")</span>
     </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("ProjectType.Help")</span>
+     </div>
+    </div>
    </div>
    <select id="ProjectType" name="ProjectType" class="form-control" data-ng-model="project.ProjectType" required>
     @For Each pt As ProjectType In ProjectTypesController.GetProjectTypes
@@ -31,6 +43,12 @@
     <label>
      <span>Url 1</span>
     </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("Url.Help")</span>
+     </div>
+    </div>
    </div>
    <input type="text" id="txtUrl1" name="Url1" class="form-control" data-ng-model="project.Url1"
           data-ng-pattern="/^(http|https)\:///" />
@@ -41,6 +59,12 @@
     <label>
      <span>Url 2</span>
     </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("Url.Help")</span>
+     </div>
+    </div>
    </div>
    <input type="text" id="txtUrl2" name="Url2" class="form-control" data-ng-model="project.Url2"
           data-ng-pattern="/https?\:.*/" />
@@ -51,6 +75,12 @@
     <label>
      <span>@Html.GetLocalizedString("Status")</span>
     </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("Status.Help")</span>
+     </div>
+    </div>
    </div>
    <input type="text" id="txtStatus" class="form-control" data-ng-model="project.Status" />
   </div>
@@ -59,14 +89,40 @@
     <label>
      <span>@Html.GetLocalizedString("Owners")</span>
     </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("Owners.Help")</span>
+     </div>
+    </div>
    </div>
    <input type="text" id="txtOwners" class="form-control" data-ng-model="project.Owners" />
   </div>
   <div class="dnnFormItem">
    <div class="dnnLabel">
     <label>
+     <span>@Html.GetLocalizedString("People")</span>
+    </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("People.Help")</span>
+     </div>
+    </div>
+   </div>
+   <input type="text" id="txtPeople" class="form-control" data-ng-model="project.People" />
+  </div>
+  <div class="dnnFormItem">
+   <div class="dnnLabel">
+    <label>
      <span>@Html.GetLocalizedString("Aims")</span>
     </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("Aims.Help")</span>
+     </div>
+    </div>
    </div>
    <textarea cols="80" rows="5" data-ng-model="project.Aims"></textarea>
   </div>
@@ -75,6 +131,12 @@
     <label>
      <span>@Html.GetLocalizedString("Description")</span>
     </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("Description.Help")</span>
+     </div>
+    </div>
    </div>
    <textarea cols="80" rows="5" data-ng-model="project.Description"></textarea>
   </div>
@@ -83,6 +145,12 @@
     <label>
      <span>@Html.GetLocalizedString("Dependencies")</span>
     </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("Dependencies.Help")</span>
+     </div>
+    </div>
    </div>
    <textarea cols="80" rows="5" data-ng-model="project.Dependencies"></textarea>
   </div>

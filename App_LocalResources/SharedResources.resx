@@ -189,4 +189,34 @@
   <data name="SaveChanges.Text" xml:space="preserve">
     <value>Save Changes</value>
   </data>
+  <data name="People.Text" xml:space="preserve">
+    <value>People, Authors</value>
+  </data>
+  <data name="Aims.Help" xml:space="preserve">
+    <value>Describe what the project aims to accomplish. What were the criteria when you set out to make this? Why didn't existing solutions work for you?</value>
+  </data>
+  <data name="Dependencies.Help" xml:space="preserve">
+    <value>DNN version dependency and any other dependencies that we should be aware of. Preferably with version. E.g. Bootstrap 3, Angular 1.2, etc.</value>
+  </data>
+  <data name="Description.Help" xml:space="preserve">
+    <value>Summary of the main features of your project. Focus on how it has achieved the aims you set out to accomplish. Why should we be interested in this and not a similar project (if it exists)?</value>
+  </data>
+  <data name="Owners.Help" xml:space="preserve">
+    <value>Who owns the copyright to this project?</value>
+  </data>
+  <data name="People.Help" xml:space="preserve">
+    <value>Who are the pepole behind this? This can be people who write code, but it can also be those that help manage the community, maintain a site, etc.</value>
+  </data>
+  <data name="ProjectName.Help" xml:space="preserve">
+    <value>Please keep this concise so people quickly recognize the project.</value>
+  </data>
+  <data name="ProjectType.Help" xml:space="preserve">
+    <value>What is the underlying license model of the project? If you can't find the one you need, please let us know.</value>
+  </data>
+  <data name="Status.Help" xml:space="preserve">
+    <value>Some information about the status of the project. Is it in a stable release? Just in planning? Be honest so people don't get disappointed when they go to your site.</value>
+  </data>
+  <data name="Url.Help" xml:space="preserve">
+    <value>Urls where the project can be found. Codeplex, Github, DNN Store, or your personal site?</value>
+  </data>
 </root>
