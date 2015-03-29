@@ -155,10 +155,15 @@
     <Compile Include="Common\Resizer.vb" />
     <Compile Include="Common\RouteMapper.vb" />
     <Compile Include="Controllers\AlbumController.vb" />
+    <Compile Include="Controllers\LicenseTypes\LicenseTypesController.vb" />
+    <Compile Include="Controllers\LicenseTypes\LicenseTypesController_Services.vb" />
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController.vb" />
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController_Services.vb" />
     <Compile Include="Data\RepositoryImpl.vb" />
     <Compile Include="Documents\ProjectDocument.vb" />
+    <Compile Include="Models\LicenseTypes\LicenseType.vb" />
+    <Compile Include="Models\LicenseTypes\LicenseTypeBase_Methods.vb" />
+    <Compile Include="Models\LicenseTypes\LicenseTypeBase_Properties.vb" />
     <Compile Include="Models\Projects\Project_Interfaces.vb" />
     <Compile Include="Models\Projects\Project_Properties.vb" />
     <Compile Include="Models\ProjectTypes\ProjectType.vb" />
@@ -167,6 +172,8 @@
     <Compile Include="ModuleHome.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Repositories\LicenseTypesBaseRepository.vb" />
+    <Compile Include="Repositories\LicenseTypesRepository.vb" />
     <Compile Include="Repositories\ProjectsBaseRepository.vb" />
     <Compile Include="Repositories\ProjectsRepository.vb" />
     <Compile Include="Repositories\ProjectTypesBaseRepository.vb" />

@@ -1,5 +1,7 @@
 ﻿@Imports Connect.DNN.Modules.Projects.Models.ProjectTypes
 @Imports Connect.DNN.Modules.Projects.Controllers.ProjectTypes
+@Imports Connect.DNN.Modules.Projects.Models.LicenseTypes
+@Imports Connect.DNN.Modules.Projects.Controllers.LicenseTypes
 
 <div class="dnnForm dnnClear" data-ng-form name="frmEditProject">
  <fieldset>
@@ -31,7 +33,7 @@
      </div>
     </div>
    </div>
-   <select id="ProjectType" name="ProjectType" class="form-control" data-ng-model="project.ProjectType" required>
+   <select id="ProjectType" name="ProjectType" class="form-control" data-ng-model="project.ProjectTypeId" required>
     @For Each pt As ProjectType In ProjectTypesController.GetProjectTypes
      @<option value="@pt.ProjectTypeId">@pt.TypeDescription</option>
     Next
@@ -39,6 +41,24 @@
    <p class="help-block" ng-if="frmEditProject.ProjectType.$error.required">@Html.GetLocalizedString("ProjectType.Required")</p>
   </div>
   <div class="dnnFormItem" show-errors>
+   <div class="dnnLabel">
+    <label>
+     <span>@Html.GetLocalizedString("LicenseType")</span>
+    </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("LicenseType.Help")</span>
+     </div>
+    </div>
+   </div>
+   <select id="LicenseType" name="LicenseType" class="form-control" data-ng-model="project.LicenseTypeId" required>
+    @For Each lt As LicenseType In LicenseTypesController.GetLicenseTypes
+     @<option value="@lt.LicenseTypeId">@lt.TypeDescription</option>
+    Next
+   </select>
+   <p class="help-block" ng-if="frmEditProject.ProjectType.$error.required">@Html.GetLocalizedString("ProjectType.Required")</p>
+  </div>  <div class="dnnFormItem" show-errors>
    <div class="dnnLabel">
     <label>
      <span>Url 1</span>

@@ -5,7 +5,10 @@
  <div class="cp_column">
   <dl class="cp_dl_horizontal">
    <dt>@Html.GetLocalizedString("ProjectType")</dt>
-   <dd>{{project.TypeDescription}}&nbsp;</dd>
+   <dd>{{project.ProjectType}}&nbsp;</dd>
+   <div style="clear:both"></div>
+   <dt>@Html.GetLocalizedString("LicenseType")</dt>
+   <dd>{{project.LicenseType}}&nbsp;</dd>
    <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("Owners")</dt>
    <dd>{{project.Owners}}&nbsp;</dd>

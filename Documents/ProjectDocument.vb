@@ -48,7 +48,10 @@ Namespace Documents
 
    Dim y As Single = 40.0F
    DrawTextBlock("Project Type", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
-   DrawTextBlock(project.TypeDescription, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
+   DrawTextBlock(project.ProjectType, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
+   y += 2
+   DrawTextBlock("License Type", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   DrawTextBlock(project.LicenseType, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    y += 2
    DrawTextBlock("Owners", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
    DrawTextBlock(project.Owners, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)

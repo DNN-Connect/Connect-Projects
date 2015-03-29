@@ -211,12 +211,21 @@
     <value>Please keep this concise so people quickly recognize the project.</value>
   </data>
   <data name="ProjectType.Help" xml:space="preserve">
-    <value>What is the underlying license model of the project? If you can't find the one you need, please let us know.</value>
+    <value>What kind of project is this? Let us know if the one you want is not there.</value>
   </data>
   <data name="Status.Help" xml:space="preserve">
     <value>Some information about the status of the project. Is it in a stable release? Just in planning? Be honest so people don't get disappointed when they go to your site.</value>
   </data>
   <data name="Url.Help" xml:space="preserve">
     <value>Urls where the project can be found. Codeplex, Github, DNN Store, or your personal site?</value>
+  </data>
+  <data name="LicenseType.Help" xml:space="preserve">
+    <value>What is the underlying license model of the project? If you can't find the one you need, please let us know.</value>
+  </data>
+  <data name="LicenseType.Text" xml:space="preserve">
+    <value>License Type</value>
+  </data>
+  <data name="LicenseType.Required" xml:space="preserve">
+    <value>A license type is required</value>
   </data>
 </root>
