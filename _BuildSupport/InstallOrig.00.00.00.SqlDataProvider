@@ -1,5 +1,23 @@
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_LicenseTypes]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Connect_Projects_LicenseTypes](
+	[LicenseTypeId] [int] IDENTITY(1,1) NOT NULL,
+	[TypeDescription] [nvarchar](300) NOT NULL,
+	[ProjectColor] [varchar](10) NOT NULL,
+ CONSTRAINT [PK_Connect_Projects_LicenseTypes] PRIMARY KEY CLUSTERED 
+(
+	[LicenseTypeId] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]') AND type in (N'U'))
 BEGIN
 CREATE TABLE [dbo].[Connect_Projects_Projects](
@@ -7,7 +25,7 @@ CREATE TABLE [dbo].[Connect_Projects_Projects](
 	[ModuleId] [int] NOT NULL,
 	[Visible] [bit] NOT NULL,
 	[ProjectName] [nvarchar](1000) NOT NULL,
-	[ProjectType] [int] NOT NULL,
+	[LicenseTypeId] [int] NOT NULL,
 	[Url1] [nvarchar](500) NULL,
 	[Url2] [nvarchar](500) NULL,
 	[Status] [nvarchar](500) NULL,
@@ -21,6 +39,7 @@ CREATE TABLE [dbo].[Connect_Projects_Projects](
 	[CreatedOnDate] [datetime] NOT NULL,
 	[LastModifiedByUserID] [int] NOT NULL,
 	[LastModifiedOnDate] [datetime] NOT NULL,
+	[ProjectTypeId] [int] NOT NULL,
  CONSTRAINT [PK_Connect_Projects_Projects] PRIMARY KEY CLUSTERED 
 (
 	[ProjectId] ASC
@@ -38,7 +57,6 @@ BEGIN
 CREATE TABLE [dbo].[Connect_Projects_ProjectTypes](
 	[ProjectTypeId] [int] IDENTITY(1,1) NOT NULL,
 	[TypeDescription] [nvarchar](300) NOT NULL,
-	[ProjectColor] [varchar](10) NOT NULL,
  CONSTRAINT [PK_Connect_Projects_ProjectTypes] PRIMARY KEY CLUSTERED 
 (
 	[ProjectTypeId] ASC
@@ -49,8 +67,18 @@ GO
 
 
 
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_LicenseTypes]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
+ALTER TABLE [dbo].[Connect_Projects_Projects]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_Projects_LicenseTypes] FOREIGN KEY([LicenseTypeId])
+REFERENCES [dbo].[Connect_Projects_LicenseTypes] ([LicenseTypeId])
+ON DELETE CASCADE
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_LicenseTypes]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
+ALTER TABLE [dbo].[Connect_Projects_Projects] CHECK CONSTRAINT [FK_Connect_Projects_Projects_LicenseTypes]
+GO
+
+
+
 IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_ProjectTypes]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
-ALTER TABLE [dbo].[Connect_Projects_Projects]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_Projects_ProjectTypes] FOREIGN KEY([ProjectType])
+ALTER TABLE [dbo].[Connect_Projects_Projects]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_Projects_ProjectTypes] FOREIGN KEY([ProjectTypeId])
 REFERENCES [dbo].[Connect_Projects_ProjectTypes] ([ProjectTypeId])
 ON DELETE CASCADE
 IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_ProjectTypes]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
@@ -82,18 +110,22 @@ SET QUOTED_IDENTIFIER ON
 
 
 
+
 CREATE VIEW [dbo].[vw_Connect_Projects_Projects]
 AS
 SELECT
  p.*,
- pt.TypeDescription,
- pt.ProjectColor,
+ pt.TypeDescription ProjectType,
+ lt.TypeDescription LicenseType,
+ lt.ProjectColor,
  uc.DisplayName AS CreatedByUser,
  um.DisplayName AS LastModifiedByUser
 FROM dbo.Connect_Projects_Projects p
- INNER JOIN dbo.Connect_Projects_ProjectTypes pt ON p.ProjectType=pt.ProjectTypeId
+ INNER JOIN dbo.Connect_Projects_ProjectTypes pt ON p.ProjectTypeId=pt.ProjectTypeId
+ INNER JOIN dbo.Connect_Projects_LicenseTypes lt ON p.LicenseTypeId=lt.LicenseTypeId
  LEFT JOIN dbo.Users uc ON uc.UserID = p.CreatedByUserID
  LEFT JOIN dbo.Users um ON um.UserID = p.LastModifiedByUserID
+
 
 
 

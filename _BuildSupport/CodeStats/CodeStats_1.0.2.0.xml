@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<code-summaries>
+  <code-summary date="2015-03-29T15:02:16.7215729+02:00" buildname="1.0.2.0">
+    <linecount label="VB" totalLineCount="5508" emptyLineCount="728" commentLineCount="366">
+      <file-summaries>
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\AuditableEntity.vb" totalLineCount="28" emptyLineCount="6" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\ContextSecurity.vb" totalLineCount="21" emptyLineCount="4" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\FilesStatus.vb" totalLineCount="20" emptyLineCount="1" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\Globals.vb" totalLineCount="176" emptyLineCount="17" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\Image.vb" totalLineCount="73" emptyLineCount="11" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\ImageCollection.vb" totalLineCount="143" emptyLineCount="16" commentLineCount="3" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\ModuleApiController.vb" totalLineCount="61" emptyLineCount="7" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\ModuleBase.vb" totalLineCount="85" emptyLineCount="16" commentLineCount="3" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\ModuleSettings.vb" totalLineCount="77" emptyLineCount="13" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\ModuleWebPage.vb" totalLineCount="84" emptyLineCount="12" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\RazorControl.vb" totalLineCount="48" emptyLineCount="11" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\Resizer.vb" totalLineCount="76" emptyLineCount="16" commentLineCount="3" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\RouteMapper.vb" totalLineCount="19" emptyLineCount="3" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\LicenseTypes\LicenseTypesController.vb" totalLineCount="47" emptyLineCount="19" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\LicenseTypes\LicenseTypesController_Services.vb" totalLineCount="29" emptyLineCount="6" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\Projects\ProjectsController.vb" totalLineCount="53" emptyLineCount="19" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\Projects\ProjectsController_Services.vb" totalLineCount="105" emptyLineCount="10" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\ProjectTypes\ProjectTypesController.vb" totalLineCount="47" emptyLineCount="19" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\ProjectTypes\ProjectTypesController_Services.vb" totalLineCount="21" emptyLineCount="5" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\AlbumController.vb" totalLineCount="208" emptyLineCount="16" commentLineCount="4" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\ModuleController.vb" totalLineCount="26" emptyLineCount="3" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Data\RepositoryImpl.vb" totalLineCount="116" emptyLineCount="15" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Documents\ProjectDocument.vb" totalLineCount="164" emptyLineCount="23" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular-file-upload.min.js" totalLineCount="6" emptyLineCount="0" commentLineCount="5" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular-route.min.js" totalLineCount="15" emptyLineCount="0" commentLineCount="6" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular.min.js" totalLineCount="250" emptyLineCount="0" commentLineCount="6" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\connect.projects.js" totalLineCount="276" emptyLineCount="12" commentLineCount="1" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\es5-sham.min.js" totalLineCount="7" emptyLineCount="0" commentLineCount="6" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\es5-shim.min.js" totalLineCount="7" emptyLineCount="0" commentLineCount="6" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\jquery.colorbox.js" totalLineCount="1084" emptyLineCount="199" commentLineCount="79" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\simple.datagrid.js" totalLineCount="968" emptyLineCount="77" commentLineCount="25" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\stupidtable.min.js" totalLineCount="4" emptyLineCount="0" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\LicenseTypes\LicenseType.vb" totalLineCount="33" emptyLineCount="7" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\LicenseTypes\LicenseTypeBase_Methods.vb" totalLineCount="64" emptyLineCount="11" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\LicenseTypes\LicenseTypeBase_Properties.vb" totalLineCount="46" emptyLineCount="9" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\ProjectBase_Methods.vb" totalLineCount="120" emptyLineCount="11" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\ProjectBase_Properties.vb" totalLineCount="103" emptyLineCount="9" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\Project_Interfaces.vb" totalLineCount="51" emptyLineCount="9" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\Project_Properties.vb" totalLineCount="65" emptyLineCount="9" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\ProjectTypes\ProjectType.vb" totalLineCount="32" emptyLineCount="7" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\ProjectTypes\ProjectTypeBase_Methods.vb" totalLineCount="61" emptyLineCount="11" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\ProjectTypes\ProjectTypeBase_Properties.vb" totalLineCount="42" emptyLineCount="9" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\LicenseTypesBaseRepository.vb" totalLineCount="11" emptyLineCount="4" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\LicenseTypesRepository.vb" totalLineCount="11" emptyLineCount="4" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\ProjectsBaseRepository.vb" totalLineCount="11" emptyLineCount="4" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\ProjectsRepository.vb" totalLineCount="11" emptyLineCount="4" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\ProjectTypesBaseRepository.vb" totalLineCount="11" emptyLineCount="4" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\ProjectTypesRepository.vb" totalLineCount="11" emptyLineCount="4" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\ModuleHome.vb" totalLineCount="33" emptyLineCount="9" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx" totalLineCount="65" emptyLineCount="1" commentLineCount="0" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx.designer.vb" totalLineCount="285" emptyLineCount="33" commentLineCount="218" />
+        <file-summary name="D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx.vb" totalLineCount="98" emptyLineCount="13" commentLineCount="1" />
+      </file-summaries>
+    </linecount>
+  </code-summary>
+</code-summaries>

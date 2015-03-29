@@ -30,7 +30,7 @@ set.buildvars:
 
 set.versions:
 
-     [echo] Set Version 01.00.01 on Connect.Projects.vbproj
+     [echo] Set Version 01.00.02 on Connect.Projects.vbproj
 Checking ..\My Project\AssemblyInfo.vb
 Checking ..\_Installation\Connect.Projects.dnn
 Reset References to _References\
@@ -65,8 +65,8 @@ Adjusting 'Newtonsoft.Json, Version=4.5.6.14930, Culture=neutral, PublicKeyToken
 Adjusting Path 'Newtonsoft.Json, Version=4.5.6.14930, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL'
 Adjusting 'Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL'
 Adjusting Path 'Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL'
-Adjusting 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
-Adjusting Path 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
+Adjusting 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
+Adjusting Path 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
 Adjusting 'System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
 Adjusting Path 'System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
 Adjusting 'System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
@@ -79,7 +79,7 @@ clean.bindirectory:
 compile.projects:
 
      [echo] Building Connect.Projects.vbproj
-  [msbuild] Build started 28/3/2015 21:57:37.
+  [msbuild] Build started 29/3/2015 15:02:16.
   [msbuild] Overriding target "GetFrameworkPaths" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "GetFrameworkPaths" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.NETFramework.targets".
   [msbuild] Overriding target "SatelliteDllsProjectOutputGroup" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "SatelliteDllsProjectOutputGroup" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets".
   [msbuild] Project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" on node 1 (Rebuild target(s)).
@@ -262,7 +262,7 @@ compile.projects:
   [msbuild]       System.Data
   [msbuild]       System.Data.DataSetExtensions
   [msbuild]       System.Drawing
-  [msbuild]       System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
+  [msbuild]       System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
   [msbuild]           Private = 'False'
   [msbuild]           HintPath = '_References\System.Net.Http.dll'
   [msbuild]           SpecificVersion = 'False'
@@ -541,14 +541,14 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\mscorlib.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.winmd", but it didn't exist.
-  [msbuild]       Required by "System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL".
+  [msbuild]       Required by "System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral".
   [msbuild]       Required by "System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
-  [msbuild]       Required by "System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
+  [msbuild]       Required by "System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL".
   [msbuild]       Required by "Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL".
   [msbuild]       Required by "Syncfusion.Core".
   [msbuild]       Required by "DotNetNuke.WebUtility, Version=4.2.1.783, Culture=neutral, processorArchitecture=MSIL".
@@ -1257,13 +1257,13 @@ compile.projects:
   [msbuild]               DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]               DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]               DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, processorArchitecture=MSIL
+  [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll
+  [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll".
+  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll
   [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll".
   [msbuild]               DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]               DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
-  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
-  [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll
-  [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll".
   [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]       References which depend on "DotNetNuke.Web.Client, Version=6.1.0.272, Culture=neutral, PublicKeyToken=null" [].
   [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll
@@ -1440,7 +1440,7 @@ compile.projects:
   [msbuild] Output file "obj\release\Connect.DNN.Modules.Projects.xml" does not exist.
   [msbuild] Using "Vbc" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
   [msbuild] Task "Vbc"
-  [msbuild]   C:\Windows\Microsoft.NET\Framework\v4.0.30319\Vbc.exe /noconfig /imports:Connect.DNN.Modules.Projects.Common,Microsoft.VisualBasic,System,System.Collections,System.Collections.Generic,System.Data,System.Diagnostics,System.Collections.Specialized,System.Configuration,System.Text,System.Text.RegularExpressions,System.Web,System.Web.Caching,System.Web.SessionState,System.Web.Security,System.Web.Profile,System.Web.UI,System.Web.UI.WebControls,System.Web.UI.WebControls.WebParts,System.Web.UI.HtmlControls /optionstrict+ /nowarn:42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355 /nostdlib /rootnamespace:Connect.DNN.Modules.Projects /sdkpath:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /highentropyva- /doc:obj\release\Connect.DNN.Modules.Projects.xml /define:"CONFIG=\"release\",TRACE=-1,PLATFORM=\"AnyCPU\"" /reference:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Client.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Razor.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.ApplicationBlocks.Data.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Newtonsoft.Json.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Compression.Base.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Core.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Pdf.Base.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Configuration.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.EnterpriseServices.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Runtime.Serialization.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.ApplicationServices.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.DynamicData.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Entity.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Extensions.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Mobile.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Services.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.WebPages.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll" /debug:pdbonly /optimize+ /out:obj\release\Connect.DNN.Modules.Projects.dll /resource:obj\release\Connect.DNN.Modules.Projects.Resources.resources /target:library Common\AuditableEntity.vb Common\FilesStatus.vb Common\Globals.vb Common\Image.vb Common\ImageCollection.vb Common\ModuleApiController.vb Common\ModuleWebPage.vb Common\RazorControl.vb Common\Resizer.vb Common\RouteMapper.vb Controllers\AlbumController.vb Controllers\ProjectTypes\ProjectTypesController.vb Controllers\ProjectTypes\ProjectTypesController_Services.vb Data\RepositoryImpl.vb Documents\ProjectDocument.vb Models\Projects\Project_Interfaces.vb Models\Projects\Project_Properties.vb Models\ProjectTypes\ProjectType.vb Models\ProjectTypes\ProjectTypeBase_Methods.vb Models\ProjectTypes\ProjectTypeBase_Properties.vb ModuleHome.vb Repositories\ProjectsBaseRepository.vb Repositories\ProjectsRepository.vb Repositories\ProjectTypesBaseRepository.vb Repositories\ProjectTypesRepository.vb Settings.ascx.designer.vb Settings.ascx.vb Common\ContextSecurity.vb Common\ModuleBase.vb Controllers\ModuleController.vb Common\ModuleSettings.vb Controllers\Projects\ProjectsController.vb Controllers\Projects\ProjectsController_Services.vb Models\Projects\ProjectBase_Methods.vb Models\Projects\ProjectBase_Properties.vb "My Project\Application.Designer.vb" "My Project\AssemblyInfo.vb" "My Project\Resources.Designer.vb" "My Project\Settings.Designer.vb" "C:\Users\peter\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.vb"
+  [msbuild]   C:\Windows\Microsoft.NET\Framework\v4.0.30319\Vbc.exe /noconfig /imports:Connect.DNN.Modules.Projects.Common,Microsoft.VisualBasic,System,System.Collections,System.Collections.Generic,System.Data,System.Diagnostics,System.Collections.Specialized,System.Configuration,System.Text,System.Text.RegularExpressions,System.Web,System.Web.Caching,System.Web.SessionState,System.Web.Security,System.Web.Profile,System.Web.UI,System.Web.UI.WebControls,System.Web.UI.WebControls.WebParts,System.Web.UI.HtmlControls /optionstrict+ /nowarn:42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355 /nostdlib /rootnamespace:Connect.DNN.Modules.Projects /sdkpath:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /highentropyva- /doc:obj\release\Connect.DNN.Modules.Projects.xml /define:"CONFIG=\"release\",TRACE=-1,PLATFORM=\"AnyCPU\"" /reference:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Client.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Razor.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.ApplicationBlocks.Data.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Newtonsoft.Json.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Compression.Base.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Core.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Pdf.Base.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Configuration.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.EnterpriseServices.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Runtime.Serialization.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.ApplicationServices.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.DynamicData.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Entity.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Extensions.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Mobile.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Services.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.WebPages.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll" /debug:pdbonly /optimize+ /out:obj\release\Connect.DNN.Modules.Projects.dll /resource:obj\release\Connect.DNN.Modules.Projects.Resources.resources /target:library Common\AuditableEntity.vb Common\FilesStatus.vb Common\Globals.vb Common\Image.vb Common\ImageCollection.vb Common\ModuleApiController.vb Common\ModuleWebPage.vb Common\RazorControl.vb Common\Resizer.vb Common\RouteMapper.vb Controllers\AlbumController.vb Controllers\LicenseTypes\LicenseTypesController.vb Controllers\LicenseTypes\LicenseTypesController_Services.vb Controllers\ProjectTypes\ProjectTypesController.vb Controllers\ProjectTypes\ProjectTypesController_Services.vb Data\RepositoryImpl.vb Documents\ProjectDocument.vb Models\LicenseTypes\LicenseType.vb Models\LicenseTypes\LicenseTypeBase_Methods.vb Models\LicenseTypes\LicenseTypeBase_Properties.vb Models\Projects\Project_Interfaces.vb Models\Projects\Project_Properties.vb Models\ProjectTypes\ProjectType.vb Models\ProjectTypes\ProjectTypeBase_Methods.vb Models\ProjectTypes\ProjectTypeBase_Properties.vb ModuleHome.vb Repositories\LicenseTypesBaseRepository.vb Repositories\LicenseTypesRepository.vb Repositories\ProjectsBaseRepository.vb Repositories\ProjectsRepository.vb Repositories\ProjectTypesBaseRepository.vb Repositories\ProjectTypesRepository.vb Settings.ascx.designer.vb Settings.ascx.vb Common\ContextSecurity.vb Common\ModuleBase.vb Controllers\ModuleController.vb Common\ModuleSettings.vb Controllers\Projects\ProjectsController.vb Controllers\Projects\ProjectsController_Services.vb Models\Projects\ProjectBase_Methods.vb Models\Projects\ProjectBase_Properties.vb "My Project\Application.Designer.vb" "My Project\AssemblyInfo.vb" "My Project\Resources.Designer.vb" "My Project\Settings.Designer.vb" "C:\Users\peter\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.vb"
   [msbuild]   Microsoft (R) Visual Basic Compiler version 12.0.51209.34209
   [msbuild]   Copyright (c) Microsoft Corporation.  All rights reserved.
   [msbuild]   
@@ -1659,7 +1659,7 @@ compile.projects:
   [msbuild]     0 Warning(s)
   [msbuild]     0 Error(s)
   [msbuild] 
-  [msbuild] Time Elapsed 00:00:00.73
+  [msbuild] Time Elapsed 00:00:00.67
 
 make.doc:
 
@@ -1670,11 +1670,11 @@ compileandpackage:
 
 read.version:
 
-     [echo] shortVersion: 01.00.01
-     [echo] version: 1.0.1.0
+     [echo] shortVersion: 01.00.02
+     [echo] version: 1.0.2.0
      [echo] major: 01
      [echo] minor: 00
-     [echo] build: 01
+     [echo] build: 02
 
 make.codestats:
 
@@ -1691,6 +1691,8 @@ make.codestats:
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\RazorControl.vb Totals: [T] 48 [C] 0 [E] 11
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\Resizer.vb Totals: [T] 76 [C] 3 [E] 16
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\RouteMapper.vb Totals: [T] 19 [C] 0 [E] 3
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\LicenseTypes\LicenseTypesController.vb Totals: [T] 47 [C] 0 [E] 19
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\LicenseTypes\LicenseTypesController_Services.vb Totals: [T] 29 [C] 0 [E] 6
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\Projects\ProjectsController.vb Totals: [T] 53 [C] 0 [E] 19
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\Projects\ProjectsController_Services.vb Totals: [T] 105 [C] 0 [E] 10
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\ProjectTypes\ProjectTypesController.vb Totals: [T] 47 [C] 0 [E] 19
@@ -1698,23 +1700,28 @@ make.codestats:
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\AlbumController.vb Totals: [T] 208 [C] 4 [E] 16
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\ModuleController.vb Totals: [T] 26 [C] 0 [E] 3
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Data\RepositoryImpl.vb Totals: [T] 116 [C] 0 [E] 15
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Documents\ProjectDocument.vb Totals: [T] 161 [C] 0 [E] 23
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Documents\ProjectDocument.vb Totals: [T] 164 [C] 0 [E] 23
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular-file-upload.min.js Totals: [T] 6 [C] 5 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular-route.min.js Totals: [T] 15 [C] 6 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular.min.js Totals: [T] 250 [C] 6 [E] 0
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\connect.projects.js Totals: [T] 275 [C] 1 [E] 12
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\connect.projects.js Totals: [T] 276 [C] 1 [E] 12
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\es5-sham.min.js Totals: [T] 7 [C] 6 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\es5-shim.min.js Totals: [T] 7 [C] 6 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\jquery.colorbox.js Totals: [T] 1084 [C] 79 [E] 199
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\simple.datagrid.js Totals: [T] 968 [C] 25 [E] 77
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\stupidtable.min.js Totals: [T] 4 [C] 0 [E] 0
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\ProjectBase_Methods.vb Totals: [T] 117 [C] 0 [E] 11
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\ProjectBase_Properties.vb Totals: [T] 99 [C] 0 [E] 9
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\Project_Interfaces.vb Totals: [T] 48 [C] 0 [E] 9
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\Project_Properties.vb Totals: [T] 62 [C] 0 [E] 9
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\ProjectTypes\ProjectType.vb Totals: [T] 33 [C] 0 [E] 7
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\ProjectTypes\ProjectTypeBase_Methods.vb Totals: [T] 64 [C] 0 [E] 11
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\ProjectTypes\ProjectTypeBase_Properties.vb Totals: [T] 46 [C] 0 [E] 9
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\LicenseTypes\LicenseType.vb Totals: [T] 33 [C] 0 [E] 7
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\LicenseTypes\LicenseTypeBase_Methods.vb Totals: [T] 64 [C] 0 [E] 11
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\LicenseTypes\LicenseTypeBase_Properties.vb Totals: [T] 46 [C] 0 [E] 9
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\ProjectBase_Methods.vb Totals: [T] 120 [C] 0 [E] 11
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\ProjectBase_Properties.vb Totals: [T] 103 [C] 0 [E] 9
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\Project_Interfaces.vb Totals: [T] 51 [C] 0 [E] 9
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\Project_Properties.vb Totals: [T] 65 [C] 0 [E] 9
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\ProjectTypes\ProjectType.vb Totals: [T] 32 [C] 0 [E] 7
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\ProjectTypes\ProjectTypeBase_Methods.vb Totals: [T] 61 [C] 0 [E] 11
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\ProjectTypes\ProjectTypeBase_Properties.vb Totals: [T] 42 [C] 0 [E] 9
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\LicenseTypesBaseRepository.vb Totals: [T] 11 [C] 0 [E] 4
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\LicenseTypesRepository.vb Totals: [T] 11 [C] 0 [E] 4
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\ProjectsBaseRepository.vb Totals: [T] 11 [C] 0 [E] 4
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\ProjectsRepository.vb Totals: [T] 11 [C] 0 [E] 4
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\ProjectTypesBaseRepository.vb Totals: [T] 11 [C] 0 [E] 4
@@ -1723,11 +1730,11 @@ make.codestats:
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx Totals: [T] 65 [C] 0 [E] 1
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx.designer.vb Totals: [T] 285 [C] 218 [E] 33
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx.vb Totals: [T] 98 [C] 1 [E] 13
-[codestats] Totals: [VB]  [T] 5258 [C] 366 [E] 668
+[codestats] Totals: [VB]  [T] 5508 [C] 366 [E] 728
 
 check.sqlscripts:
 
-     [echo] Version: 01.00.01
+     [echo] Version: 01.00.02
 
 make.package:
 
@@ -1749,21 +1756,21 @@ make.package:
 [compilecss] Compiling D:\Programs\Nant\Build\Resources\module.css
       [zip] Zipping 25 files to 'D:\Programs\Nant\Build\Package\Resources.zip'.
      [copy] Copying 4 files to 'D:\Programs\Nant\Build\Package'.
-     [copy] Copying 2 files to 'D:\Programs\Nant\Build\Package'.
+     [copy] Copying 3 files to 'D:\Programs\Nant\Build\Package'.
      [echo] Transforming D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Installation\Connect.Projects.dnn with dnn5.xsl
-      [zip] Zipping 8 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.00.01_Install.zip'.
+      [zip] Zipping 9 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.00.02_Install.zip'.
    [delete] Deleting directory 'D:\Programs\Nant\Build\Package'.
      [echo] Building SOURCE
 
 make.package:
 
    [delete] Deleting directory 'D:\Programs\Nant\Build\Resources'.
-     [copy] Copying 70 files to 'D:\Programs\Nant\Build\Resources'.
-      [zip] Zipping 70 files to 'D:\Programs\Nant\Build\Package\Resources.zip'.
+     [copy] Copying 77 files to 'D:\Programs\Nant\Build\Resources'.
+      [zip] Zipping 77 files to 'D:\Programs\Nant\Build\Package\Resources.zip'.
      [copy] Copying 4 files to 'D:\Programs\Nant\Build\Package'.
-     [copy] Copying 2 files to 'D:\Programs\Nant\Build\Package'.
+     [copy] Copying 3 files to 'D:\Programs\Nant\Build\Package'.
      [echo] Transforming D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Installation\Connect.Projects.dnn with dnn5.xsl
-      [zip] Zipping 8 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.00.01_Source.zip'.
+      [zip] Zipping 9 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.00.02_Source.zip'.
    [delete] Deleting directory 'D:\Programs\Nant\Build\Package'.
 
 all:
@@ -1774,12 +1781,12 @@ backup.project:
      [echo] Backing Up to \\192.168.123.240\src
      [echo] Backing Up to D:\src
      [echo] Backing Up Install
-     [copy] Copying 1 file to 'D:\src\Projects\2015-3-28\Connect.Projects_01.00.01_Install.zip'.
+     [copy] Copying 1 file to 'D:\src\Projects\2015-3-29\Connect.Projects_01.00.02_Install.zip'.
      [echo] Backing Up Source
-     [copy] Copying 1 file to 'D:\src\Projects\2015-3-28\Connect.Projects_01.00.01_Source.zip'.
+     [copy] Copying 1 file to 'D:\src\Projects\2015-3-29\Connect.Projects_01.00.02_Source.zip'.
      [echo] Backing Up to G:\src
 
 BUILD SUCCEEDED
 
-Total time: 29.9 seconds.
+Total time: 2.9 seconds.
 
