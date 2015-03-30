@@ -4,8 +4,10 @@
 <div class="cp_container">
  <div class="cp_column">
   <dl class="cp_dl_horizontal">
-   <dt>@Html.GetLocalizedString("ProjectType")</dt>
-   <dd>{{project.ProjectType}}&nbsp;</dd>
+   <dt>@Html.GetLocalizedString("ProjectTypes")</dt>
+   <dd>
+    <span data-ng-repeat="pt in project.ProjectTypes | filter:{IsSelected: true}">{{pt.TypeDescription}}</span>
+   </dd>
    <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("LicenseType")</dt>
    <dd>{{project.LicenseType}}&nbsp;</dd>

@@ -141,8 +141,8 @@
   <data name="Projects.Text" xml:space="preserve">
     <value>Projects</value>
   </data>
-  <data name="ProjectType.Text" xml:space="preserve">
-    <value>Project Type</value>
+  <data name="ProjectTypes.Text" xml:space="preserve">
+    <value>Project Types</value>
   </data>
   <data name="Return.Text" xml:space="preserve">
     <value>Return</value>
@@ -161,9 +161,6 @@
   </data>
   <data name="ProjectName.Required" xml:space="preserve">
     <value>A project name is required</value>
-  </data>
-  <data name="ProjectType.Required" xml:space="preserve">
-    <value>Please select a project type</value>
   </data>
   <data name="Url.Pattern" xml:space="preserve">
     <value>Please specify a full url (http(s)://url/to/resource)</value>
@@ -210,7 +207,7 @@
   <data name="ProjectName.Help" xml:space="preserve">
     <value>Please keep this concise so people quickly recognize the project.</value>
   </data>
-  <data name="ProjectType.Help" xml:space="preserve">
+  <data name="ProjectTypes.Help" xml:space="preserve">
     <value>What kind of project is this? Let us know if the one you want is not there.</value>
   </data>
   <data name="Status.Help" xml:space="preserve">

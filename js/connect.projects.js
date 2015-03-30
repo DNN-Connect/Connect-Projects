@@ -90,8 +90,8 @@ mod.factory('projectsFactory', [function () {
 		projects: function (moduleId, success, fail) {
 			dataCall(moduleId, 'Projects', 'Projects', {}, success, fail);
 		},
-		projectTypes: function (moduleId, success, fail) {
-			dataCall(moduleId, 'ProjectTypes', 'Types', {}, success, fail);
+		projectTypes: function (moduleId, projectId, success, fail) {
+			dataCall(moduleId, 'ProjectTypes', 'Project', { id: projectId }, success, fail);
 		},
 		project: function (moduleId, projectId, success, fail) {
 			if (projectId == undefined) {
@@ -101,19 +101,7 @@ mod.factory('projectsFactory', [function () {
 		},
 		updateProject: function (moduleId, project, success, fail) {
 			apiPostCall(moduleId, 'Projects', 'Put', null, {
-				ProjectId: project.ProjectId,
-				Visible: project.Visible,
-				ProjectName: project.ProjectName,
-				ProjectTypeId: project.ProjectTypeId,
-				LicenseTypeId: project.LicenseTypeId,
-				Url1: project.Url1,
-				Url2: project.Url2,
-				Status: project.Status,
-				Owners: project.Owners,
-				People: project.People,
-				Aims: project.Aims,
-				Description: project.Description,
-				Dependencies: project.Dependencies
+				project: JSON.stringify(project)
 			}, success, fail);
 		},
 		deleteProject: function (moduleId, projectId, success, fail) {
@@ -162,7 +150,14 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 		$scope.ProjectAims = $sce.trustAsHtml($scope.project.Aims.replace(/\n/g, '<br/>'));
 		$scope.ProjectDescription = $sce.trustAsHtml($scope.project.Description.replace(/\n/g, '<br/>'));
 		$scope.ProjectDependencies = $sce.trustAsHtml($scope.project.Dependencies.replace(/\n/g, '<br/>'));
-		$scope.$apply();
+		projectsFactory.projectTypes($scope.moduleId, $scope.projectId, function (data) {
+			if (data == '') {
+				$scope.project.ProjectTypes = [];
+			} else {
+				$scope.project.ProjectTypes = data;
+			}
+			$scope.$apply();
+		});
 	});
 	projectsFactory.getAlbum($scope.moduleId, $scope.projectId, function (data) {
 		$scope.album = data;
@@ -182,6 +177,7 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 		$('a[href$=".gif"], a[href$=".jpg"], a[href$=".png"], a[href$=".bmp"]').colorbox();
 	});
 	$scope.updateProject = function (project) {
+		project.SelectedProjectTypes = $scope.selection;
 		projectsFactory.updateProject($scope.moduleId, project, function (data) {
 			window.location.href = window.location.pathname + '#/Projects';
 		});
@@ -236,6 +232,12 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 			});
 		};
 	};
+	$scope.selection = [];
+	$scope.$watch('project.ProjectTypes|filter:{IsSelected:true}', function (nv) {
+		$scope.selection = nv.map(function (pt) {
+			return pt.TypeId;
+		});
+	}, true);
 }]);
 
 mod.directive('showErrors', function () {

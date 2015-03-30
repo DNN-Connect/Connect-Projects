@@ -21,24 +21,28 @@
           required />
    <p class="help-block" ng-if="frmEditProject.ProjectName.$error.required">@Html.GetLocalizedString("ProjectName.Required")</p>
   </div>
-  <div class="dnnFormItem" show-errors>
+  <div class="dnnFormItem">
    <div class="dnnLabel">
     <label>
-     <span>@Html.GetLocalizedString("ProjectType")</span>
+     <span>@Html.GetLocalizedString("ProjectTypes")</span>
     </label>
     <a href="#" class="dnnFormHelp" tabindex="-1"></a>
     <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
      <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
-      <span class="dnnHelpText">@Html.GetLocalizedString("ProjectType.Help")</span>
+      <span class="dnnHelpText">@Html.GetLocalizedString("ProjectTypes.Help")</span>
      </div>
     </div>
    </div>
-   <select id="ProjectType" name="ProjectType" class="form-control" data-ng-model="project.ProjectTypeId" required>
-    @For Each pt As ProjectType In ProjectTypesController.GetProjectTypes
-     @<option value="@pt.ProjectTypeId">@pt.TypeDescription</option>
-    Next
-   </select>
-   <p class="help-block" ng-if="frmEditProject.ProjectType.$error.required">@Html.GetLocalizedString("ProjectType.Required")</p>
+   <div class="dnnFormItemValue">
+    <ul class="cp_checkboxList">
+     <li data-ng-repeat="pt in project.ProjectTypes">
+      <input type="checkbox"
+             name="selectedTypes[]"
+             value="{{pt.TypeId}}"
+             ng-model="pt.IsSelected"> {{pt.TypeDescription}}
+     </li>
+    </ul>
+   </div>
   </div>
   <div class="dnnFormItem" show-errors>
    <div class="dnnLabel">

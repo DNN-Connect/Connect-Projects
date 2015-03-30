@@ -159,16 +159,24 @@
     <Compile Include="Controllers\LicenseTypes\LicenseTypesController_Services.vb" />
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController.vb" />
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController_Services.vb" />
+    <Compile Include="Controllers\PTypes\PTypesController.vb" />
+    <Compile Include="Controllers\PTypes\PTypesController_Services.vb" />
     <Compile Include="Data\RepositoryImpl.vb" />
     <Compile Include="Documents\ProjectDocument.vb" />
     <Compile Include="Models\LicenseTypes\LicenseType.vb" />
     <Compile Include="Models\LicenseTypes\LicenseTypeBase_Methods.vb" />
     <Compile Include="Models\LicenseTypes\LicenseTypeBase_Properties.vb" />
     <Compile Include="Models\Projects\Project_Interfaces.vb" />
+    <Compile Include="Models\Projects\Project.vb" />
     <Compile Include="Models\Projects\Project_Properties.vb" />
-    <Compile Include="Models\ProjectTypes\ProjectType.vb" />
     <Compile Include="Models\ProjectTypes\ProjectTypeBase_Methods.vb" />
     <Compile Include="Models\ProjectTypes\ProjectTypeBase_Properties.vb" />
+    <Compile Include="Models\ProjectTypes\ProjectType_Interfaces.vb" />
+    <Compile Include="Models\ProjectTypes\ProjectType_Properties.vb" />
+    <Compile Include="Models\PTypes\PType.vb" />
+    <Compile Include="Models\PTypes\PTypeBase_Methods.vb" />
+    <Compile Include="Models\PTypes\PTypeBase_Properties.vb" />
+    <Compile Include="Models\PTypes\PTypeSelect.vb" />
     <Compile Include="ModuleHome.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -178,6 +186,8 @@
     <Compile Include="Repositories\ProjectsRepository.vb" />
     <Compile Include="Repositories\ProjectTypesBaseRepository.vb" />
     <Compile Include="Repositories\ProjectTypesRepository.vb" />
+    <Compile Include="Repositories\PTypesBaseRepository.vb" />
+    <Compile Include="Repositories\PTypesRepository.vb" />
     <Compile Include="Settings.ascx.designer.vb">
       <DependentUpon>Settings.ascx</DependentUpon>
     </Compile>

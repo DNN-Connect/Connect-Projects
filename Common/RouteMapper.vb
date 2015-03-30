@@ -8,10 +8,16 @@ Namespace Common
   Public Sub RegisterRoutes(mapRouteManager As DotNetNuke.Web.Api.IMapRoute) Implements DotNetNuke.Web.Api.IServiceRouteMapper.RegisterRoutes
    mapRouteManager.MapHttpRoute("Connect/Projects", "Projects1", "{controller}/{action}/{id}", Nothing, New With {.id = "\d*"}, New String() {
    "Connect.DNN.Modules.Projects.Controllers",
-   "Connect.DNN.Modules.Projects.Controllers.Projects"})
+   "Connect.DNN.Modules.Projects.Controllers.Projects",
+   "Connect.DNN.Modules.Projects.Controllers.ProjectTypes",
+   "Connect.DNN.Modules.Projects.Controllers.LicenseTypes",
+   "Connect.DNN.Modules.Projects.Controllers.PTypes"})
    mapRouteManager.MapHttpRoute("Connect/Projects", "Projects2", "{controller}/{action}", Nothing, Nothing, New String() {
                                 "Connect.DNN.Modules.Projects.Controllers",
-                                "Connect.DNN.Modules.Projects.Controllers.Projects"})
+                                "Connect.DNN.Modules.Projects.Controllers.Projects",
+                                "Connect.DNN.Modules.Projects.Controllers.ProjectTypes",
+                                "Connect.DNN.Modules.Projects.Controllers.LicenseTypes",
+                                "Connect.DNN.Modules.Projects.Controllers.PTypes"})
   End Sub
 #End Region
 

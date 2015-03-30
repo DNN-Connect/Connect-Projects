@@ -39,7 +39,6 @@ CREATE TABLE [dbo].[Connect_Projects_Projects](
 	[CreatedOnDate] [datetime] NOT NULL,
 	[LastModifiedByUserID] [int] NOT NULL,
 	[LastModifiedOnDate] [datetime] NOT NULL,
-	[ProjectTypeId] [int] NOT NULL,
  CONSTRAINT [PK_Connect_Projects_Projects] PRIMARY KEY CLUSTERED 
 (
 	[ProjectId] ASC
@@ -55,11 +54,30 @@ SET QUOTED_IDENTIFIER ON
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTypes]') AND type in (N'U'))
 BEGIN
 CREATE TABLE [dbo].[Connect_Projects_ProjectTypes](
-	[ProjectTypeId] [int] IDENTITY(1,1) NOT NULL,
-	[TypeDescription] [nvarchar](300) NOT NULL,
+	[ProjectId] [int] NOT NULL,
+	[TypeId] [int] NOT NULL,
  CONSTRAINT [PK_Connect_Projects_ProjectTypes] PRIMARY KEY CLUSTERED 
 (
-	[ProjectTypeId] ASC
+	[ProjectId] ASC,
+	[TypeId] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_PTypes]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Connect_Projects_PTypes](
+	[TypeId] [int] IDENTITY(1,1) NOT NULL,
+	[TypeDescription] [nvarchar](100) NOT NULL,
+	[TypeIcon] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Connect_Projects_PTypes] PRIMARY KEY CLUSTERED 
+(
+	[TypeId] ASC
 )WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF)
 )
 END
@@ -77,22 +95,32 @@ GO
 
 
 
-IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_ProjectTypes]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
-ALTER TABLE [dbo].[Connect_Projects_Projects]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_Projects_ProjectTypes] FOREIGN KEY([ProjectTypeId])
-REFERENCES [dbo].[Connect_Projects_ProjectTypes] ([ProjectTypeId])
-ON DELETE CASCADE
-IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_ProjectTypes]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
-ALTER TABLE [dbo].[Connect_Projects_Projects] CHECK CONSTRAINT [FK_Connect_Projects_Projects_ProjectTypes]
-GO
-
-
-
 IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_Modules]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
 ALTER TABLE [dbo].[Connect_Projects_Projects]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_Projects_Modules] FOREIGN KEY([ModuleId])
 REFERENCES [dbo].[Modules] ([ModuleID])
 ON DELETE CASCADE
 IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Projects_Modules]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Projects]'))
 ALTER TABLE [dbo].[Connect_Projects_Projects] CHECK CONSTRAINT [FK_Connect_Projects_Projects_Modules]
+GO
+
+
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_ProjectTypes_Projects]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTypes]'))
+ALTER TABLE [dbo].[Connect_Projects_ProjectTypes]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_ProjectTypes_Projects] FOREIGN KEY([ProjectId])
+REFERENCES [dbo].[Connect_Projects_Projects] ([ProjectId])
+ON DELETE CASCADE
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_ProjectTypes_Projects]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTypes]'))
+ALTER TABLE [dbo].[Connect_Projects_ProjectTypes] CHECK CONSTRAINT [FK_Connect_Projects_ProjectTypes_Projects]
+GO
+
+
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_ProjectTypes_PTypes]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTypes]'))
+ALTER TABLE [dbo].[Connect_Projects_ProjectTypes]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_ProjectTypes_PTypes] FOREIGN KEY([TypeId])
+REFERENCES [dbo].[Connect_Projects_PTypes] ([TypeId])
+ON DELETE CASCADE
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_ProjectTypes_PTypes]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTypes]'))
+ALTER TABLE [dbo].[Connect_Projects_ProjectTypes] CHECK CONSTRAINT [FK_Connect_Projects_ProjectTypes_PTypes]
 GO
 
 
@@ -111,17 +139,17 @@ SET QUOTED_IDENTIFIER ON
 
 
 
+
+
 CREATE VIEW [dbo].[vw_Connect_Projects_Projects]
 AS
 SELECT
  p.*,
- pt.TypeDescription ProjectType,
  lt.TypeDescription LicenseType,
  lt.ProjectColor,
  uc.DisplayName AS CreatedByUser,
  um.DisplayName AS LastModifiedByUser
 FROM dbo.Connect_Projects_Projects p
- INNER JOIN dbo.Connect_Projects_ProjectTypes pt ON p.ProjectTypeId=pt.ProjectTypeId
  INNER JOIN dbo.Connect_Projects_LicenseTypes lt ON p.LicenseTypeId=lt.LicenseTypeId
  LEFT JOIN dbo.Users uc ON uc.UserID = p.CreatedByUserID
  LEFT JOIN dbo.Users um ON um.UserID = p.LastModifiedByUserID
@@ -130,6 +158,93 @@ FROM dbo.Connect_Projects_Projects p
 
 
 
+
+
+
+GO
+
+
+
+IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[vw_Connect_Projects_ProjectTypes]'))
+DROP VIEW [dbo].[vw_Connect_Projects_ProjectTypes]
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+
+
+
+
+
+
+
+
+
+CREATE VIEW [dbo].[vw_Connect_Projects_ProjectTypes]
+AS
+SELECT
+ pt.*,
+ p.ProjectName,
+ p.Visible,
+ t.TypeDescription,
+ t.TypeIcon
+FROM dbo.Connect_Projects_ProjectTypes pt
+ INNER JOIN dbo.Connect_Projects_Projects p ON pt.ProjectId=p.ProjectId
+ INNER JOIN dbo.Connect_Projects_PTypes t ON pt.TypeId=t.TypeId
+
+
+GO
+
+
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_GetProjectTypeSelectionList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[Connect_Projects_GetProjectTypeSelectionList]
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+
+CREATE PROCEDURE dbo.Connect_Projects_GetProjectTypeSelectionList
+ @ProjectId INT
+AS
+
+SELECT
+ t.*,
+ ISNULL(pt.ProjectId, 0) Selected
+FROM dbo.Connect_Projects_PTypes t
+ LEFT JOIN dbo.Connect_Projects_ProjectTypes pt ON t.TypeId=pt.TypeId AND pt.ProjectId=@ProjectId
+
+
+GO
+
+
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_SetProjectTypes]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[Connect_Projects_SetProjectTypes]
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+
+CREATE PROCEDURE dbo.Connect_Projects_SetProjectTypes
+ @ProjectId INT,
+ @ProjectTypeIds VARCHAR(2000)
+AS
+DELETE FROM dbo.Connect_Projects_ProjectTypes
+WHERE ProjectId=@ProjectId;
+INSERT INTO dbo.Connect_Projects_ProjectTypes
+ (ProjectId, TypeId)
+SELECT
+ @ProjectId,
+ ids.RecordID
+FROM
+ dbo.SplitDelimitedIDs(@ProjectTypeIds, ',') ids
 
 GO
 

@@ -9,6 +9,13 @@
 .dnnFormItem.has-error .help-block {
  display: block;
 }
+.dnnFormItemValue {
+ margin-left: 32.075%;
+ padding-left:38px;
+}
+.cp_checkboxList {
+ list-style: none;
+}
 
 .btnright {
  width: 100%;
@@ -87,18 +94,23 @@ dl.cp_dl_horizontal {
  overflow: hidden;
 }
 
- dl.cp_dl_horizontal dt {
-  float: left;
-  font-weight: bold;
-  margin-right: 10px;
-  padding: 5px;
-  width: 100px;
- }
+dl.cp_dl_horizontal dt {
+ float: left;
+ font-weight: bold;
+ margin-right: 10px;
+ padding: 5px;
+ width: 100px;
+}
 
- dl.cp_dl_horizontal dd {
-  margin: 2px 0;
-  padding: 5px 0;
- }
+dl.cp_dl_horizontal dd {
+ margin: 2px 0;
+ padding: 5px 0;
+}
+
+dl.cp_dl_horizontal dd span {
+ margin: 0 10px 0 0;
+ border-bottom: 1px dotted #999;
+}
 
 .cp_img {
  width: 100%;

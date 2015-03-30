@@ -1,7 +1,11 @@
-﻿Imports System.Drawing
+﻿Imports System.CodeDom
+Imports System.Drawing
+Imports System.Linq
 Imports Connect.DNN.Modules.Projects.Common
 Imports Connect.DNN.Modules.Projects.Controllers.Projects
+Imports Connect.DNN.Modules.Projects.Controllers.ProjectTypes
 Imports Connect.DNN.Modules.Projects.Models.Projects
+Imports Connect.DNN.Modules.Projects.Models.ProjectTypes
 Imports DotNetNuke.Entities.Portals
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
@@ -29,10 +33,15 @@ Namespace Documents
    InitPage()
 
    Dim project As Project = ProjectsController.GetProject(moduleId, projectId)
+   Dim projectTypes As IEnumerable(Of ProjectType) = ProjectTypesController.GetProjectTypes(projectId)
    Dim projectColor As Color = project.ProjectColor.ToColor()
+   Dim iconPath As String = "images\"
    Dim contrastColor As Color = Color.White
    If projectColor.CanUseBlack Then
     contrastColor = Color.Black
+    iconPath &= "fa-black\"
+   Else
+    iconPath &= "fa-white\"
    End If
    Dim bannerColor As New PdfColor(projectColor)
    Dim titleFontSize As Single = 18
@@ -46,10 +55,18 @@ Namespace Documents
    te.Brush = New PdfSolidBrush(contrastColor)
    te.Draw(Page, New RectangleF(10.0F.MillimetersToPoints(), 20.0F.MillimetersToPoints() - (font.MeasureString(te.Text).Height), 200.0F.MillimetersToPoints(), font.MeasureString(te.Text).Height))
 
+   Dim x As Single = 272.0F
+   For Each p As ProjectType In projectTypes
+    Dim icon As New PdfBitmap(ModuleMapPath & iconPath & p.TypeIcon & ".png")
+    PageGraphics.DrawImage(icon, x.MillimetersToPoints, 2.0F.MillimetersToPoints, 21.0F.MillimetersToPoints, 21.0F.MillimetersToPoints)
+    x -= 25
+   Next
+
    Dim y As Single = 40.0F
-   DrawTextBlock("Project Type", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
-   DrawTextBlock(project.ProjectType, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   y += 2
+   DrawTextBlock("Project Type(s)", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   Dim types As String = String.Join(", ", projectTypes.Select(Function(t) t.TypeDescription))
+   DrawTextBlock(types, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
+   'y += 2
    DrawTextBlock("License Type", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
    DrawTextBlock(project.LicenseType, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    y += 2
@@ -154,6 +171,10 @@ Namespace Documents
    Else
     Return New PdfStandardFont(PdfFontFamily.Courier, fontSize)
    End If
+  End Function
+
+  Public Function GetFontAwesome(fontSize As Single) As PdfFont
+   Return New PdfTrueTypeFont(ModuleMapPath & "fonts\fontawesome.ttf", fontSize)
   End Function
 
   Public Function GetAgency(fontSize As Single) As PdfFont
