@@ -87,6 +87,27 @@ FROM {databaseOwner}{objectQualifier}Connect_Projects_Projects p
  LEFT JOIN {databaseOwner}{objectQualifier}Users um ON um.UserID = p.LastModifiedByUserID
 GO
 
+IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'{databaseOwner}{objectQualifier}vw_Connect_Projects_ProjectTypes'))
+DROP VIEW {databaseOwner}{objectQualifier}vw_Connect_Projects_ProjectTypes
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE VIEW {databaseOwner}{objectQualifier}vw_Connect_Projects_ProjectTypes
+AS
+SELECT
+ pt.*,
+ p.ProjectName,
+ p.Visible,
+ t.TypeDescription,
+ t.TypeIcon
+FROM {databaseOwner}{objectQualifier}Connect_Projects_ProjectTypes pt
+ INNER JOIN {databaseOwner}{objectQualifier}Connect_Projects_Projects p ON pt.ProjectId=p.ProjectId
+ INNER JOIN {databaseOwner}{objectQualifier}Connect_Projects_PTypes t ON pt.TypeId=t.TypeId
+GO
+
 /******* DATA *******/
 INSERT INTO {databaseOwner}{objectQualifier}Connect_Projects_PTypes ([TypeDescription], [TypeIcon]) VALUES ('Module', 'cubes');
 INSERT INTO {databaseOwner}{objectQualifier}Connect_Projects_PTypes ([TypeDescription], [TypeIcon]) VALUES ('Theme', 'picture-o');
