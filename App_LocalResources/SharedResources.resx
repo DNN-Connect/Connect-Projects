@@ -225,4 +225,19 @@
   <data name="LicenseType.Required" xml:space="preserve">
     <value>A license type is required</value>
   </data>
+  <data name="ApproveProject.Text" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="ApproveProject_Desc.Text" xml:space="preserve">
+    <value>Approve this project for public viewing</value>
+  </data>
+  <data name="DeleteItem.Text" xml:space="preserve">
+    <value>Delete this project?</value>
+  </data>
+  <data name="DeleteProject.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteProject_Desc.Text" xml:space="preserve">
+    <value>Delete this project. Note this cannot be undone.</value>
+  </data>
 </root>

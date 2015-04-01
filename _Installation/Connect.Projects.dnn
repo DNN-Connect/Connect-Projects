@@ -23,6 +23,7 @@
       <businessControllerClass>Connect.DNN.Modules.Projects.Integration.ModuleController, CONNECT.DNN.MODULES.PROJECTS</businessControllerClass>
       <supportedFeatures>
        <supportedFeature type="Searchable" />
+       <supportedFeature type="Upgradable" />
       </supportedFeatures>
       <moduleDefinitions>
        <moduleDefinition>
