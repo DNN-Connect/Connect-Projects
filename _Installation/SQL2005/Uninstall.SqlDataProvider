@@ -1,3 +1,8 @@
+/******* DATA *******/
+DELETE FROM {databaseOwner}{objectQualifier}CoreMessaging_NotificationTypes
+WHERE Name='Connect_Projects_Project_Published'
+GO
+
 /******* SPROCS *******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}{objectQualifier}Connect_Projects_GetProjectTypeSelectionList') AND type in (N'P', N'PC'))
 DROP PROCEDURE {databaseOwner}{objectQualifier}Connect_Projects_GetProjectTypeSelectionList
