@@ -1,0 +1,81 @@
+IF NOT EXISTS(SELECT * FROM {databaseOwner}{objectQualifier}CoreMessaging_NotificationTypes WHERE Name='Connect_Projects_Project_Published')
+INSERT INTO {databaseOwner}{objectQualifier}CoreMessaging_NotificationTypes
+([Name]
+,[Description]
+,[TTL]
+,[DesktopModuleID]
+,[CreatedByUserID]
+,[CreatedOnDate]
+,[LastModifiedByUserID]
+,[LastModifiedOnDate])
+SELECT
+'Connect_Projects_Project_Published'
+,'Project Approval'
+,NULL
+,dm.DesktopModuleID
+,-1
+,GETDATE()
+,-1
+,GETDATE()
+FROM
+{databaseOwner}{objectQualifier}DesktopModules dm
+WHERE dm.ModuleName = 'Connect_Projects'
+GO
+
+INSERT INTO {databaseOwner}{objectQualifier}CoreMessaging_NotificationTypeActions
+([NotificationTypeID]
+,[NameResourceKey]
+,[DescriptionResourceKey]
+,[ConfirmResourceKey]
+,[Order]
+,[APICall]
+,[CreatedByUserID]
+,[CreatedOnDate]
+,[LastModifiedByUserID]
+,[LastModifiedOnDate])
+SELECT
+ nt.NotificationTypeID
+,'ApproveProject'
+,'ApproveProject_Desc'
+,NULL
+,0
+,'DesktopModules/Connect/Projects/API/Projects/Approve'
+,-1
+,GETDATE()
+,-1
+,GETDATE()
+FROM
+ {databaseOwner}{objectQualifier}CoreMessaging_NotificationTypes nt
+ WHERE nt.Name='Connect_Projects_Project_Published'
+ AND NOT EXISTS(SELECT * FROM {databaseOwner}{objectQualifier}CoreMessaging_NotificationTypeActions
+  WHERE NotificationTypeID=nt.NotificationTypeID AND NameResourceKey='ApproveProject')
+GO
+
+INSERT INTO {databaseOwner}{objectQualifier}CoreMessaging_NotificationTypeActions
+([NotificationTypeID]
+,[NameResourceKey]
+,[DescriptionResourceKey]
+,[ConfirmResourceKey]
+,[Order]
+,[APICall]
+,[CreatedByUserID]
+,[CreatedOnDate]
+,[LastModifiedByUserID]
+,[LastModifiedOnDate])
+SELECT
+ nt.NotificationTypeID
+,'DeleteProject'
+,'DeleteProject_Desc'
+,'DeleteItem'
+,1
+,'DesktopModules/Connect/Projects/API/Projects/Delete'
+,-1
+,GETDATE()
+,-1
+,GETDATE()
+FROM
+ {databaseOwner}{objectQualifier}CoreMessaging_NotificationTypes nt
+ WHERE nt.Name='Connect_Projects_Project_Published'
+ AND NOT EXISTS(SELECT * FROM {databaseOwner}CoreMessaging_NotificationTypeActions
+  WHERE NotificationTypeID=nt.NotificationTypeID AND NameResourceKey='DeleteProject')
+GO
