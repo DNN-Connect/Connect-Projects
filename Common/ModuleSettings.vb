@@ -40,7 +40,7 @@ Namespace Common
 #Region " Public Members "
   Public Sub SaveSettings()
 
-   Dim objModules As New ModuleController
+   Dim objModules As New DotNetNuke.Entities.Modules.ModuleController
    objModules.UpdateModuleSetting(ModuleId, "TnWidth", Me.TnWidth.ToString)
    objModules.UpdateModuleSetting(ModuleId, "TnHeight", Me.TnHeight.ToString)
    objModules.UpdateModuleSetting(ModuleId, "MedWidth", Me.MedWidth.ToString)

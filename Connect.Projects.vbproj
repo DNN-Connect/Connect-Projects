@@ -164,6 +164,7 @@
     <Compile Include="Data\RepositoryImpl.vb" />
     <Compile Include="Documents\ProjectDocument.vb" />
     <Compile Include="Integration\Integration.vb" />
+    <Compile Include="Integration\JournalController.vb" />
     <Compile Include="Integration\ModuleController.vb" />
     <Compile Include="Integration\NotificationController.vb" />
     <Compile Include="Integration\NotificationKey.vb" />

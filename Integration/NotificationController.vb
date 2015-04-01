@@ -1,10 +1,11 @@
 ﻿Imports System.Linq
+Imports Connect.DNN.Modules.Projects.Controllers.Projects
 Imports Connect.DNN.Modules.Projects.Models.Projects
 Imports DotNetNuke.Entities.Modules
 Imports DotNetNuke.Entities.Users
 Imports DotNetNuke.Security.Permissions
 Imports DotNetNuke.Security.Roles
-Imports DotNetNuke.Services.Journal
+Imports DotNetNuke.Services.Localization.Localization
 Imports DotNetNuke.Services.Social.Notifications
 
 Namespace Integration
@@ -12,15 +13,17 @@ Namespace Integration
  Public Class NotificationController
 
 #Region " Integration Methods "
-  Public Shared Sub ProjectPendingApproval(project As Project, portalId As Integer, summary As String, title As String)
+  Public Shared Sub ProjectPendingApproval(portalId As Integer, moduleId As Integer, projectId As Integer)
+
    Dim notificationType As NotificationType = NotificationsController.Instance.GetNotificationType(NotificationPublishingTypeName)
+   Dim project As Project = ProjectsController.GetProject(moduleId, projectId)
 
    Dim notificationKey As New NotificationKey(ContentTypeName, project.ModuleId, project.ProjectId)
    Dim objNotification As New Notification
 
    objNotification.NotificationTypeID = notificationType.NotificationTypeId
-   objNotification.Subject = title
-   objNotification.Body = summary
+   objNotification.Subject = GetString("ProjectAdded.Title", SharedResourceFileName)
+   objNotification.Body = String.Format(GetString("ProjectAdded.Summary", SharedResourceFileName), project.CreatedByUser, project.ProjectName)
    objNotification.IncludeDismissAction = False
    objNotification.SenderUserID = project.CreatedByUserID
    objNotification.Context = notificationKey.ToString

@@ -240,4 +240,10 @@
   <data name="DeleteProject_Desc.Text" xml:space="preserve">
     <value>Delete this project. Note this cannot be undone.</value>
   </data>
+  <data name="ProjectAdded.Summary" xml:space="preserve">
+    <value>{0} has added a new project to the projects list called {1}</value>
+  </data>
+  <data name="ProjectAdded.Title" xml:space="preserve">
+    <value>New project</value>
+  </data>
 </root>
