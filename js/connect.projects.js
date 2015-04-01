@@ -179,7 +179,7 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 	$scope.updateProject = function (project) {
 		project.SelectedProjectTypes = $scope.selection;
 		projectsFactory.updateProject($scope.moduleId, project, function (data) {
-			window.location.href = window.location.pathname + '#/Projects';
+			window.location.href = window.location.pathname + '#/Project/' + data;
 		});
 		return false;
 	}
