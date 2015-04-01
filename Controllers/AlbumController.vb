@@ -6,6 +6,7 @@ Imports System.Web.Script.Serialization
 Imports Connect.DNN.Modules.Projects.Common
 Imports Connect.DNN.Modules.Projects.Controllers.Projects
 Imports Connect.DNN.Modules.Projects.Models.Projects
+Imports DotNetNuke.Security
 Imports DotNetNuke.Web.Api
 Imports Newtonsoft.Json
 
@@ -28,7 +29,7 @@ Namespace Controllers
    Public Property album As String
   End Class
   <HttpPost()>
-  <DnnModuleAuthorize(PermissionKey:="SUBMITTER")>
+  <DnnModuleAuthorize(AccessLevel:=SecurityAccessLevel.Edit, PermissionKey:="SUBMITTER")>
   <ValidateAntiForgeryToken()>
   Public Function Put(id As Integer, data As AlbumPutDTO) As HttpResponseMessage
    Dim p As ProjectBase = CheckPermission(id)
@@ -44,7 +45,7 @@ Namespace Controllers
   End Function
 
   <HttpGet()>
-  <DnnModuleAuthorize(PermissionKey:="SUBMITTER")>
+  <DnnModuleAuthorize(AccessLevel:=SecurityAccessLevel.Edit, PermissionKey:="SUBMITTER")>
   <ValidateAntiForgeryToken()>
   Public Function DeleteImage(id As Integer, image As String) As HttpResponseMessage
    Dim p As ProjectBase = CheckPermission(id)
@@ -70,7 +71,7 @@ Namespace Controllers
   Private ReadOnly js As New JavaScriptSerializer()
 
   <HttpPost()>
-  <DnnModuleAuthorize(PermissionKey:="SUBMITTER")>
+  <DnnModuleAuthorize(AccessLevel:=SecurityAccessLevel.Edit, PermissionKey:="SUBMITTER")>
   <ValidateAntiForgeryToken()>
   Public Function UploadFile(id As Integer) As HttpResponseMessage
    Dim p As ProjectBase = CheckPermission(id)
@@ -84,7 +85,7 @@ Namespace Controllers
   End Function
 
   <HttpGet()>
-  <DnnModuleAuthorize(PermissionKey:="SUBMITTER")>
+  <DnnModuleAuthorize(AccessLevel:=SecurityAccessLevel.Edit, PermissionKey:="SUBMITTER")>
   <ValidateAntiForgeryToken()>
   Public Function CommitFile(id As Integer, fileName As String) As HttpResponseMessage
    Dim p As ProjectBase = CheckPermission(id)

@@ -3,6 +3,7 @@ Imports DotNetNuke.Common.Utilities
 
 Namespace Common
 
+ <DataContract()>
  Public MustInherit Class AuditableEntity
 
   Public Sub FillAuditFields(dr As IDataReader)

@@ -105,7 +105,7 @@ mod.factory('projectsFactory', [function () {
 			}, success, fail);
 		},
 		deleteProject: function (moduleId, projectId, success, fail) {
-			dataCall(moduleId, 'Projects', 'Delete', { id: projectId }, success, fail);
+			apiPostCall(moduleId, 'Projects', 'Delete', projectId, {}, success, fail);
 		},
 		getAlbum: function (moduleId, projectId, success, fail) {
 			dataCall(moduleId, 'Album', 'Get', { id: projectId }, success, fail);
