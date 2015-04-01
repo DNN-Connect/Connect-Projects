@@ -108,6 +108,7 @@ Namespace Documents
     If ar > boxAr Then
      Dim zoom As Double = boxWidth / im.Width
      Dim newHeight As Single = CSng(im.Height * zoom)
+     If y + newHeight > 410 Then Exit For
      PageGraphics.DrawImage(im,
                             (columnWidth + (columnWidth - boxWidth) / 2).MillimetersToPoints, y.MillimetersToPoints,
                             boxWidth.MillimetersToPoints, newHeight.MillimetersToPoints)
@@ -115,6 +116,7 @@ Namespace Documents
     Else
      Dim zoom As Double = boxHeight / im.Height
      Dim newWidth As Single = CSng(im.Width * zoom)
+     If y + boxHeight > 410 Then Exit For
      PageGraphics.DrawImage(im,
                             (columnWidth + (columnWidth - newWidth) / 2).MillimetersToPoints, y.MillimetersToPoints,
                             newWidth.MillimetersToPoints, boxHeight.MillimetersToPoints)
