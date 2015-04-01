@@ -20,6 +20,10 @@
      <desktopModule>
       <moduleName>Connect_Projects</moduleName>
       <foldername>Connect\Projects</foldername>
+      <businessControllerClass>Connect.DNN.Modules.Projects.Integration.ModuleController, CONNECT.DNN.MODULES.PROJECTS</businessControllerClass>
+      <supportedFeatures>
+       <supportedFeature type="Searchable" />
+      </supportedFeatures>
       <moduleDefinitions>
        <moduleDefinition>
         <friendlyName>Projects</friendlyName>

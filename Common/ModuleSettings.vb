@@ -1,5 +1,6 @@
 Imports DotNetNuke.Entities.Modules
 Imports DotNetNuke.Common.Utilities.DictionaryExtensions
+Imports ModuleController = Connect.DNN.Modules.Projects.Integration.ModuleController
 
 Namespace Common
  Public Class ModuleSettings

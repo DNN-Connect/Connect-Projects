@@ -163,6 +163,7 @@
     <Compile Include="Controllers\PTypes\PTypesController_Services.vb" />
     <Compile Include="Data\RepositoryImpl.vb" />
     <Compile Include="Documents\ProjectDocument.vb" />
+    <Compile Include="Integration\ModuleController.vb" />
     <Compile Include="Models\LicenseTypes\LicenseType.vb" />
     <Compile Include="Models\LicenseTypes\LicenseTypeBase_Methods.vb" />
     <Compile Include="Models\LicenseTypes\LicenseTypeBase_Properties.vb" />
