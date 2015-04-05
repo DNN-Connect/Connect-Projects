@@ -3,10 +3,11 @@
 
 <div class="cp_container">
  <div class="cp_column">
+  <div data-ng-if="project.NrLiveLinks == 0" class="cp_warning">@Html.GetLocalizedString("NoActiveLinks")</div>
   <dl class="cp_dl_horizontal">
    <dt>@Html.GetLocalizedString("ProjectTypes")</dt>
    <dd>
-    <span data-ng-repeat="pt in project.ProjectTypes | filter:{IsSelected: true}">{{pt.TypeDescription}}</span>
+    <span data-ng-repeat="pt in project.ProjectTypes | filter:{IsSelected: true}" class="cp_tag">{{pt.TypeDescription}}</span>
    </dd>
    <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("LicenseType")</dt>
@@ -14,14 +15,26 @@
    <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("Owners")</dt>
    <dd>{{project.Owners}}&nbsp;</dd>
+   <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("People")</dt>
    <dd>{{project.People}}&nbsp;</dd>
    <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("Status")</dt>
    <dd>{{project.Status}}&nbsp;</dd>
+   <div style="clear:both"></div>
    <span data-ng-repeat="u in project.Urls">
     <dt>Url</dt>
-    <dd><a href="{{u.Url}}">{{u.Description.isNull(u.Url)}}</a></dd>
+    <dd>
+     <a href="{{u.Url}}">{{u.Description.isNull(u.Url)}}</a>
+     <span class="cp_note"><br />
+      {{'@Html.GetLocalizedString("LastRetrieved")' | stringFormat:[dateFormat(u.LastChecked, 'short')]}}
+     </span>
+     <span class="cp_note" data-ng-if="u.LastChange">
+      <br />
+      {{'@Html.GetLocalizedString("LastModified")' | stringFormat:[dateFormat(u.LastChange, 'short')]}}
+     </span>
+    </dd>
+    <div style="clear:both"></div>
    </span>
   </dl>
   <h3>@Html.GetLocalizedString("Aims")</h3>

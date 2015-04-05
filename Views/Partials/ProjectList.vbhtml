@@ -9,7 +9,7 @@ End Code
       class="cp_pl_project"
       style="background-color:#{{project.ProjectColor}}"
       data-ng-click="gotoProject(project.ProjectId)">
-  <div data-ng-class="{'cp_pl_invisible': !project.Visible}">
+  <div data-ng-class="{'cp_pl_invisible': !project.Visible, 'cp_pl_nolinks': project.NrLiveLinks == 0}">
    <div class="cp_pl_img">
     <img src="@imgPath{{project.ProjectId}}/{{project.FirstImage.AddImageSize('_tn')}}" width="{{settings.tnWidth}}" height="{{settings.tnHeight}}" alt="{{project.ProjectName}}" />
    </div>

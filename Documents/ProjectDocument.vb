@@ -93,8 +93,15 @@ Namespace Documents
     y += paddingUnderTitle
     For Each url As UrlBase In project.Urls
      DrawTextBlock(url.Url, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-     If url.LastChecked IsNot Nothing Then
-      DrawTextBlock(String.Format("Last checked {0:D}", url.LastChecked), GetCourier(tinyFontSize, False), Color.Gray, y, 10.0F, 130.0F)
+     If url.IsDead Then
+      DrawTextBlock("This link appears to be dead", GetCourier(tinyFontSize, False), Color.Red, y, 10.0F, 130.0F)
+     Else
+      If url.LastChecked IsNot Nothing Then
+       DrawTextBlock(String.Format("Last retrieved {0:D}", url.LastChecked), GetCourier(tinyFontSize, False), Color.Gray, y, 10.0F, 130.0F)
+      End If
+      If url.LastChange IsNot Nothing Then
+       DrawTextBlock(String.Format("Last change {0:D}", url.LastChange), GetCourier(tinyFontSize, False), Color.Gray, y, 10.0F, 130.0F)
+      End If
      End If
     Next
    End If

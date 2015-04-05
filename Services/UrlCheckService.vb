@@ -37,9 +37,6 @@ Namespace Services
         urlExists = True
         Log.AppendLine(String.Format("The url exists"))
        End If
-       If response.LastModified <> Date.MinValue Then
-        lastModified = response.LastModified
-       End If
       End Using
      Catch exc As Exception
      End Try
