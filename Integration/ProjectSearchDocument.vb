@@ -1,6 +1,7 @@
 ﻿Imports System.Linq
 Imports Connect.DNN.Modules.Projects.Controllers.ProjectTypes
 Imports Connect.DNN.Modules.Projects.Models.Projects
+Imports Connect.DNN.Modules.Projects.Models.Urls
 Imports DotNetNuke.Entities.Modules
 Imports DotNetNuke.Services.Search.Entities
 
@@ -24,10 +25,12 @@ Namespace Integration
    AddDataLine("Owners", p.Owners)
    AddDataLine("People", p.People)
    AddDataLine("Status", p.Status)
-   'AddDataLine("Url 1", p.Url1)
-   'AddDataLine("Url 2", p.Url2)
    AddDataLine("Aims", p.Aims)
    AddDataLine("Dependencies", p.Dependencies)
+   For Each url As UrlBase In p.Urls
+    AddDataLine("Url", url.Url)
+    AddDataLine("Description", url.Url)
+   Next
   End Sub
 
   Private Sub AddDataLine(propName As String, propValue As String)

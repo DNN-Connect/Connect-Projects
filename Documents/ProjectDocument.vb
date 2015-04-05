@@ -6,6 +6,7 @@ Imports Connect.DNN.Modules.Projects.Controllers.Projects
 Imports Connect.DNN.Modules.Projects.Controllers.ProjectTypes
 Imports Connect.DNN.Modules.Projects.Models.Projects
 Imports Connect.DNN.Modules.Projects.Models.ProjectTypes
+Imports Connect.DNN.Modules.Projects.Models.Urls
 Imports DotNetNuke.Entities.Portals
 Imports Syncfusion.Pdf
 Imports Syncfusion.Pdf.Graphics
@@ -46,6 +47,9 @@ Namespace Documents
    Dim bannerColor As New PdfColor(projectColor)
    Dim titleFontSize As Single = 18
    Dim bodyFontSize As Single = 12
+   Dim tinyFontSize As Single = 9
+   Dim distanceToNextHeading As Single = 3.0F
+   Dim paddingUnderTitle As Single = 1.0F
 
    PageGraphics.DrawRectangle(New PdfSolidBrush(bannerColor), 0.0F, 0.0F.MillimetersToPoints(), 297.0F.MillimetersToPoints(), 25.0F.MillimetersToPoints())
    Dim font As PdfFont = GetHelvetica(30, True)
@@ -64,34 +68,47 @@ Namespace Documents
 
    Dim y As Single = 40.0F
    DrawTextBlock("Project Type(s)", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   y += paddingUnderTitle
    Dim types As String = String.Join(", ", projectTypes.Select(Function(t) t.TypeDescription))
    DrawTextBlock(types, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   'y += 2
+   y += distanceToNextHeading
    DrawTextBlock("License Type", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   y += paddingUnderTitle
    DrawTextBlock(project.LicenseType, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   y += 2
+   y += distanceToNextHeading
    DrawTextBlock("Owners", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   y += paddingUnderTitle
    DrawTextBlock(project.Owners, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   y += 2
+   y += distanceToNextHeading
    DrawTextBlock("People/Authors", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   y += paddingUnderTitle
    DrawTextBlock(project.People, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   y += 2
+   y += distanceToNextHeading
    DrawTextBlock("Status", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   y += paddingUnderTitle
    DrawTextBlock(project.Status, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   y += 2
-   'DrawTextBlock("Url", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
-   'DrawTextBlock(project.Url1, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   'If project.Url2 <> "" Then
-   ' DrawTextBlock(project.Url2, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   'End If
-   y += 2
+   y += distanceToNextHeading
+   If project.Urls.Count > 0 Then
+    DrawTextBlock("Url", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+    y += paddingUnderTitle
+    For Each url As UrlBase In project.Urls
+     DrawTextBlock(url.Url, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
+     If url.LastChecked IsNot Nothing Then
+      DrawTextBlock(String.Format("Last checked {0:D}", url.LastChecked), GetCourier(tinyFontSize, False), Color.Gray, y, 10.0F, 130.0F)
+     End If
+    Next
+   End If
+   y += distanceToNextHeading
    DrawTextBlock("Aims", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   y += paddingUnderTitle
    DrawTextBlock(project.Aims, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   y += 2
+   y += distanceToNextHeading
    DrawTextBlock("Description", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   y += paddingUnderTitle
    DrawTextBlock(project.Description, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   y += 2
+   y += distanceToNextHeading
    DrawTextBlock("Dependencies", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   y += paddingUnderTitle
    DrawTextBlock(project.Dependencies, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
 
    Dim imageMapPath As String = String.Format("{0}Connect\Projects\{1}\{2}\", PortalSettings.Current.HomeDirectoryMapPath, moduleId, projectId)
