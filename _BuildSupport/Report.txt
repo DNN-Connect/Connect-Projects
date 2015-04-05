@@ -30,7 +30,7 @@ set.buildvars:
 
 set.versions:
 
-     [echo] Set Version 01.01.00 on Connect.Projects.vbproj
+     [echo] Set Version 01.02.00 on Connect.Projects.vbproj
 Checking ..\My Project\AssemblyInfo.vb
 Checking ..\_Installation\Connect.Projects.dnn
 Reset References to _References\
@@ -41,6 +41,7 @@ Found assembly dotnetnuke.web.razor with version 7.1.2.356
 Found assembly dotnetnuke.webutility with version 4.2.1.783
 Found assembly microsoft.applicationblocks.data with version 2.0.0.0
 Found assembly newtonsoft.json with version 4.5.6.14930
+Found assembly octokit with version 0.8.0
 Found assembly syncfusion.compression.base with version 12.4400.0.24
 Found assembly syncfusion.core with version 12.4400.0.24
 Found assembly syncfusion.docio.base with version 12.4400.0.24
@@ -65,8 +66,8 @@ Adjusting 'Newtonsoft.Json, Version=4.5.6.14930, Culture=neutral, PublicKeyToken
 Adjusting Path 'Newtonsoft.Json, Version=4.5.6.14930, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL'
 Adjusting 'Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL'
 Adjusting Path 'Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL'
-Adjusting 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
-Adjusting Path 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
+Adjusting 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
+Adjusting Path 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
 Adjusting 'System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
 Adjusting Path 'System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
 Adjusting 'System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
@@ -79,7 +80,7 @@ clean.bindirectory:
 compile.projects:
 
      [echo] Building Connect.Projects.vbproj
-  [msbuild] Build started 1/4/2015 20:45:56.
+  [msbuild] Build started 5/4/2015 22:31:10.
   [msbuild] Overriding target "GetFrameworkPaths" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "GetFrameworkPaths" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.NETFramework.targets".
   [msbuild] Overriding target "SatelliteDllsProjectOutputGroup" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "SatelliteDllsProjectOutputGroup" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets".
   [msbuild] Project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" on node 1 (Rebuild target(s)).
@@ -128,6 +129,7 @@ compile.projects:
   [msbuild]   File "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\Syncfusion.Compression.Base.dll" doesn't exist. Skipping.
   [msbuild]   File "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\Syncfusion.Core.dll" doesn't exist. Skipping.
   [msbuild]   File "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\Syncfusion.Pdf.Base.dll" doesn't exist. Skipping.
+  [msbuild]   File "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\Octokit.dll" doesn't exist. Skipping.
   [msbuild]   Deleting file "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\obj\release\Connect.Projects.vbprojResolveAssemblyReference.cache".
   [msbuild]   Deleting file "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\obj\release\Connect.DNN.Modules.Projects.Resources.resources".
   [msbuild]   Deleting file "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\obj\release\Connect.Projects.vbproj.GenerateResource.Cache".
@@ -176,7 +178,9 @@ compile.projects:
   [msbuild] Done building target "GetFrameworkPaths" in project "Connect.Projects.vbproj".
   [msbuild] Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
   [msbuild] Target "GetReferenceAssemblyPaths" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "PrepareForBuild" depends on it):
-  [msbuild] Task "GetReferenceAssemblyPaths" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) was evaluated as ('.NETFramework,Version=v4.0' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
+  [msbuild] Using "GetReferenceAssemblyPaths" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+  [msbuild] Task "GetReferenceAssemblyPaths"
+  [msbuild] Done executing task "GetReferenceAssemblyPaths".
   [msbuild] Done building target "GetReferenceAssemblyPaths" in project "Connect.Projects.vbproj".
   [msbuild] Target "PrepareForBuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "CoreBuild" depends on it):
   [msbuild] Using "FindAppConfigFile" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
@@ -217,9 +221,9 @@ compile.projects:
   [msbuild] Using "ResolveAssemblyReference" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
   [msbuild] Task "ResolveAssemblyReference"
   [msbuild]   TargetFrameworkMoniker:
-  [msbuild]       .NETFramework,Version=v4.0
+  [msbuild]       .NETFramework,Version=v4.5
   [msbuild]   TargetFrameworkMonikerDisplayName:
-  [msbuild]       .NET Framework 4
+  [msbuild]       .NET Framework 4.5
   [msbuild]   TargetedRuntimeVersion:
   [msbuild]       v4.0.30319
   [msbuild]   Assemblies:
@@ -251,6 +255,8 @@ compile.projects:
   [msbuild]           Private = 'False'
   [msbuild]           HintPath = '_References\Newtonsoft.Json.dll'
   [msbuild]           SpecificVersion = 'False'
+  [msbuild]       Octokit
+  [msbuild]           HintPath = '_References\Octokit.dll'
   [msbuild]       Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL
   [msbuild]           HintPath = '_References\Syncfusion.Compression.Base.dll'
   [msbuild]           SpecificVersion = 'False'
@@ -262,7 +268,7 @@ compile.projects:
   [msbuild]       System.Data
   [msbuild]       System.Data.DataSetExtensions
   [msbuild]       System.Drawing
-  [msbuild]       System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
+  [msbuild]       System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
   [msbuild]           Private = 'False'
   [msbuild]           HintPath = '_References\System.Net.Http.dll'
   [msbuild]           SpecificVersion = 'False'
@@ -288,10 +294,10 @@ compile.projects:
   [msbuild]       System.Xml.Linq
   [msbuild]       System.Core
   [msbuild]   AssemblyFiles:
-  [msbuild]       C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll
+  [msbuild]       C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll
   [msbuild]   CandidateAssemblyFiles:
   [msbuild]   TargetFrameworkDirectories:
-  [msbuild]       C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
+  [msbuild]       C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\
   [msbuild]   InstalledAssemblyTables:
   [msbuild]   IgnoreInstalledAssemblyTable:
   [msbuild]       False
@@ -299,7 +305,7 @@ compile.projects:
   [msbuild]       {CandidateAssemblyFiles}
   [msbuild]       {HintPathFromItem}
   [msbuild]       {TargetFrameworkDirectory}
-  [msbuild]       {Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}
+  [msbuild]       {Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}
   [msbuild]       {AssemblyFolders}
   [msbuild]       {GAC}
   [msbuild]       {RawFileName}
@@ -333,16 +339,16 @@ compile.projects:
   [msbuild]   ProfileName:
   [msbuild]       
   [msbuild]   FullFrameworkFolders:
-  [msbuild]       C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
+  [msbuild]       C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\
   [msbuild]   LatestTargetFrameworkDirectories:
   [msbuild]   ProfileTablesLocation:
   [msbuild]   Unified primary reference "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll" because there is a more recent version of this framework file.
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.ApplicationBlocks.Data.dll" because there is a more recent version of this framework file.
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "DotNetNuke, Version=7.1.2.356, Culture=neutral, PublicKeyToken=null".
@@ -380,6 +386,10 @@ compile.projects:
   [msbuild]       Reference found at search path location "{HintPathFromItem}".
   [msbuild]       This reference is not "CopyLocal" because at least one source item had "Private" set to "false" and no source items had "Private" set to "true".
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
+  [msbuild]   Primary reference "Octokit, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null".
+  [msbuild]       Resolved file path is "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Octokit.dll".
+  [msbuild]       Reference found at search path location "{HintPathFromItem}".
+  [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89".
   [msbuild]       Resolved file path is "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Compression.Base.dll".
   [msbuild]       Reference found at search path location "{HintPathFromItem}".
@@ -395,24 +405,24 @@ compile.projects:
   [msbuild]   Unified primary reference "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll" because there is a more recent version of this framework file.
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.ApplicationBlocks.Data.dll" because there is a more recent version of this framework file.
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
@@ -421,48 +431,48 @@ compile.projects:
   [msbuild]       This reference is not "CopyLocal" because at least one source item had "Private" set to "false" and no source items had "Private" set to "true".
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Runtime.Serialization.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Runtime.Serialization.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Runtime.Serialization.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Runtime.Serialization.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Unified primary reference "System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll" because there is a more recent version of this framework file.
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll" because there is a more recent version of this framework file.
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll" because there is a more recent version of this framework file.
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.ApplicationServices.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.ApplicationServices.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.ApplicationServices.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.ApplicationServices.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Web.DynamicData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.DynamicData.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.DynamicData.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.DynamicData.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.DynamicData.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Web.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Entity.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Entity.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Entity.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Entity.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Extensions.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Extensions.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Extensions.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Extensions.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35".
@@ -479,53 +489,53 @@ compile.projects:
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll" because there is a more recent version of this framework file.
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll" because there is a more recent version of this framework file.
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.ApplicationBlocks.Data.dll" because there is a more recent version of this framework file.
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Unified primary reference "System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll" because there is a more recent version of this framework file.
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Configuration.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Configuration.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Configuration.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Configuration.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Services.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Services.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Services.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Services.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.EnterpriseServices.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.EnterpriseServices.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.EnterpriseServices.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.EnterpriseServices.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Web.Mobile, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Mobile.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Mobile.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Mobile.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Mobile.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Primary reference "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.winmd", but it didn't exist.
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Unified Dependency "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
@@ -533,17 +543,17 @@ compile.projects:
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll" because there is a more recent version of this framework file.
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll" because there is a more recent version of this framework file.
   [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.ApplicationBlocks.Data.dll" because there is a more recent version of this framework file.
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\mscorlib.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\mscorlib.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\mscorlib.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.winmd", but it didn't exist.
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, processorArchitecture=MSIL".
-  [msbuild]       Required by "DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
+  [msbuild]       Required by "Octokit".
   [msbuild]       Required by "Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral".
   [msbuild]       Required by "System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
@@ -551,9 +561,9 @@ compile.projects:
   [msbuild]       Required by "Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL".
   [msbuild]       Required by "Syncfusion.Core".
   [msbuild]       Required by "DotNetNuke.WebUtility, Version=4.2.1.783, Culture=neutral, processorArchitecture=MSIL".
+  [msbuild]       Required by "DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "Newtonsoft.Json, Version=4.5.6.14930, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL".
   [msbuild]       Required by "Syncfusion.Pdf.Base".
-  [msbuild]       Required by "System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL".
   [msbuild]       This reference is not "CopyLocal" because at least one source item had "Private" set to "false" and no source items had "Private" set to "true".
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Dependency "PetaPoco, Version=5.0.1.17400, Culture=neutral, PublicKeyToken=null".
@@ -563,10 +573,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\PetaPoco.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\PetaPoco.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PetaPoco.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PetaPoco.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PetaPoco.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PetaPoco.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PetaPoco.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PetaPoco.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\PetaPoco.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\PetaPoco.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\PetaPoco.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\PetaPoco.winmd", but it didn't exist.
@@ -594,14 +607,14 @@ compile.projects:
   [msbuild]       Required by "DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]   Dependency "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.ComponentModel.Composition.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.ComponentModel.Composition.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.ComponentModel.Composition.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.ComponentModel.Composition.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.ComponentModel.Composition.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.ComponentModel.Composition.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.ComponentModel.Composition.winmd", but it didn't exist.
   [msbuild]       Required by "DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
@@ -614,10 +627,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Lucene.Net.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Lucene.Net.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Lucene.Net.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Lucene.Net.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Lucene.Net.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Lucene.Net.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Lucene.Net.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Lucene.Net.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Lucene.Net.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Lucene.Net.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Lucene.Net.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\Lucene.Net.winmd", but it didn't exist.
@@ -645,14 +661,14 @@ compile.projects:
   [msbuild]       Required by "DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]   Dependency "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Design.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Design.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Design.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Design.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Design.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Design.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Design.winmd", but it didn't exist.
   [msbuild]       Required by "DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
@@ -665,10 +681,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Services.Syndication.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Services.Syndication.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.Services.Syndication.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.Services.Syndication.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.Services.Syndication.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.Services.Syndication.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.Services.Syndication.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.Services.Syndication.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.Services.Syndication.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.Services.Syndication.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.Services.Syndication.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\DotNetNuke.Services.Syndication.winmd", but it didn't exist.
@@ -702,10 +721,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Instrumentation.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Instrumentation.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.Instrumentation.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.Instrumentation.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.Instrumentation.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.Instrumentation.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.Instrumentation.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.Instrumentation.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.Instrumentation.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.Instrumentation.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.Instrumentation.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\DotNetNuke.Instrumentation.winmd", but it didn't exist.
@@ -740,10 +762,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\SharpZipLib.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\SharpZipLib.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\SharpZipLib.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\SharpZipLib.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\SharpZipLib.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\SharpZipLib.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\SharpZipLib.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\SharpZipLib.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\SharpZipLib.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\SharpZipLib.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\SharpZipLib.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\SharpZipLib.winmd", but it didn't exist.
@@ -777,10 +802,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Telerik.Web.UI.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Telerik.Web.UI.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Telerik.Web.UI.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Telerik.Web.UI.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Telerik.Web.UI.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Telerik.Web.UI.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Telerik.Web.UI.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Telerik.Web.UI.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Telerik.Web.UI.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Telerik.Web.UI.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Telerik.Web.UI.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\Telerik.Web.UI.winmd", but it didn't exist.
@@ -814,10 +842,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Lucene.Net.Contrib.FastVectorHighlighter.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Lucene.Net.Contrib.FastVectorHighlighter.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Lucene.Net.Contrib.FastVectorHighlighter.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Lucene.Net.Contrib.FastVectorHighlighter.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Lucene.Net.Contrib.FastVectorHighlighter.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Lucene.Net.Contrib.FastVectorHighlighter.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Lucene.Net.Contrib.FastVectorHighlighter.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Lucene.Net.Contrib.FastVectorHighlighter.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Lucene.Net.Contrib.FastVectorHighlighter.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Lucene.Net.Contrib.FastVectorHighlighter.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Lucene.Net.Contrib.FastVectorHighlighter.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\Lucene.Net.Contrib.FastVectorHighlighter.winmd", but it didn't exist.
@@ -847,14 +878,14 @@ compile.projects:
   [msbuild]   Unified Dependency "Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
   [msbuild]       Using this version instead of original version "8.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll" because there is a more recent version of this framework file.
   [msbuild]       Using this version instead of original version "8.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.ApplicationBlocks.Data.dll" because there is a more recent version of this framework file.
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.VisualBasic.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.VisualBasic.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.VisualBasic.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.VisualBasic.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.VisualBasic.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.VisualBasic.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.VisualBasic.winmd", but it didn't exist.
   [msbuild]       Required by "DotNetNuke.WebUtility, Version=4.2.1.783, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral".
   [msbuild]       Required by "DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
@@ -869,10 +900,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebControls.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebControls.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.WebControls.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.WebControls.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.WebControls.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.WebControls.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.WebControls.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.WebControls.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.WebControls.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.WebControls.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.WebControls.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\DotNetNuke.WebControls.winmd", but it didn't exist.
@@ -906,10 +940,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\CountryListBox.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\CountryListBox.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\CountryListBox.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\CountryListBox.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\CountryListBox.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\CountryListBox.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\CountryListBox.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\CountryListBox.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\CountryListBox.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\CountryListBox.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\CountryListBox.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\CountryListBox.winmd", but it didn't exist.
@@ -937,14 +974,14 @@ compile.projects:
   [msbuild]       Required by "DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]   Dependency "System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.ComponentModel.DataAnnotations.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.ComponentModel.DataAnnotations.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.ComponentModel.DataAnnotations.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.ComponentModel.DataAnnotations.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.ComponentModel.DataAnnotations.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.ComponentModel.DataAnnotations.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.ComponentModel.DataAnnotations.winmd", but it didn't exist.
   [msbuild]       Required by "System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
   [msbuild]       Required by "System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
@@ -953,32 +990,53 @@ compile.projects:
   [msbuild]       This reference is not "CopyLocal" because at least one source item had "Private" set to "false" and no source items had "Private" set to "true".
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Dependency "Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.CSharp.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.CSharp.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.CSharp.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.CSharp.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.CSharp.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.CSharp.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.CSharp.winmd", but it didn't exist.
   [msbuild]       Required by "System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       This reference is not "CopyLocal" because at least one source item had "Private" set to "false" and no source items had "Private" set to "true".
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
+  [msbuild]   Unified Dependency "System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+  [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll" because there is a more recent version of this framework file.
+  [msbuild]       Using this version instead of original version "2.0.0.0" in "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.dll" because there is a more recent version of this framework file.
+  [msbuild]       Using this version instead of original version "2.0.0.0" in "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.Formatting.dll" because there is a more recent version of this framework file.
+  [msbuild]       Using this version instead of original version "2.0.0.0" in "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Web.Http.WebHost.dll" because there is a more recent version of this framework file.
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Net.Http.dll".
+  [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
+  [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
+  [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.winmd", but it didn't exist.
+  [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll", but its name "System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" didn't match.
+  [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Net.Http.winmd", but it didn't exist.
+  [msbuild]       Required by "System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
+  [msbuild]       Required by "Octokit".
+  [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
+  [msbuild]       This reference is not "CopyLocal" because it conflicted with another reference with the same name and lost the conflict.
+  [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Dependency "System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35".
   [msbuild]       Resolved file path is "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.Formatting.dll".
-  [msbuild]       Reference found at search path location "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]       Reference found at search path location "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.Formatting.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.Formatting.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.Formatting.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Net.Http.Formatting.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Net.Http.Formatting.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Net.Http.Formatting.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Net.Http.Formatting.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Net.Http.Formatting.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Net.Http.Formatting.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Net.Http.Formatting.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Net.Http.Formatting.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Net.Http.Formatting.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
@@ -992,10 +1050,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\WebFormsMvp.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\WebFormsMvp.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\WebFormsMvp.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\WebFormsMvp.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\WebFormsMvp.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\WebFormsMvp.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\WebFormsMvp.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\WebFormsMvp.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\WebFormsMvp.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\WebFormsMvp.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\WebFormsMvp.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\WebFormsMvp.winmd", but it didn't exist.
@@ -1027,10 +1088,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.HttpModules.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.HttpModules.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.HttpModules.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.HttpModules.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.HttpModules.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.HttpModules.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.HttpModules.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.HttpModules.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.HttpModules.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.HttpModules.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.HttpModules.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\DotNetNuke.HttpModules.winmd", but it didn't exist.
@@ -1057,16 +1121,19 @@ compile.projects:
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]   Dependency "System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35".
   [msbuild]       Resolved file path is "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Web.Http.WebHost.dll".
-  [msbuild]       Reference found at search path location "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]       Reference found at search path location "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.WebHost.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.WebHost.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.WebHost.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Http.WebHost.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Http.WebHost.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Http.WebHost.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Http.WebHost.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Http.WebHost.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Http.WebHost.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Web.Http.WebHost.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Web.Http.WebHost.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Web.Http.WebHost.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Found related file "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Web.Http.WebHost.xml".
@@ -1079,10 +1146,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\ClientDependency.Core.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\ClientDependency.Core.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\ClientDependency.Core.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\ClientDependency.Core.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\ClientDependency.Core.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\ClientDependency.Core.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\ClientDependency.Core.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\ClientDependency.Core.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\ClientDependency.Core.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\ClientDependency.Core.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\ClientDependency.Core.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\ClientDependency.Core.winmd", but it didn't exist.
@@ -1117,10 +1187,13 @@ compile.projects:
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Client.dll", but its name "DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, PublicKeyToken=null" didn't match.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Client.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.Web.Client.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.Web.Client.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\DotNetNuke.Web.Client.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.Web.Client.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.Web.Client.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\DotNetNuke.Web.Client.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.Web.Client.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.Web.Client.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\DotNetNuke.Web.Client.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]           For SearchPath "{AssemblyFolders}".
   [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\DotNetNuke.Web.Client.winmd", but it didn't exist.
@@ -1149,42 +1222,45 @@ compile.projects:
   [msbuild]       Required by "DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]   Dependency "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Windows.Forms.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Windows.Forms.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Windows.Forms.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.winmd", but it didn't exist.
   [msbuild]       Required by "Syncfusion.Pdf.Base".
   [msbuild]       Required by "Syncfusion.Core".
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Dependency "System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Security.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Security.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Security.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Security.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Security.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Security.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Security.winmd", but it didn't exist.
   [msbuild]       Required by "Syncfusion.Pdf.Base".
   [msbuild]       This reference is not "CopyLocal" because it's a prerequisite file.
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Dependency "Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35".
   [msbuild]       Resolved file path is "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\Microsoft.Web.Infrastructure.dll".
-  [msbuild]       Reference found at search path location "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]       Reference found at search path location "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.Web.Infrastructure.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.Web.Infrastructure.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.Web.Infrastructure.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.Web.Infrastructure.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.Web.Infrastructure.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.Web.Infrastructure.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.Web.Infrastructure.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.Web.Infrastructure.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.Web.Infrastructure.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Microsoft.Web.Infrastructure.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Microsoft.Web.Infrastructure.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\Microsoft.Web.Infrastructure.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]       Required by "System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
@@ -1195,16 +1271,19 @@ compile.projects:
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Dependency "System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35".
   [msbuild]       Resolved file path is "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.Razor.dll".
-  [msbuild]       Reference found at search path location "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]       Reference found at search path location "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Razor.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Razor.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Razor.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Razor.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Razor.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Razor.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Razor.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Razor.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Razor.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Web.Razor.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Web.Razor.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Web.Razor.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]       Required by "System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
@@ -1214,14 +1293,14 @@ compile.projects:
   [msbuild]       This reference is not "CopyLocal" because at least one source item had "Private" set to "false" and no source items had "Private" set to "true".
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Dependency "System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089".
-  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.Linq.dll".
+  [msbuild]       Resolved file path is "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.Linq.dll".
   [msbuild]       Reference found at search path location "{TargetFrameworkDirectory}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Data.Linq.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Data.Linq.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Data.Linq.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.Linq.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.Linq.winmd", but it didn't exist.
   [msbuild]       Required by "System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
@@ -1230,16 +1309,19 @@ compile.projects:
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
   [msbuild]   Dependency "System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35".
   [msbuild]       Resolved file path is "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.Deployment.dll".
-  [msbuild]       Reference found at search path location "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]       Reference found at search path location "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           For SearchPath "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References".
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.WebPages.Deployment.winmd", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.WebPages.Deployment.dll", but it didn't exist.
   [msbuild]           Considered "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.WebPages.Deployment.exe", but it didn't exist.
   [msbuild]           For SearchPath "{TargetFrameworkDirectory}".
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.WebPages.Deployment.winmd", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.WebPages.Deployment.dll", but it didn't exist.
-  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.WebPages.Deployment.exe", but it didn't exist.
-  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}".
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.WebPages.Deployment.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.WebPages.Deployment.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.WebPages.Deployment.exe", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Web.WebPages.Deployment.winmd", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Web.WebPages.Deployment.dll", but it didn't exist.
+  [msbuild]           Considered "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Web.WebPages.Deployment.exe", but it didn't exist.
+  [msbuild]           For SearchPath "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}".
   [msbuild]           Considered AssemblyFoldersEx locations.
   [msbuild]       Required by "System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL".
   [msbuild]       Required by "DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL".
@@ -1248,6 +1330,30 @@ compile.projects:
   [msbuild]       Found related file "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.Deployment.xml".
   [msbuild]       This reference is not "CopyLocal" because at least one source item had "Private" set to "false" and no source items had "Private" set to "true".
   [msbuild]       The ImageRuntimeVersion for this reference is "v4.0.30319".
+  [msbuild]   There was a conflict between "System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" and "System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+  [msbuild]       "System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" was chosen because it was primary and "System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" was not.
+  [msbuild]       References which depend on "System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" [D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll].
+  [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll
+  [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll".
+  [msbuild]               System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
+  [msbuild]       References which depend on "System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" [C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Net.Http.dll].
+  [msbuild]           C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Web.Http.WebHost.dll
+  [msbuild]             Project file item includes which caused reference "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Web.Http.WebHost.dll".
+  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
+  [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll
+  [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll".
+  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
+  [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Octokit.dll
+  [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Octokit.dll".
+  [msbuild]               Octokit
+  [msbuild]           C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.Formatting.dll
+  [msbuild]             Project file item includes which caused reference "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.Formatting.dll".
+  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
+  [msbuild]               System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL
+  [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.dll
+  [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.dll".
+  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
+  [msbuild]               System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL
   [msbuild]   There was a conflict between "DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, PublicKeyToken=null" and "DotNetNuke.Web.Client, Version=6.1.0.272, Culture=neutral, PublicKeyToken=null".
   [msbuild]       "DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, PublicKeyToken=null" was chosen because it was primary and "DotNetNuke.Web.Client, Version=6.1.0.272, Culture=neutral, PublicKeyToken=null" was not.
   [msbuild]       References which depend on "DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, PublicKeyToken=null" [D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Client.dll].
@@ -1272,8 +1378,18 @@ compile.projects:
   [msbuild]               DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]               DotNetNuke.WebUtility, Version=4.2.1.783, Culture=neutral, processorArchitecture=MSIL
   [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
-  [msbuild]   AssemblyFoldersEx location: "{Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx}"
+  [msbuild] C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3247: Found conflicts between different versions of the same dependent assembly. [D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj]
+  [msbuild]   AssemblyFoldersEx location: "{Registry:Software\Microsoft\.NETFramework,v4.5,AssemblyFoldersEx}"
   [msbuild]           C:\Program Files (x86)\NUnit 2.6.3\bin\framework\
+  [msbuild]           C:\Program Files (x86)\Microsoft Web Tools\ReferenceAssemblies\12.0\
+  [msbuild]           C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\ReferenceAssemblies\v4.5\
+  [msbuild]           C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\
+  [msbuild]           C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\
+  [msbuild]           C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\.NETFramework\v4.0\4.3.0.0\Type Providers\
+  [msbuild]           C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\.NETFramework\v4.0\4.3.0.0\
+  [msbuild]           C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\.NETFramework\v4.0\4.3.1.0\
+  [msbuild]           C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Prototyping\Libraries\
+  [msbuild]           C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\.NETFramework\v4.5\Libraries\
   [msbuild]           C:\Program Files (x86)\Microsoft WCF Data Services\5.6\bin\.NETFramework\
   [msbuild]           C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\ReferenceAssemblies\v4.0\
   [msbuild]           c:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\ReferenceAssemblies\v4.0\
@@ -1319,15 +1435,27 @@ compile.projects:
   [msbuild] Target "ResolveComReferences" skipped, due to false condition; ('@(COMReference)'!='' or '@(COMFileReference)'!='') was evaluated as (''!='' or ''!='').
   [msbuild] Target "AfterResolveReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "ResolveReferences" depends on it):
   [msbuild] Done building target "AfterResolveReferences" in project "Connect.Projects.vbproj".
-  [msbuild] Target "ImplicitlyExpandDesignTimeFacades" skipped, due to false condition; ('$(ImplicitlyExpandDesignTimeFacades)' == 'true') was evaluated as ('' == 'true').
+  [msbuild] Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+  [msbuild] Target "ImplicitlyExpandDesignTimeFacades" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.NETFramework.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "ResolveReferences" depends on it):
+  [msbuild] Task "Message" skipped, due to false condition; ('%(ReferencePath.ResolvedFrom)' == 'ImplicitlyExpandDesignTimeFacades') was evaluated as ('{HintPathFromItem}' == 'ImplicitlyExpandDesignTimeFacades').
+  [msbuild] Task "Message" skipped, due to false condition; ('%(ReferencePath.ResolvedFrom)' == 'ImplicitlyExpandDesignTimeFacades') was evaluated as ('{TargetFrameworkDirectory}' == 'ImplicitlyExpandDesignTimeFacades').
+  [msbuild] Done building target "ImplicitlyExpandDesignTimeFacades" in project "Connect.Projects.vbproj".
   [msbuild] Target "ResolveReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "CoreBuild" depends on it):
   [msbuild] Done building target "ResolveReferences" in project "Connect.Projects.vbproj".
+  [msbuild] Target "ValidationExtension" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WorkflowBuildExtensions.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "PrepareResources" depends on it):
+  [msbuild] Task "WorkflowBuildMessageTask" skipped, due to false condition; ('$(SkipWorkflowValidation)'!='' and '$(SkipWorkflowValidation)'!='true' and '$(SkipWorkflowValidation)'!='false') was evaluated as (''!='' and ''!='true' and ''!='false').
+  [msbuild] Done building target "ValidationExtension" in project "Connect.Projects.vbproj".
+  [msbuild] Target "ExpressionBuildExtension" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WorkflowBuildExtensions.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "PrepareResources" depends on it):
+  [msbuild] Task "WorkflowBuildMessageTask" skipped, due to false condition; ('$(DisableWorkflowCompiledExpressions)'!='' and '$(DisableWorkflowCompiledExpressions)'!='true' and '$(DisableWorkflowCompiledExpressions)'!='false') was evaluated as (''!='' and ''!='true' and ''!='false').
+  [msbuild] Done building target "ExpressionBuildExtension" in project "Connect.Projects.vbproj".
   [msbuild] Target "XamlMarkupCompilePass1" skipped, due to false condition; ('@(XamlPage)' != '' or '@(XamlAppDef)' != '') was evaluated as ('' != '' or '' != '').
   [msbuild] Target "XamlMarkupCompileReadGeneratedFileList" skipped, due to false condition; ('@(XamlPage)' != '' or '@(XamlAppDef)' != '') was evaluated as ('' != '' or '' != '').
   [msbuild] Target "XamlMarkupCompileAddFilesGenerated" skipped, due to false condition; ('@(XamlPage)' != '' or '@(XamlAppDef)' != '') was evaluated as ('' != '' or '' != '').
   [msbuild] Target "XamlMarkupCompilePass2" skipped, due to false condition; ('$(XamlRequiresCompilationPass2)' == 'true' ) was evaluated as ('false' == 'true' ).
   [msbuild] Target "XamlMarkupCompileReadPass2Flag" skipped, due to false condition; ('@(XamlPage)' != '' or '@(XamlAppDef)' != '') was evaluated as ('' != '' or '' != '').
   [msbuild] Target "XamlMarkupCompileAddExtensionFilesGenerated" skipped, due to false condition; ('@(XamlPage)' != '' or '@(XamlAppDef)' != '') was evaluated as ('' != '' or '' != '').
+  [msbuild] Target "AddDeferredValidationErrorsFileToFileWrites" skipped, due to false condition; (Exists('$(DeferredValidationErrorsFileName)')) was evaluated as (Exists('obj\release\\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml')).
+  [msbuild] Target "ReportValidationBuildExtensionErrors" skipped, due to false condition; ('$(SkipWorkflowValidation)' != 'true' and ('@(XamlPage)' != '' or '@(XamlAppDef)' != '')) was evaluated as ('' != 'true' and ('' != '' or '' != '')).
   [msbuild] Target "MarkupCompilePass1" skipped, due to false condition; ('@(Page)' != '' or '@(ApplicationDefinition)' != '' ) was evaluated as ('' != '' or '' != '' ).
   [msbuild] Target "AfterMarkupCompilePass1" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "PrepareResources" depends on it):
   [msbuild] Done building target "AfterMarkupCompilePass1" in project "Connect.Projects.vbproj".
@@ -1384,7 +1512,7 @@ compile.projects:
   [msbuild] Target "CoreResGen" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "ResGen" depends on it):
   [msbuild] Using "GenerateResource" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
   [msbuild] Task "GenerateResource"
-  [msbuild]   "C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\resgen.exe" /useSourcePath /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Client.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Razor.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.ApplicationBlocks.Data.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Newtonsoft.Json.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Compression.Base.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Core.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Pdf.Base.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Configuration.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.EnterpriseServices.dll" /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Runtime.Serialization.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.ApplicationServices.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.DynamicData.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Entity.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Extensions.dll" /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Mobile.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Services.dll" /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.WebPages.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll" /compile "My Project\Resources.resx",obj\release\Connect.DNN.Modules.Projects.Resources.resources
+  [msbuild]   "C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\resgen.exe" /useSourcePath /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Client.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Razor.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.ApplicationBlocks.Data.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Newtonsoft.Json.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Octokit.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Compression.Base.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Core.dll /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Pdf.Base.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Configuration.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.EnterpriseServices.dll" /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Runtime.Serialization.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.ApplicationServices.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.DynamicData.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Entity.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Extensions.dll" /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Mobile.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Services.dll" /r:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.WebPages.dll /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.dll" /compile "My Project\Resources.resx",obj\release\Connect.DNN.Modules.Projects.Resources.resources
   [msbuild]   Processing resource file "My Project\Resources.resx" into "obj\release\Connect.DNN.Modules.Projects.Resources.resources".
   [msbuild]   Processing 0 resources from file "My Project\Resources.resx".
   [msbuild] Done executing task "GenerateResource".
@@ -1421,7 +1549,7 @@ compile.projects:
   [msbuild] Target "GenerateTargetFrameworkMonikerAttribute" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "BeforeCompile" depends on it):
   [msbuild] Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
   [msbuild] Input files: C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets
-  [msbuild] Output files: C:\Users\peter\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.vb
+  [msbuild] Output files: C:\Users\peter\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.vb
   [msbuild] Done building target "GenerateTargetFrameworkMonikerAttribute" in project "Connect.Projects.vbproj".
   [msbuild] Target "GenerateAdditionalSources" skipped, due to false condition; ('@(AssemblyAttributes)' != '' and '$(GenerateAdditionalSources)' == 'true') was evaluated as ('' != '' and '' == 'true').
   [msbuild] Target "BeforeCompile" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "Compile" depends on it):
@@ -1440,10 +1568,18 @@ compile.projects:
   [msbuild] Output file "obj\release\Connect.DNN.Modules.Projects.xml" does not exist.
   [msbuild] Using "Vbc" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
   [msbuild] Task "Vbc"
-  [msbuild]   C:\Windows\Microsoft.NET\Framework\v4.0.30319\Vbc.exe /noconfig /imports:Connect.DNN.Modules.Projects.Common,Microsoft.VisualBasic,System,System.Collections,System.Collections.Generic,System.Data,System.Diagnostics,System.Collections.Specialized,System.Configuration,System.Text,System.Text.RegularExpressions,System.Web,System.Web.Caching,System.Web.SessionState,System.Web.Security,System.Web.Profile,System.Web.UI,System.Web.UI.WebControls,System.Web.UI.WebControls.WebParts,System.Web.UI.HtmlControls /optionstrict+ /nowarn:42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355 /nostdlib /rootnamespace:Connect.DNN.Modules.Projects /sdkpath:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /highentropyva- /doc:obj\release\Connect.DNN.Modules.Projects.xml /define:"CONFIG=\"release\",TRACE=-1,PLATFORM=\"AnyCPU\"" /reference:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Client.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Razor.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.ApplicationBlocks.Data.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Newtonsoft.Json.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Compression.Base.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Core.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Pdf.Base.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Configuration.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.EnterpriseServices.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Runtime.Serialization.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.ApplicationServices.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.DynamicData.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Entity.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Extensions.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Mobile.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.Services.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.WebPages.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll" /debug:pdbonly /optimize+ /out:obj\release\Connect.DNN.Modules.Projects.dll /resource:obj\release\Connect.DNN.Modules.Projects.Resources.resources /target:library Common\AuditableEntity.vb Common\FilesStatus.vb Common\Globals.vb Common\Image.vb Common\ImageCollection.vb Common\ModuleApiController.vb Common\ModuleWebPage.vb Common\RazorControl.vb Common\Resizer.vb Common\RouteMapper.vb Controllers\AlbumController.vb Controllers\LicenseTypes\LicenseTypesController.vb Controllers\LicenseTypes\LicenseTypesController_Services.vb Controllers\ProjectTypes\ProjectTypesController.vb Controllers\ProjectTypes\ProjectTypesController_Services.vb Controllers\PTypes\PTypesController.vb Controllers\PTypes\PTypesController_Services.vb Data\RepositoryImpl.vb Documents\ProjectDocument.vb Integration\Integration.vb Integration\JournalController.vb Integration\ModuleController.vb Integration\NotificationController.vb Integration\NotificationKey.vb Integration\ProjectSearchDocument.vb Models\LicenseTypes\LicenseType.vb Models\LicenseTypes\LicenseTypeBase_Methods.vb Models\LicenseTypes\LicenseTypeBase_Properties.vb Models\Projects\Project_Interfaces.vb Models\Projects\Project.vb Models\Projects\Project_Properties.vb Models\ProjectTypes\ProjectTypeBase_Methods.vb Models\ProjectTypes\ProjectTypeBase_Properties.vb Models\ProjectTypes\ProjectType_Interfaces.vb Models\ProjectTypes\ProjectType_Properties.vb Models\PTypes\PType.vb Models\PTypes\PTypeBase_Methods.vb Models\PTypes\PTypeBase_Properties.vb Models\PTypes\PTypeSelect.vb ModuleHome.vb Repositories\LicenseTypesBaseRepository.vb Repositories\LicenseTypesRepository.vb Repositories\ProjectsBaseRepository.vb Repositories\ProjectsRepository.vb Repositories\ProjectTypesBaseRepository.vb Repositories\ProjectTypesRepository.vb Repositories\PTypesBaseRepository.vb Repositories\PTypesRepository.vb Settings.ascx.designer.vb Settings.ascx.vb Common\ContextSecurity.vb Common\ModuleBase.vb Controllers\ModuleController.vb Common\ModuleSettings.vb Controllers\Projects\ProjectsController.vb Controllers\Projects\ProjectsController_Services.vb Models\Projects\ProjectBase_Methods.vb Models\Projects\ProjectBase_Properties.vb "My Project\Application.Designer.vb" "My Project\AssemblyInfo.vb" "My Project\Resources.Designer.vb" "My Project\Settings.Designer.vb" "C:\Users\peter\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.vb"
+  [msbuild]   C:\Windows\Microsoft.NET\Framework\v4.0.30319\Vbc.exe /noconfig /imports:Connect.DNN.Modules.Projects.Common,Microsoft.VisualBasic,System,System.Collections,System.Collections.Generic,System.Data,System.Diagnostics,System.Collections.Specialized,System.Configuration,System.Text,System.Text.RegularExpressions,System.Web,System.Web.Caching,System.Web.SessionState,System.Web.Security,System.Web.Profile,System.Web.UI,System.Web.UI.WebControls,System.Web.UI.WebControls.WebParts,System.Web.UI.HtmlControls /optionstrict+ /nowarn:42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355 /nostdlib /rootnamespace:Connect.DNN.Modules.Projects /sdkpath:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5" /highentropyva+ /doc:obj\release\Connect.DNN.Modules.Projects.xml /define:"CONFIG=\"release\",TRACE=-1,PLATFORM=\"AnyCPU\"" /reference:D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Client.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Razor.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Microsoft.ApplicationBlocks.Data.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Newtonsoft.Json.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Octokit.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Compression.Base.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Core.dll,D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Pdf.Base.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Configuration.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.EnterpriseServices.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Runtime.Serialization.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.ApplicationServices.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.DynamicData.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Entity.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Extensions.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Mobile.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Web.Services.dll",D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.WebPages.dll,"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll","C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.dll" /debug:pdbonly /optimize+ /out:obj\release\Connect.DNN.Modules.Projects.dll /subsystemversion:6.00 /resource:obj\release\Connect.DNN.Modules.Projects.Resources.resources /target:library Common\AuditableEntity.vb Common\FilesStatus.vb Common\Globals.vb Common\Image.vb Common\ImageCollection.vb Common\ModuleApiController.vb Common\ModuleWebPage.vb Common\RazorControl.vb Common\Resizer.vb Common\RouteMapper.vb Controllers\AlbumController.vb Controllers\LicenseTypes\LicenseTypesController.vb Controllers\LicenseTypes\LicenseTypesController_Services.vb Controllers\ProjectTypes\ProjectTypesController.vb Controllers\ProjectTypes\ProjectTypesController_Services.vb Controllers\PTypes\PTypesController.vb Controllers\PTypes\PTypesController_Services.vb Controllers\Urls\UrlsController.vb Controllers\Urls\UrlsController_Services.vb Data\RepositoryImpl.vb Documents\ProjectDocument.vb Integration\Integration.vb Integration\JournalController.vb Integration\ModuleController.vb Integration\NotificationController.vb Integration\NotificationKey.vb Integration\ProjectSearchDocument.vb Models\LicenseTypes\LicenseType.vb Models\LicenseTypes\LicenseTypeBase_Methods.vb Models\LicenseTypes\LicenseTypeBase_Properties.vb Models\Projects\Project_Interfaces.vb Models\Projects\Project.vb Models\Projects\Project_Properties.vb Models\ProjectTypes\ProjectTypeBase_Methods.vb Models\ProjectTypes\ProjectTypeBase_Properties.vb Models\ProjectTypes\ProjectType_Interfaces.vb Models\ProjectTypes\ProjectType_Properties.vb Models\PTypes\PType.vb Models\PTypes\PTypeBase_Methods.vb Models\PTypes\PTypeBase_Properties.vb Models\PTypes\PTypeSelect.vb Models\Urls\Url.vb Models\Urls\UrlBase_Methods.vb Models\Urls\UrlBase_Properties.vb ModuleHome.vb Repositories\LicenseTypesBaseRepository.vb Repositories\LicenseTypesRepository.vb Repositories\ProjectsBaseRepository.vb Repositories\ProjectsRepository.vb Repositories\ProjectTypesBaseRepository.vb Repositories\ProjectTypesRepository.vb Repositories\PTypesBaseRepository.vb Repositories\PTypesRepository.vb Repositories\UrlsBaseRepository.vb Repositories\UrlsRepository.vb Services\UrlCheckService.vb Settings.ascx.designer.vb Settings.ascx.vb Common\ContextSecurity.vb Common\ModuleBase.vb Controllers\ModuleController.vb Common\ModuleSettings.vb Controllers\Projects\ProjectsController.vb Controllers\Projects\ProjectsController_Services.vb Models\Projects\ProjectBase_Methods.vb Models\Projects\ProjectBase_Properties.vb "My Project\Application.Designer.vb" "My Project\AssemblyInfo.vb" "My Project\Resources.Designer.vb" "My Project\Settings.Designer.vb" "C:\Users\peter\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.vb"
   [msbuild]   Microsoft (R) Visual Basic Compiler version 12.0.51209.34209
   [msbuild]   Copyright (c) Microsoft Corporation.  All rights reserved.
   [msbuild]   
+  [msbuild] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Services\UrlCheckService.vb(85,18): warning BC42356: This async method lacks 'Await' operators and so will run synchronously. Consider using the 'Await' operator to await non-blocking API calls, or 'Await Task.Run(...)' to do CPU-bound work on a background thread. [D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj]
+  [msbuild]   
+  [msbuild]     Async Function GetSomething() As Threading.Tasks.Task(Of String)
+  [msbuild]                    ~~~~~~~~~~~~                                     
+  [msbuild] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Services\UrlCheckService.vb(87,3): warning BC42105: Function 'GetSomething' doesn't return a value on all code paths. A null reference exception could occur at run time when the result is used. [D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj]
+  [msbuild]   
+  [msbuild]     End Function
+  [msbuild]     ~~~~~~~~~~~~
   [msbuild] Done executing task "Vbc".
   [msbuild] Task "CallTarget" skipped, due to false condition; ('$(TargetsTriggeredByCompilation)' != '') was evaluated as ('' != '').
   [msbuild] Done building target "CoreCompile" in project "Connect.Projects.vbproj".
@@ -1458,6 +1594,7 @@ compile.projects:
   [msbuild] Done building target "_AfterCompileWinFXInternal" in project "Connect.Projects.vbproj".
   [msbuild] Target "Compile" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "CoreBuild" depends on it):
   [msbuild] Done building target "Compile" in project "Connect.Projects.vbproj".
+  [msbuild] Target "DeferredValidation" skipped, due to false condition; ('$(SkipWorkflowValidation)' != 'true' and ('@(XamlPage)' != '' or '@(XamlAppDef)' != '')) was evaluated as ('' != 'true' and ('' != '' or '' != '')).
   [msbuild] Target "ExportWindowsMDFile" skipped, due to false condition; ('$(ExportWinMDFile)' == 'true') was evaluated as ('' == 'true').
   [msbuild] Target "UnmanagedUnregistration" skipped, due to false condition; ((('$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)' or '$(RegisterForComInterop)' != 'true' or '$(OutputType)' != 'library') or
   [msbuild]                     ('$(_AssemblyTimestampBeforeCompile)' == '')) and
@@ -1482,6 +1619,7 @@ compile.projects:
   [msbuild] Target "_CopyFilesMarkedCopyLocal" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" from project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (target "CopyFilesToOutputDirectory" depends on it):
   [msbuild] Using "Copy" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
   [msbuild] Task "Copy"
+  [msbuild]   Copying file from "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Octokit.dll" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\Octokit.dll".
   [msbuild]   Copying file from "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Compression.Base.dll" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\Syncfusion.Compression.Base.dll".
   [msbuild]   Copying file from "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Core.dll" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\Syncfusion.Core.dll".
   [msbuild]   Copying file from "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Pdf.Base.dll" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\Syncfusion.Pdf.Base.dll".
@@ -1559,6 +1697,7 @@ compile.projects:
   [msbuild] Task "Copy"
   [msbuild] Done executing task "Copy".
   [msbuild] Task "Copy"
+  [msbuild]   Copying file from "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Octokit.dll" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\_PublishedWebsites\Connect.Projects\bin\Octokit.dll".
   [msbuild]   Copying file from "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Compression.Base.dll" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\_PublishedWebsites\Connect.Projects\bin\Syncfusion.Compression.Base.dll".
   [msbuild]   Copying file from "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Core.dll" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\_PublishedWebsites\Connect.Projects\bin\Syncfusion.Core.dll".
   [msbuild]   Copying file from "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Pdf.Base.dll" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\_PublishedWebsites\Connect.Projects\bin\Syncfusion.Pdf.Base.dll".
@@ -1656,10 +1795,21 @@ compile.projects:
   [msbuild] Done Building Project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (Rebuild target(s)).
   [msbuild] 
   [msbuild] Build succeeded.
-  [msbuild]     0 Warning(s)
+  [msbuild] 
+  [msbuild] "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (Rebuild target) (1) ->
+  [msbuild] (ResolveAssemblyReferences target) -> 
+  [msbuild]   C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3247: Found conflicts between different versions of the same dependent assembly. [D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj]
+  [msbuild] 
+  [msbuild] 
+  [msbuild] "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" (Rebuild target) (1) ->
+  [msbuild] (CoreCompile target) -> 
+  [msbuild]   D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Services\UrlCheckService.vb(85,18): warning BC42356: This async method lacks 'Await' operators and so will run synchronously. Consider using the 'Await' operator to await non-blocking API calls, or 'Await Task.Run(...)' to do CPU-bound work on a background thread. [D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj]
+  [msbuild]   D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Services\UrlCheckService.vb(87,3): warning BC42105: Function 'GetSomething' doesn't return a value on all code paths. A null reference exception could occur at run time when the result is used. [D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj]
+  [msbuild] 
+  [msbuild]     3 Warning(s)
   [msbuild]     0 Error(s)
   [msbuild] 
-  [msbuild] Time Elapsed 00:00:00.73
+  [msbuild] Time Elapsed 00:00:00.95
 
 make.doc:
 
@@ -1670,10 +1820,10 @@ compileandpackage:
 
 read.version:
 
-     [echo] shortVersion: 01.01.00
-     [echo] version: 1.1.0.0
+     [echo] shortVersion: 01.02.00
+     [echo] version: 1.2.0.0
      [echo] major: 01
-     [echo] minor: 01
+     [echo] minor: 02
      [echo] build: 00
 
 make.codestats:
@@ -1693,26 +1843,28 @@ make.codestats:
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Common\RouteMapper.vb Totals: [T] 25 [C] 0 [E] 3
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\LicenseTypes\LicenseTypesController.vb Totals: [T] 47 [C] 0 [E] 19
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\LicenseTypes\LicenseTypesController_Services.vb Totals: [T] 16 [C] 0 [E] 5
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\Projects\ProjectsController.vb Totals: [T] 53 [C] 0 [E] 19
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\Projects\ProjectsController_Services.vb Totals: [T] 161 [C] 0 [E] 13
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\Projects\ProjectsController.vb Totals: [T] 60 [C] 0 [E] 19
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\Projects\ProjectsController_Services.vb Totals: [T] 165 [C] 0 [E] 13
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\ProjectTypes\ProjectTypesController.vb Totals: [T] 51 [C] 0 [E] 20
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\ProjectTypes\ProjectTypesController_Services.vb Totals: [T] 22 [C] 0 [E] 5
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\PTypes\PTypesController.vb Totals: [T] 53 [C] 0 [E] 20
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\PTypes\PTypesController_Services.vb Totals: [T] 21 [C] 0 [E] 5
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\Urls\UrlsController.vb Totals: [T] 86 [C] 0 [E] 27
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\Urls\UrlsController_Services.vb Totals: [T] 16 [C] 0 [E] 5
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\AlbumController.vb Totals: [T] 209 [C] 4 [E] 16
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Controllers\ModuleController.vb Totals: [T] 26 [C] 0 [E] 3
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Data\RepositoryImpl.vb Totals: [T] 116 [C] 0 [E] 15
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Documents\ProjectDocument.vb Totals: [T] 187 [C] 1 [E] 25
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Documents\ProjectDocument.vb Totals: [T] 211 [C] 0 [E] 25
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Integration\Integration.vb Totals: [T] 7 [C] 0 [E] 1
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Integration\JournalController.vb Totals: [T] 61 [C] 0 [E] 11
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Integration\ModuleController.vb Totals: [T] 24 [C] 0 [E] 5
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Integration\NotificationController.vb Totals: [T] 61 [C] 0 [E] 12
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Integration\NotificationKey.vb Totals: [T] 27 [C] 0 [E] 5
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Integration\ProjectSearchDocument.vb Totals: [T] 41 [C] 0 [E] 5
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Integration\ProjectSearchDocument.vb Totals: [T] 44 [C] 0 [E] 5
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular-file-upload.min.js Totals: [T] 6 [C] 5 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular-route.min.js Totals: [T] 15 [C] 6 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular.min.js Totals: [T] 250 [C] 6 [E] 0
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\connect.projects.js Totals: [T] 278 [C] 1 [E] 12
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\connect.projects.js Totals: [T] 390 [C] 15 [E] 33
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\es5-sham.min.js Totals: [T] 7 [C] 6 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\es5-shim.min.js Totals: [T] 7 [C] 6 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\jquery.colorbox.js Totals: [T] 1084 [C] 79 [E] 199
@@ -1721,10 +1873,10 @@ make.codestats:
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\LicenseTypes\LicenseType.vb Totals: [T] 33 [C] 0 [E] 7
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\LicenseTypes\LicenseTypeBase_Methods.vb Totals: [T] 64 [C] 0 [E] 11
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\LicenseTypes\LicenseTypeBase_Properties.vb Totals: [T] 46 [C] 0 [E] 9
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\Project.vb Totals: [T] 14 [C] 0 [E] 5
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\ProjectBase_Methods.vb Totals: [T] 117 [C] 0 [E] 11
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\ProjectBase_Properties.vb Totals: [T] 99 [C] 0 [E] 9
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\Project_Interfaces.vb Totals: [T] 48 [C] 0 [E] 9
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\Project.vb Totals: [T] 24 [C] 0 [E] 7
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\ProjectBase_Methods.vb Totals: [T] 109 [C] 0 [E] 11
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\ProjectBase_Properties.vb Totals: [T] 91 [C] 0 [E] 9
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\Project_Interfaces.vb Totals: [T] 51 [C] 0 [E] 9
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Projects\Project_Properties.vb Totals: [T] 62 [C] 0 [E] 9
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\ProjectTypes\ProjectTypeBase_Methods.vb Totals: [T] 60 [C] 0 [E] 11
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\ProjectTypes\ProjectTypeBase_Properties.vb Totals: [T] 40 [C] 0 [E] 9
@@ -1734,6 +1886,9 @@ make.codestats:
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\PTypes\PTypeBase_Methods.vb Totals: [T] 65 [C] 0 [E] 11
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\PTypes\PTypeBase_Properties.vb Totals: [T] 46 [C] 0 [E] 9
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\PTypes\PTypeSelect.vb Totals: [T] 30 [C] 0 [E] 6
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Urls\Url.vb Totals: [T] 39 [C] 0 [E] 7
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Urls\UrlBase_Methods.vb Totals: [T] 88 [C] 0 [E] 11
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Models\Urls\UrlBase_Properties.vb Totals: [T] 70 [C] 11 [E] 9
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\LicenseTypesBaseRepository.vb Totals: [T] 11 [C] 0 [E] 4
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\LicenseTypesRepository.vb Totals: [T] 11 [C] 0 [E] 4
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\ProjectsBaseRepository.vb Totals: [T] 11 [C] 0 [E] 4
@@ -1742,15 +1897,18 @@ make.codestats:
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\ProjectTypesRepository.vb Totals: [T] 11 [C] 0 [E] 4
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\PTypesBaseRepository.vb Totals: [T] 11 [C] 0 [E] 4
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\PTypesRepository.vb Totals: [T] 11 [C] 0 [E] 4
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\UrlsBaseRepository.vb Totals: [T] 11 [C] 0 [E] 4
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Repositories\UrlsRepository.vb Totals: [T] 11 [C] 0 [E] 4
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Services\UrlCheckService.vb Totals: [T] 90 [C] 1 [E] 18
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\ModuleHome.vb Totals: [T] 33 [C] 0 [E] 9
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx Totals: [T] 65 [C] 0 [E] 1
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx.designer.vb Totals: [T] 285 [C] 218 [E] 33
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx.vb Totals: [T] 98 [C] 1 [E] 13
-[codestats] Totals: [VB]  [T] 7348 [C] 367 [E] 858
+[codestats] Totals: [VB]  [T] 7906 [C] 392 [E] 966
 
 check.sqlscripts:
 
-     [echo] Version: 01.01.00
+     [echo] Version: 01.02.00
 
 make.package:
 
@@ -1771,22 +1929,22 @@ make.package:
 [compilecss] Compiling D:\Programs\Nant\Build\Resources\css\colorbox.css
 [compilecss] Compiling D:\Programs\Nant\Build\Resources\module.css
       [zip] Zipping 1212 files to 'D:\Programs\Nant\Build\Package\Resources.zip'.
-     [copy] Copying 4 files to 'D:\Programs\Nant\Build\Package'.
      [copy] Copying 5 files to 'D:\Programs\Nant\Build\Package'.
+     [copy] Copying 6 files to 'D:\Programs\Nant\Build\Package'.
      [echo] Transforming D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Installation\Connect.Projects.dnn with dnn5.xsl
-      [zip] Zipping 11 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.01.00_Install.zip'.
+      [zip] Zipping 13 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.02.00_Install.zip'.
    [delete] Deleting directory 'D:\Programs\Nant\Build\Package'.
      [echo] Building SOURCE
 
 make.package:
 
    [delete] Deleting directory 'D:\Programs\Nant\Build\Resources'.
-     [copy] Copying 1280 files to 'D:\Programs\Nant\Build\Resources'.
-      [zip] Zipping 1280 files to 'D:\Programs\Nant\Build\Package\Resources.zip'.
-     [copy] Copying 4 files to 'D:\Programs\Nant\Build\Package'.
+     [copy] Copying 1288 files to 'D:\Programs\Nant\Build\Resources'.
+      [zip] Zipping 1288 files to 'D:\Programs\Nant\Build\Package\Resources.zip'.
      [copy] Copying 5 files to 'D:\Programs\Nant\Build\Package'.
+     [copy] Copying 6 files to 'D:\Programs\Nant\Build\Package'.
      [echo] Transforming D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Installation\Connect.Projects.dnn with dnn5.xsl
-      [zip] Zipping 11 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.01.00_Source.zip'.
+      [zip] Zipping 13 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.02.00_Source.zip'.
    [delete] Deleting directory 'D:\Programs\Nant\Build\Package'.
 
 all:
@@ -1797,12 +1955,12 @@ backup.project:
      [echo] Backing Up to \\192.168.123.240\src
      [echo] Backing Up to D:\src
      [echo] Backing Up Install
-     [copy] Copying 1 file to 'D:\src\Projects\2015-4-1\Connect.Projects_01.01.00_Install.zip'.
+     [copy] Copying 1 file to 'D:\src\Projects\2015-4-5\Connect.Projects_01.02.00_Install.zip'.
      [echo] Backing Up Source
-     [copy] Copying 1 file to 'D:\src\Projects\2015-4-1\Connect.Projects_01.01.00_Source.zip'.
+     [copy] Copying 1 file to 'D:\src\Projects\2015-4-5\Connect.Projects_01.02.00_Source.zip'.
      [echo] Backing Up to G:\src
 
 BUILD SUCCEEDED
 
-Total time: 34.4 seconds.
+Total time: 35.5 seconds.
 

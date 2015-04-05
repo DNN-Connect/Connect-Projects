@@ -1,1 +1,1 @@
-Connect.Projects.vbproj;01.01.01
+Connect.Projects.vbproj;01.02.00

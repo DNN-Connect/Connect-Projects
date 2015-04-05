@@ -26,8 +26,6 @@ CREATE TABLE [dbo].[Connect_Projects_Projects](
 	[Visible] [bit] NOT NULL,
 	[ProjectName] [nvarchar](1000) NOT NULL,
 	[LicenseTypeId] [int] NOT NULL,
-	[Url1] [nvarchar](500) NULL,
-	[Url2] [nvarchar](500) NULL,
 	[Status] [nvarchar](500) NULL,
 	[Owners] [nvarchar](1000) NULL,
 	[People] [nvarchar](1000) NULL,
@@ -74,10 +72,34 @@ BEGIN
 CREATE TABLE [dbo].[Connect_Projects_PTypes](
 	[TypeId] [int] IDENTITY(1,1) NOT NULL,
 	[TypeDescription] [nvarchar](100) NOT NULL,
-	[TypeIcon] [nvarchar](50) NULL,
+	[TypeIcon] [nvarchar](20) NULL,
  CONSTRAINT [PK_Connect_Projects_PTypes] PRIMARY KEY CLUSTERED 
 (
 	[TypeId] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Urls]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Connect_Projects_Urls](
+	[UrlId] [int] IDENTITY(1,1) NOT NULL,
+	[ProjectId] [int] NOT NULL,
+	[Url] [nvarchar](500) NOT NULL,
+	[Description] [nvarchar](1000) NULL,
+	[UrlType] [int] NOT NULL,
+	[IsDead] [bit] NOT NULL,
+	[LastChange] [datetime] NULL,
+	[LastChecked] [datetime] NULL,
+	[Retries] [int] NULL,
+ CONSTRAINT [PK_Connect_Projects_Urls] PRIMARY KEY CLUSTERED 
+(
+	[UrlId] ASC
 )WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF)
 )
 END
@@ -125,6 +147,16 @@ GO
 
 
 
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Urls_Projects]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Urls]'))
+ALTER TABLE [dbo].[Connect_Projects_Urls]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_Urls_Projects] FOREIGN KEY([ProjectId])
+REFERENCES [dbo].[Connect_Projects_Projects] ([ProjectId])
+ON DELETE CASCADE
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_Urls_Projects]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_Urls]'))
+ALTER TABLE [dbo].[Connect_Projects_Urls] CHECK CONSTRAINT [FK_Connect_Projects_Urls_Projects]
+GO
+
+
+
 IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[vw_Connect_Projects_Projects]'))
 DROP VIEW [dbo].[vw_Connect_Projects_Projects]
 GO
@@ -135,12 +167,6 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 
 
-
-
-
-
-
-
 CREATE VIEW [dbo].[vw_Connect_Projects_Projects]
 AS
 SELECT
@@ -148,17 +174,12 @@ SELECT
  lt.TypeDescription LicenseType,
  lt.ProjectColor,
  uc.DisplayName AS CreatedByUser,
- um.DisplayName AS LastModifiedByUser
+ um.DisplayName AS LastModifiedByUser,
+ (SELECT COUNT(*) FROM dbo.Connect_Projects_Urls u WHERE u.ProjectId=p.ProjectId AND u.IsDead=0) NrLiveLinks
 FROM dbo.Connect_Projects_Projects p
  INNER JOIN dbo.Connect_Projects_LicenseTypes lt ON p.LicenseTypeId=lt.LicenseTypeId
  LEFT JOIN dbo.Users uc ON uc.UserID = p.CreatedByUserID
  LEFT JOIN dbo.Users um ON um.UserID = p.LastModifiedByUserID
-
-
-
-
-
-
 
 
 GO
@@ -173,16 +194,7 @@ GO
 
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
-
-
-
-
-
-
-
-
-
-CREATE VIEW [dbo].[vw_Connect_Projects_ProjectTypes]
+CREATE VIEW dbo.vw_Connect_Projects_ProjectTypes
 AS
 SELECT
  pt.*,
@@ -193,8 +205,6 @@ SELECT
 FROM dbo.Connect_Projects_ProjectTypes pt
  INNER JOIN dbo.Connect_Projects_Projects p ON pt.ProjectId=p.ProjectId
  INNER JOIN dbo.Connect_Projects_PTypes t ON pt.TypeId=t.TypeId
-
-
 GO
 
 
@@ -207,18 +217,14 @@ GO
 
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
-
 CREATE PROCEDURE dbo.Connect_Projects_GetProjectTypeSelectionList
  @ProjectId INT
 AS
-
 SELECT
  t.*,
  ISNULL(pt.ProjectId, 0) Selected
 FROM dbo.Connect_Projects_PTypes t
  LEFT JOIN dbo.Connect_Projects_ProjectTypes pt ON t.TypeId=pt.TypeId AND pt.ProjectId=@ProjectId
-
-
 GO
 
 
@@ -231,7 +237,6 @@ GO
 
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
-
 CREATE PROCEDURE dbo.Connect_Projects_SetProjectTypes
  @ProjectId INT,
  @ProjectTypeIds VARCHAR(2000)
@@ -245,7 +250,6 @@ SELECT
  ids.RecordID
 FROM
  dbo.SplitDelimitedIDs(@ProjectTypeIds, ',') ids
-
 GO
 
 
