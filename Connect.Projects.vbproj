@@ -161,6 +161,8 @@
     <Compile Include="Controllers\ProjectTypes\ProjectTypesController_Services.vb" />
     <Compile Include="Controllers\PTypes\PTypesController.vb" />
     <Compile Include="Controllers\PTypes\PTypesController_Services.vb" />
+    <Compile Include="Controllers\Urls\UrlsController.vb" />
+    <Compile Include="Controllers\Urls\UrlsController_Services.vb" />
     <Compile Include="Data\RepositoryImpl.vb" />
     <Compile Include="Documents\ProjectDocument.vb" />
     <Compile Include="Integration\Integration.vb" />
@@ -183,6 +185,9 @@
     <Compile Include="Models\PTypes\PTypeBase_Methods.vb" />
     <Compile Include="Models\PTypes\PTypeBase_Properties.vb" />
     <Compile Include="Models\PTypes\PTypeSelect.vb" />
+    <Compile Include="Models\Urls\Url.vb" />
+    <Compile Include="Models\Urls\UrlBase_Methods.vb" />
+    <Compile Include="Models\Urls\UrlBase_Properties.vb" />
     <Compile Include="ModuleHome.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -194,6 +199,8 @@
     <Compile Include="Repositories\ProjectTypesRepository.vb" />
     <Compile Include="Repositories\PTypesBaseRepository.vb" />
     <Compile Include="Repositories\PTypesRepository.vb" />
+    <Compile Include="Repositories\UrlsBaseRepository.vb" />
+    <Compile Include="Repositories\UrlsRepository.vb" />
     <Compile Include="Settings.ascx.designer.vb">
       <DependentUpon>Settings.ascx</DependentUpon>
     </Compile>

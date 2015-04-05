@@ -62,37 +62,6 @@
     Next
    </select>
    <p class="help-block" ng-if="frmEditProject.ProjectType.$error.required">@Html.GetLocalizedString("ProjectType.Required")</p>
-  </div>  <div class="dnnFormItem" show-errors>
-   <div class="dnnLabel">
-    <label>
-     <span>Url 1</span>
-    </label>
-    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
-    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
-     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
-      <span class="dnnHelpText">@Html.GetLocalizedString("Url.Help")</span>
-     </div>
-    </div>
-   </div>
-   <input type="text" id="txtUrl1" name="Url1" class="form-control" data-ng-model="project.Url1"
-          data-ng-pattern="/^(http|https)\:///" />
-   <p class="help-block" ng-if="frmEditProject.Url1.$error.pattern">@Html.GetLocalizedString("Url.Pattern")</p>
-  </div>
-  <div class="dnnFormItem" show-errors>
-   <div class="dnnLabel">
-    <label>
-     <span>Url 2</span>
-    </label>
-    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
-    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
-     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
-      <span class="dnnHelpText">@Html.GetLocalizedString("Url.Help")</span>
-     </div>
-    </div>
-   </div>
-   <input type="text" id="txtUrl2" name="Url2" class="form-control" data-ng-model="project.Url2"
-          data-ng-pattern="/https?\:.*/" />
-   <p class="help-block" ng-if="frmEditProject.Url2.$error.pattern">@Html.GetLocalizedString("Url.Pattern")</p>
   </div>
   <div class="dnnFormItem">
    <div class="dnnLabel">
@@ -187,6 +156,19 @@
    <input type="checkbox" id="chkVisible" class="form-control" data-ng-model="project.Visible" />
   </div>
  </fieldset>
+ <h3>Urls</h3>
+ <div class="cp_editurl">
+  <div>Url</div>
+  <div>@Html.GetLocalizedString("Description")</div>
+ </div>
+ <div show-errors data-ng-repeat="u in project.Urls" class="cp_editurl">
+  <input type="text" class="form-control" name="url" data-ng-model="u.Url"
+         data-ng-pattern="/^(http|https)\:///" />
+  <input type="text" class="form-control" data-ng-model="u.Description" />
+  <button type="button" data-ng-click="deleteUrl(u)" class="dnnSecondaryAction">@Html.GetLocalizedString("Delete")</button>
+  <p class="help-block" ng-if="frmEditProject.url.$error.pattern">@Html.GetLocalizedString("Url.Pattern")</p>
+ </div>
+ <button type="button" data-ng-click="addUrl()" class="dnnSecondaryAction">@Html.GetLocalizedString("Add")</button>
 </div>
 
 <a href="#/Projects" class="btn btn-default dnnSecondaryAction">@Html.GetLocalizedString("Return")</a>

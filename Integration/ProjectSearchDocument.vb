@@ -24,8 +24,8 @@ Namespace Integration
    AddDataLine("Owners", p.Owners)
    AddDataLine("People", p.People)
    AddDataLine("Status", p.Status)
-   AddDataLine("Url 1", p.Url1)
-   AddDataLine("Url 2", p.Url2)
+   'AddDataLine("Url 1", p.Url1)
+   'AddDataLine("Url 2", p.Url2)
    AddDataLine("Aims", p.Aims)
    AddDataLine("Dependencies", p.Dependencies)
   End Sub

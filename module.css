@@ -164,3 +164,11 @@ div.cp_pl_invisible {
  border-right: 10px solid #666;
  padding-right: 20px;
 }
+.cp_editurl {
+ width: 100%;
+}
+.cp_editurl input, .cp_editurl div {
+ width: 340px;
+ padding: 4px;
+ display: inline-block;
+}

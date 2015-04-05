@@ -19,10 +19,10 @@
    <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("Status")</dt>
    <dd>{{project.Status}}&nbsp;</dd>
-   <dt data-ng-if="project.Url1 != ''">Url</dt>
-   <dd data-ng-if="project.Url1 != ''"><a href="{{project.Url1}}">{{project.Url1}}</a></dd>
-   <dt data-ng-if="project.Url2 != ''">Url</dt>
-   <dd data-ng-if="project.Url2 != ''"><a href="{{project.Url2}}">{{project.Url2}}</a></dd>
+   <span data-ng-repeat="u in project.Urls">
+    <dt>Url</dt>
+    <dd><a href="{{u.Url}}">{{u.Description.isNull(u.Url)}}</a></dd>
+   </span>
   </dl>
   <h3>@Html.GetLocalizedString("Aims")</h3>
   <div class="cp_para" data-ng-bind-html="ProjectAims">

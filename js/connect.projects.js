@@ -150,14 +150,7 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 		$scope.ProjectAims = $sce.trustAsHtml($scope.project.Aims.replace(/\n/g, '<br/>'));
 		$scope.ProjectDescription = $sce.trustAsHtml($scope.project.Description.replace(/\n/g, '<br/>'));
 		$scope.ProjectDependencies = $sce.trustAsHtml($scope.project.Dependencies.replace(/\n/g, '<br/>'));
-		projectsFactory.projectTypes($scope.moduleId, $scope.projectId, function (data) {
-			if (data == '') {
-				$scope.project.ProjectTypes = [];
-			} else {
-				$scope.project.ProjectTypes = data;
-			}
-			$scope.$apply();
-		});
+		$scope.$apply();
 	});
 	projectsFactory.getAlbum($scope.moduleId, $scope.projectId, function (data) {
 		$scope.album = data;
@@ -238,6 +231,17 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$routeParams', 'projectsFactory'
 			return pt.TypeId;
 		});
 	}, true);
+	$scope.addUrl = function () {
+		var newUrl = { "Description": "", "IsDead": false, "LastChange": "", "LastChecked": "", "ProjectId": $scope.project.ProjectId, "Retries": 5, "Url": "", "UrlId": -1, "UrlType": 0 };
+		$scope.project.Urls.push(newUrl);
+		$scope.$apply();
+	}
+	$scope.deleteUrl = function (url) {
+		if (confirm('Remove this url?')) {
+			$scope.project.Urls = $scope.project.Urls.filter(function(el) { return el !== url});
+			$scope.$apply();
+		}
+	}
 }]);
 
 mod.directive('showErrors', function () {
@@ -275,4 +279,20 @@ function getTemplate(template) {
 
 String.prototype.AddImageSize = function (size) {
 	return this.substring(0, 15) + size + this.substring(15);
+};
+
+String.prototype.isNull = function (replacement) {
+	if (this == '') {
+		return replacement;
+	} else {
+		return String(this);
+	}
+};
+
+function isNullOrEmpty(input, replacement) {
+	if (input == null || input == '') {
+		return replacement;
+	} else {
+		return input;
+	}
 };

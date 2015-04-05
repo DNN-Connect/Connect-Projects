@@ -79,11 +79,11 @@ Namespace Documents
    DrawTextBlock("Status", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
    DrawTextBlock(project.Status, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    y += 2
-   DrawTextBlock("Url", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
-   DrawTextBlock(project.Url1, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   If project.Url2 <> "" Then
-    DrawTextBlock(project.Url2, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
-   End If
+   'DrawTextBlock("Url", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+   'DrawTextBlock(project.Url1, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
+   'If project.Url2 <> "" Then
+   ' DrawTextBlock(project.Url2, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
+   'End If
    y += 2
    DrawTextBlock("Aims", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
    DrawTextBlock(project.Aims, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
