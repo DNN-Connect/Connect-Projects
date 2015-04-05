@@ -1,3 +1,4 @@
+/******* TABLES *******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -29,6 +30,7 @@ IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databa
 ALTER TABLE {databaseOwner}{objectQualifier}Connect_Projects_Urls CHECK CONSTRAINT FK_{objectQualifier}Connect_Projects_Urls_Projects
 GO
 
+/******* MIGRATE DATA *******/
 INSERT INTO {databaseOwner}{objectQualifier}Connect_Projects_Urls
 ([ProjectId]
 ,[Url]
@@ -42,7 +44,7 @@ SELECT
  p.Url1,
  0,
  0,
- GETDATE(),
+ NULL,
  GETDATE(),
  5
 FROM
@@ -73,6 +75,7 @@ WHERE
  ISNULL(p.Url2, '') <> ''
 GO
 
+/******* REMOVE OLD COLUMNS *******/
 ALTER TABLE {databaseOwner}{objectQualifier}Connect_Projects_Projects
 DROP COLUMN Url1
 GO
@@ -81,6 +84,7 @@ ALTER TABLE {databaseOwner}{objectQualifier}Connect_Projects_Projects
 DROP COLUMN Url2
 GO
 
+/******* VIEWS *******/
 IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'{databaseOwner}{objectQualifier}vw_Connect_Projects_Projects'))
 DROP VIEW {databaseOwner}{objectQualifier}vw_Connect_Projects_Projects
 GO
@@ -96,10 +100,48 @@ SELECT
  lt.TypeDescription LicenseType,
  lt.ProjectColor,
  uc.DisplayName AS CreatedByUser,
- um.DisplayName AS LastModifiedByUser
+ um.DisplayName AS LastModifiedByUser,
+ (SELECT COUNT(*) FROM {databaseOwner}{objectQualifier}Connect_Projects_Urls u WHERE u.ProjectId=p.ProjectId AND u.IsDead=0) NrLiveLinks
 FROM {databaseOwner}{objectQualifier}Connect_Projects_Projects p
  INNER JOIN {databaseOwner}{objectQualifier}Connect_Projects_LicenseTypes lt ON p.LicenseTypeId=lt.LicenseTypeId
  LEFT JOIN {databaseOwner}{objectQualifier}Users uc ON uc.UserID = p.CreatedByUserID
  LEFT JOIN {databaseOwner}{objectQualifier}Users um ON um.UserID = p.LastModifiedByUserID
+GO
+
+/******* NEW SCHEDULED TASK *******/
+INSERT INTO {databaseOwner}[{objectQualifier}Schedule]
+           ([TypeFullName]
+           ,[TimeLapse]
+           ,[TimeLapseMeasurement]
+           ,[RetryTimeLapse]
+           ,[RetryTimeLapseMeasurement]
+           ,[RetainHistoryNum]
+           ,[AttachToEvent]
+           ,[CatchUpEnabled]
+           ,[Enabled]
+           ,[ObjectDependencies]
+           ,[Servers]
+           ,[CreatedByUserID]
+           ,[CreatedOnDate]
+           ,[LastModifiedByUserID]
+           ,[LastModifiedOnDate]
+           ,[FriendlyName])
+     VALUES
+           ('Connect.DNN.Modules.Projects.Services.UrlCheckService, CONNECT.DNN.MODULES.PROJECTS'
+           ,1
+           ,'d'
+           ,2
+           ,'h'
+           ,20
+           ,''
+           ,0
+           ,1
+           ,''
+           ,null
+           ,-1
+           ,GETDATE()
+           ,-1
+           ,GETDATE()
+           ,'DNN Connect projects module url checker')
 GO
 
