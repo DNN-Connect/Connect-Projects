@@ -17,7 +17,7 @@
     <OldToolsVersion>4.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
     <TargetFrameworkProfile />
     <IISExpressSSLPort />
@@ -33,6 +33,7 @@
     <OutputPath>..\..\..\bin\</OutputPath>
     <DocumentationFile>Connect.DNN.Modules.Projects.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,6 +43,7 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>Connect.DNN.Modules.Projects.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL">
@@ -78,6 +80,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>_References\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="Octokit">
+      <HintPath>_References\Octokit.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -201,6 +206,7 @@
     <Compile Include="Repositories\PTypesRepository.vb" />
     <Compile Include="Repositories\UrlsBaseRepository.vb" />
     <Compile Include="Repositories\UrlsRepository.vb" />
+    <Compile Include="Services\UrlCheckService.vb" />
     <Compile Include="Settings.ascx.designer.vb">
       <DependentUpon>Settings.ascx</DependentUpon>
     </Compile>
