@@ -81,3 +81,7 @@
 <a href="#/Projects" class="btn btn-default dnnSecondaryAction">@Html.GetLocalizedString("Return")</a>
 <a href="#/Project/Edit/{{projectId}}" class="dnnSecondaryAction" data-ng-if="security.moderator == true || project.CreatedByUserID == @Dnn.User.UserID">@Html.GetLocalizedString("Edit")</a>
 <a href="@(GetModuleUrl("API/Projects/Pdf"))/{{projectId}}?moduleId=@Dnn.Module.ModuleId&tabId=@Dnn.Tab.TabId" class="dnnSecondaryAction">PDF</a>
+
+<div class="cp_audit">
+ {{'@Html.GetLocalizedString("Audit")' | stringFormat:[project. CreatedByUser, dateFormat(project.CreatedOnDate, 'short'), project.LastModifiedByUser, dateFormat(project.LastModifiedOnDate, 'short')]}}
+</div>

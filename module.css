@@ -186,3 +186,10 @@ span.cp_note {
  font-size: small;
  color: #aaa;
 }
+.cp_audit {
+ width: 100%;
+ text-align: center;
+ color: #ccc;
+ font-size: smaller;
+ padding: 10px;
+}

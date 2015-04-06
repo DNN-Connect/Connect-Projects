@@ -255,4 +255,7 @@
   <data name="NoActiveLinks.Text" xml:space="preserve">
     <value>There are no active links for this project</value>
   </data>
+  <data name="Audit.Text" xml:space="preserve">
+    <value>This project was added by {0} on {1}. It was last modified by {2} on {3}.</value>
+  </data>
 </root>
