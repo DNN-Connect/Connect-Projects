@@ -30,7 +30,7 @@ set.buildvars:
 
 set.versions:
 
-     [echo] Set Version 01.02.01 on Connect.Projects.vbproj
+     [echo] Set Version 01.02.02 on Connect.Projects.vbproj
 Checking ..\My Project\AssemblyInfo.vb
 Checking ..\_Installation\Connect.Projects.dnn
 Reset References to _References\
@@ -66,8 +66,8 @@ Adjusting 'Newtonsoft.Json, Version=4.5.6.14930, Culture=neutral, PublicKeyToken
 Adjusting Path 'Newtonsoft.Json, Version=4.5.6.14930, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL'
 Adjusting 'Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL'
 Adjusting Path 'Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL'
-Adjusting 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
-Adjusting Path 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
+Adjusting 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
+Adjusting Path 'System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
 Adjusting 'System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
 Adjusting Path 'System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
 Adjusting 'System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
@@ -80,7 +80,7 @@ clean.bindirectory:
 compile.projects:
 
      [echo] Building Connect.Projects.vbproj
-  [msbuild] Build started 18/4/2015 16:51:36.
+  [msbuild] Build started 18/4/2015 18:32:19.
   [msbuild] Overriding target "GetFrameworkPaths" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "GetFrameworkPaths" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.NETFramework.targets".
   [msbuild] Overriding target "SatelliteDllsProjectOutputGroup" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "SatelliteDllsProjectOutputGroup" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFX.targets".
   [msbuild] Project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" on node 1 (Rebuild target(s)).
@@ -268,7 +268,7 @@ compile.projects:
   [msbuild]       System.Data
   [msbuild]       System.Data.DataSetExtensions
   [msbuild]       System.Drawing
-  [msbuild]       System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
+  [msbuild]       System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
   [msbuild]           Private = 'False'
   [msbuild]           HintPath = '_References\System.Net.Http.dll'
   [msbuild]           SpecificVersion = 'False'
@@ -1335,25 +1335,25 @@ compile.projects:
   [msbuild]       References which depend on "System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" [D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll].
   [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll
   [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll".
-  [msbuild]               System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
+  [msbuild]               System.Net.Http, Version=4.0.30319.33440 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
   [msbuild]       References which depend on "System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" [C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Net.Http.dll].
-  [msbuild]           C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.Formatting.dll
-  [msbuild]             Project file item includes which caused reference "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.Formatting.dll".
+  [msbuild]           C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Web.Http.WebHost.dll
+  [msbuild]             Project file item includes which caused reference "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Web.Http.WebHost.dll".
   [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
-  [msbuild]               System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL
+  [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll
+  [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll".
+  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.dll
   [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Web.Http.dll".
   [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]               System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL
-  [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll
-  [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll".
-  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
-  [msbuild]           C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Web.Http.WebHost.dll
-  [msbuild]             Project file item includes which caused reference "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Web.Http.WebHost.dll".
-  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Octokit.dll
   [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Octokit.dll".
   [msbuild]               Octokit
+  [msbuild]           C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.Formatting.dll
+  [msbuild]             Project file item includes which caused reference "C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.Formatting.dll".
+  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
+  [msbuild]               System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL
   [msbuild]   There was a conflict between "DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, PublicKeyToken=null" and "DotNetNuke.Web.Client, Version=6.1.0.272, Culture=neutral, PublicKeyToken=null".
   [msbuild]       "DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, PublicKeyToken=null" was chosen because it was primary and "DotNetNuke.Web.Client, Version=6.1.0.272, Culture=neutral, PublicKeyToken=null" was not.
   [msbuild]       References which depend on "DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, PublicKeyToken=null" [D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.Client.dll].
@@ -1363,13 +1363,13 @@ compile.projects:
   [msbuild]               DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]               DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]               DotNetNuke.Web.Client, Version=6.1.2.0, Culture=neutral, processorArchitecture=MSIL
+  [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll
+  [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll".
+  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll
   [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.dll".
   [msbuild]               DotNetNuke.Web.Razor, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]               DotNetNuke, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
-  [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
-  [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll
-  [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll".
   [msbuild]               DotNetNuke.Web, Version=7.1.2.356, Culture=neutral, processorArchitecture=MSIL
   [msbuild]       References which depend on "DotNetNuke.Web.Client, Version=6.1.0.272, Culture=neutral, PublicKeyToken=null" [].
   [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.WebUtility.dll
@@ -1703,6 +1703,11 @@ compile.projects:
   [msbuild]   Copying file from "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\Syncfusion.Pdf.Base.dll" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\_PublishedWebsites\Connect.Projects\bin\Syncfusion.Pdf.Base.dll".
   [msbuild] Done executing task "Copy".
   [msbuild] Task "Copy"
+  [msbuild]   Creating directory "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\_PublishedWebsites\Connect.Projects\css".
+  [msbuild]   Copying file from "css\colorbox.css" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\_PublishedWebsites\Connect.Projects\css\colorbox.css".
+  [msbuild]   Copying file from "css\ng-tags-input.css" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\_PublishedWebsites\Connect.Projects\css\ng-tags-input.css".
+  [msbuild] Done executing task "Copy".
+  [msbuild] Task "Copy"
   [msbuild]   Creating directory "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\_PublishedWebsites\Connect.Projects\js".
   [msbuild]   Copying file from "js\connect.projects.js" to "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\bin\_PublishedWebsites\Connect.Projects\js\connect.projects.js".
   [msbuild] Done executing task "Copy".
@@ -1809,7 +1814,7 @@ compile.projects:
   [msbuild]     3 Warning(s)
   [msbuild]     0 Error(s)
   [msbuild] 
-  [msbuild] Time Elapsed 00:00:00.92
+  [msbuild] Time Elapsed 00:00:00.86
 
 make.doc:
 
@@ -1820,11 +1825,11 @@ compileandpackage:
 
 read.version:
 
-     [echo] shortVersion: 01.02.01
-     [echo] version: 1.2.1.0
+     [echo] shortVersion: 01.02.02
+     [echo] version: 1.2.2.0
      [echo] major: 01
      [echo] minor: 02
-     [echo] build: 01
+     [echo] build: 02
 
 make.codestats:
 
@@ -1868,7 +1873,7 @@ make.codestats:
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular-file-upload.min.js Totals: [T] 6 [C] 5 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular-route.min.js Totals: [T] 15 [C] 6 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\angular.min.js Totals: [T] 250 [C] 6 [E] 0
-[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\connect.projects.js Totals: [T] 405 [C] 15 [E] 33
+[codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\connect.projects.js Totals: [T] 407 [C] 15 [E] 33
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\es5-sham.min.js Totals: [T] 7 [C] 6 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\es5-shim.min.js Totals: [T] 7 [C] 6 [E] 0
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\js\jquery.colorbox.js Totals: [T] 1084 [C] 79 [E] 199
@@ -1918,11 +1923,11 @@ make.codestats:
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx Totals: [T] 65 [C] 0 [E] 1
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx.designer.vb Totals: [T] 285 [C] 218 [E] 33
 [codestats] D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Settings.ascx.vb Totals: [T] 98 [C] 1 [E] 13
-[codestats] Totals: [VB]  [T] 8452 [C] 393 [E] 1059
+[codestats] Totals: [VB]  [T] 8454 [C] 393 [E] 1059
 
 check.sqlscripts:
 
-     [echo] Version: 01.02.01
+     [echo] Version: 01.02.02
 
 make.package:
 
@@ -1942,13 +1947,13 @@ make.package:
     [jsmin] Skipping 'D:\Programs\Nant\Build\Resources\js\stupidtable.min.js' as it's already minified.
 [compilecss] Compiling CSS
 [compilecss] Compiling D:\Programs\Nant\Build\Resources\css\colorbox.css
-[compilecss] Skipping 'D:\Programs\Nant\Build\Resources\css\ng-tags-input.min.css' as it's already minified.
+[compilecss] Compiling D:\Programs\Nant\Build\Resources\css\ng-tags-input.css
 [compilecss] Compiling D:\Programs\Nant\Build\Resources\module.css
       [zip] Zipping 1214 files to 'D:\Programs\Nant\Build\Package\Resources.zip'.
      [copy] Copying 5 files to 'D:\Programs\Nant\Build\Package'.
      [copy] Copying 7 files to 'D:\Programs\Nant\Build\Package'.
      [echo] Transforming D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Installation\Connect.Projects.dnn with dnn5.xsl
-      [zip] Zipping 14 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.02.01_Install.zip'.
+      [zip] Zipping 14 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.02.02_Install.zip'.
    [delete] Deleting directory 'D:\Programs\Nant\Build\Package'.
      [echo] Building SOURCE
 
@@ -1960,7 +1965,7 @@ make.package:
      [copy] Copying 5 files to 'D:\Programs\Nant\Build\Package'.
      [copy] Copying 7 files to 'D:\Programs\Nant\Build\Package'.
      [echo] Transforming D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Installation\Connect.Projects.dnn with dnn5.xsl
-      [zip] Zipping 14 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.02.01_Source.zip'.
+      [zip] Zipping 14 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.02.02_Source.zip'.
    [delete] Deleting directory 'D:\Programs\Nant\Build\Package'.
 
 all:
@@ -1971,12 +1976,12 @@ backup.project:
      [echo] Backing Up to \\192.168.123.240\src
      [echo] Backing Up to D:\src
      [echo] Backing Up Install
-     [copy] Copying 1 file to 'D:\src\Projects\2015-4-18\Connect.Projects_01.02.01_Install.zip'.
+     [copy] Copying 1 file to 'D:\src\Projects\2015-4-18\Connect.Projects_01.02.02_Install.zip'.
      [echo] Backing Up Source
-     [copy] Copying 1 file to 'D:\src\Projects\2015-4-18\Connect.Projects_01.02.01_Source.zip'.
+     [copy] Copying 1 file to 'D:\src\Projects\2015-4-18\Connect.Projects_01.02.02_Source.zip'.
      [echo] Backing Up to G:\src
 
 BUILD SUCCEEDED
 
-Total time: 36.1 seconds.
+Total time: 35.9 seconds.
 
