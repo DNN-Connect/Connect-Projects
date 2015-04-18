@@ -131,7 +131,6 @@ mod.factory('projectsFactory', [function () {
 			dataCall(moduleId, 'Terms', 'Search', { query: query }, function (data) {
 				res = data;
 			}, null, false);
-			res.push({ Name: query, TermId: -1 });
 			return res;
 		}
 	}
@@ -261,7 +260,15 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$filter', '$routeParams', 'proje
 	}
 	$scope.loadTags = function (query) {
 		var res = projectsFactory.loadTags($scope.moduleId, query);
+		// res.unshift({ Name: query, TermId: $scope.newTagId });
+		// res.unshift({ Name: 'AAAAAA', TermId: -2 });
 		return res;
+	}
+	$scope.newTagId = -1;
+	$scope.addTag = function(tag) {
+		tag.TermId = $scope.newTagId;
+		$scope.newTagId -= 1;
+		return true;
 	}
 }]);
 

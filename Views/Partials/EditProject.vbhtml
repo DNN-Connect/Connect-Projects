@@ -56,8 +56,16 @@
      </div>
     </div>
    </div>
-   <tags-input data-ng-model="project.ProjectTags" display-property="Name" key-property="TermId" replace-spaces-with-dashes="false">
-    <auto-complete source="loadTags($query)" display-property="Name" min-length="2"></auto-complete>
+   <tags-input data-ng-model="project.ProjectTags"
+               display-property="Name"
+               key-property="TermId"
+               replace-spaces-with-dashes="false"
+               add-from-autocomplete-only="false"
+               on-tag-adding="addTag($tag)">
+    <auto-complete source="loadTags($query)"
+                   display-property="Name"
+                   min-length="2"
+                   select-first-match="false"></auto-complete>
    </tags-input>
 </div>
   <div class="dnnFormItem" show-errors>
