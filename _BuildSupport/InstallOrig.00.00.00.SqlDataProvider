@@ -49,6 +49,24 @@ GO
 
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTags]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Connect_Projects_ProjectTags](
+	[ProjectId] [int] NOT NULL,
+	[TermId] [int] NOT NULL,
+ CONSTRAINT [PK_Connect_Projects_ProjectTags] PRIMARY KEY CLUSTERED 
+(
+	[ProjectId] ASC,
+	[TermId] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTypes]') AND type in (N'U'))
 BEGIN
 CREATE TABLE [dbo].[Connect_Projects_ProjectTypes](
@@ -127,6 +145,26 @@ GO
 
 
 
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_ProjectTags_Projects]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTags]'))
+ALTER TABLE [dbo].[Connect_Projects_ProjectTags]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_ProjectTags_Projects] FOREIGN KEY([ProjectId])
+REFERENCES [dbo].[Connect_Projects_Projects] ([ProjectId])
+ON DELETE CASCADE
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_ProjectTags_Projects]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTags]'))
+ALTER TABLE [dbo].[Connect_Projects_ProjectTags] CHECK CONSTRAINT [FK_Connect_Projects_ProjectTags_Projects]
+GO
+
+
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_ProjectTags_Taxonomy_Terms]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTags]'))
+ALTER TABLE [dbo].[Connect_Projects_ProjectTags]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_ProjectTags_Taxonomy_Terms] FOREIGN KEY([TermId])
+REFERENCES [dbo].[Taxonomy_Terms] ([TermID])
+ON DELETE CASCADE
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_ProjectTags_Taxonomy_Terms]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTags]'))
+ALTER TABLE [dbo].[Connect_Projects_ProjectTags] CHECK CONSTRAINT [FK_Connect_Projects_ProjectTags_Taxonomy_Terms]
+GO
+
+
+
 IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_Connect_Projects_ProjectTypes_Projects]') AND parent_object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ProjectTypes]'))
 ALTER TABLE [dbo].[Connect_Projects_ProjectTypes]  WITH CHECK ADD  CONSTRAINT [FK_Connect_Projects_ProjectTypes_Projects] FOREIGN KEY([ProjectId])
 REFERENCES [dbo].[Connect_Projects_Projects] ([ProjectId])
@@ -186,6 +224,27 @@ GO
 
 
 
+IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[vw_Connect_Projects_ProjectTags]'))
+DROP VIEW [dbo].[vw_Connect_Projects_ProjectTags]
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+
+CREATE VIEW [dbo].[vw_Connect_Projects_ProjectTags]
+AS
+SELECT
+ pt.ProjectId,
+ t.*
+FROM dbo.Connect_Projects_ProjectTags pt
+ INNER JOIN dbo.Taxonomy_Terms t ON pt.TermId=t.TermID
+
+GO
+
+
+
 IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[vw_Connect_Projects_ProjectTypes]'))
 DROP VIEW [dbo].[vw_Connect_Projects_ProjectTypes]
 GO
@@ -225,6 +284,31 @@ SELECT
  ISNULL(pt.ProjectId, 0) Selected
 FROM dbo.Connect_Projects_PTypes t
  LEFT JOIN dbo.Connect_Projects_ProjectTypes pt ON t.TypeId=pt.TypeId AND pt.ProjectId=@ProjectId
+GO
+
+
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_SetProjectTags]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[Connect_Projects_SetProjectTags]
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+CREATE PROCEDURE dbo.Connect_Projects_SetProjectTags
+ @ProjectId INT,
+ @ProjectTagIds VARCHAR(2000)
+AS
+DELETE FROM dbo.Connect_Projects_ProjectTags
+WHERE ProjectId=@ProjectId;
+INSERT INTO dbo.Connect_Projects_ProjectTags
+ (ProjectId, TermId)
+SELECT
+ @ProjectId,
+ ids.RecordID
+FROM
+ dbo.SplitDelimitedIDs(@ProjectTagIds, ',') ids
 GO
 
 
