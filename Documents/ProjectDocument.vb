@@ -72,6 +72,13 @@ Namespace Documents
    Dim types As String = String.Join(", ", projectTypes.Select(Function(t) t.TypeDescription))
    DrawTextBlock(types, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
    y += distanceToNextHeading
+   If project.ProjectTags.Count > 0 Then
+    DrawTextBlock("Project Tags", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
+    y += paddingUnderTitle
+    Dim tags As String = String.Join(", ", project.ProjectTags.Select(Function(t) t.Name))
+    DrawTextBlock(tags, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)
+    y += distanceToNextHeading
+   End If
    DrawTextBlock("License Type", GetHelvetica(titleFontSize, False), projectColor, y, 10.0F, 130.0F)
    y += paddingUnderTitle
    DrawTextBlock(project.LicenseType, GetCourier(bodyFontSize, False), Color.Black, y, 10.0F, 130.0F)

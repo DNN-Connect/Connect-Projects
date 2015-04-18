@@ -44,6 +44,22 @@
     </ul>
    </div>
   </div>
+  <div class="dnnFormItem">
+   <div class="dnnLabel">
+    <label>
+     <span>@Html.GetLocalizedString("Tags")</span>
+    </label>
+    <a href="#" class="dnnFormHelp" tabindex="-1"></a>
+    <div class="dnnTooltip" style="position: absolute; right: -29%; top: -102px;">
+     <div class="dnnFormHelpContent dnnClear" style="visibility: hidden;">
+      <span class="dnnHelpText">@Html.GetLocalizedString("Tags.Help")</span>
+     </div>
+    </div>
+   </div>
+   <tags-input data-ng-model="project.ProjectTags" display-property="Name" key-property="TermId">
+    <auto-complete source="loadTags($query)" display-property="Name" min-length="2"></auto-complete>
+   </tags-input>
+</div>
   <div class="dnnFormItem" show-errors>
    <div class="dnnLabel">
     <label>

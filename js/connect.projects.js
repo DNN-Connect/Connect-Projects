@@ -1,4 +1,4 @@
-﻿var mod = angular.module('projectsModule', ['ngRoute', 'angularFileUpload', 'stringFormatterModule']);
+﻿var mod = angular.module('projectsModule', ['ngRoute', 'angularFileUpload', 'stringFormatterModule', 'ngTagsInput']);
 
 mod.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider.when('/Projects', {
@@ -45,12 +45,16 @@ mod.factory('projectsFactory', [function () {
 		});
 	}
 
-	var dataCall = function (moduleId, controller, action, data, success, fail) {
+	var dataCall = function (moduleId, controller, action, data, success, fail, async) {
+		if (async == undefined) {
+			async = true;
+		};
 		$.ajax({
 			type: "GET",
 			url: $.dnnSF(moduleId).getServiceRoot('Connect/Projects') + controller + '/' + action,
 			beforeSend: $.dnnSF(moduleId).setModuleHeaders,
-			data: data
+			data: data,
+			async: async
 		}).done(function (retdata) {
 			if (success != undefined) {
 				success(retdata);
@@ -120,6 +124,13 @@ mod.factory('projectsFactory', [function () {
 		},
 		commitFile: function (moduleId, projectId, fileName, success, fail) {
 			dataCall(moduleId, 'Album', 'CommitFile', { id: projectId, fileName: fileName }, success, fail);
+		},
+		loadTags: function (moduleId, query) {
+			var res;
+			dataCall(moduleId, 'Terms', 'Search', { query: query }, function(data) {
+				res = data;
+			}, null, false);
+			return res;
 		}
 	}
 }]);
@@ -245,6 +256,10 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$filter', '$routeParams', 'proje
 			$scope.project.Urls = $scope.project.Urls.filter(function(el) { return el !== url});
 			$scope.$apply();
 		}
+	}
+	$scope.loadTags = function (query) {
+		var res = projectsFactory.loadTags($scope.moduleId, query);
+		return res;
 	}
 }]);
 

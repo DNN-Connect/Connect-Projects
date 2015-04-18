@@ -42,7 +42,9 @@ Namespace Common
    If Context.Items("ServiceAdded") Is Nothing Then
 
     ' Announce at DNN
+    DotNetNuke.Framework.jQuery.RequestRegistration()
     DotNetNuke.Framework.jQuery.RequestDnnPluginsRegistration()
+    DotNetNuke.Framework.jQuery.RequestUIRegistration()
     DotNetNuke.Framework.ServicesFramework.Instance.RequestAjaxScriptSupport()
     DotNetNuke.Framework.ServicesFramework.Instance.RequestAjaxAntiForgerySupport()
 
@@ -55,9 +57,11 @@ Namespace Common
     AddJavascriptFile("es5-sham.min.js", 70)
     AddJavascriptFile("angular-file-upload.min.js", 70)
     AddJavascriptFile("jquery.colorbox.js", 70)
+    AddJavascriptFile("ng-tags-input.min.js", 70)
 
     ' Css
     AddCssFile("colorbox.css")
+    AddCssFile("ng-tags-input.min.css")
 
     Context.Items("ServiceAdded") = True
    End If

@@ -258,4 +258,10 @@
   <data name="Audit.Text" xml:space="preserve">
     <value>This project was added by {0} on {1}. It was last modified by {2} on {3}.</value>
   </data>
+  <data name="Tags.Help" xml:space="preserve">
+    <value>Specify some meaningful tags for the project</value>
+  </data>
+  <data name="Tags.Text" xml:space="preserve">
+    <value>Tags</value>
+  </data>
 </root>

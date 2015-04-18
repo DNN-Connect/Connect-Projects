@@ -10,6 +10,11 @@
     <span data-ng-repeat="pt in project.ProjectTypes | filter:{IsSelected: true}" class="cp_tag">{{pt.TypeDescription}}</span>
    </dd>
    <div style="clear:both"></div>
+   <dt>@Html.GetLocalizedString("Tags")</dt>
+   <dd>
+    <span data-ng-repeat="t in project.ProjectTags" class="cp_tag">{{t.Name}}</span>
+   </dd>
+   <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("LicenseType")</dt>
    <dd>{{project.LicenseType}}&nbsp;</dd>
    <div style="clear:both"></div>
