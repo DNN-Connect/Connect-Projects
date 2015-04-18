@@ -61,7 +61,7 @@ Namespace Common
 
     ' Css
     AddCssFile("colorbox.css")
-    AddCssFile("ng-tags-input.min.css")
+    AddCssFile("ng-tags-input.css")
 
     Context.Items("ServiceAdded") = True
    End If
