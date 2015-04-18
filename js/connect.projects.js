@@ -127,10 +127,11 @@ mod.factory('projectsFactory', [function () {
 			dataCall(moduleId, 'Album', 'CommitFile', { id: projectId, fileName: fileName }, success, fail);
 		},
 		loadTags: function (moduleId, query) {
-			var res;
-			dataCall(moduleId, 'Terms', 'Search', { query: query }, function(data) {
+			var res = [];
+			dataCall(moduleId, 'Terms', 'Search', { query: query }, function (data) {
 				res = data;
 			}, null, false);
+			res.push({ Name: query, TermId: -1 });
 			return res;
 		}
 	}
@@ -254,7 +255,7 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$filter', '$routeParams', 'proje
 	}
 	$scope.deleteUrl = function (url) {
 		if (confirm('Remove this url?')) {
-			$scope.project.Urls = $scope.project.Urls.filter(function(el) { return el !== url});
+			$scope.project.Urls = $scope.project.Urls.filter(function (el) { return el !== url });
 			$scope.$apply();
 		}
 	}
