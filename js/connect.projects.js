@@ -1,6 +1,6 @@
 ﻿var mod = angular.module('projectsModule', ['ngRoute', 'angularFileUpload', 'stringFormatterModule', 'ngTagsInput']);
 
-mod.config(['$routeProvider', function ($routeProvider) {
+mod.config(['$routeProvider', 'tagsInputConfigProvider', function ($routeProvider, tagsInputConfigProvider) {
 	$routeProvider.when('/Projects', {
 		template: function () {
 			return getTemplate('ProjectList');
@@ -20,6 +20,7 @@ mod.config(['$routeProvider', function ($routeProvider) {
 		controller: 'ProjectDetailCtrl'
 	});
 	$routeProvider.otherwise({ redirectTo: '/Projects' });
+	tagsInputConfigProvider.setTextAutosizeThreshold(30);
 }]);
 
 mod.factory('projectsFactory', [function () {

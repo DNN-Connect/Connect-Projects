@@ -56,7 +56,7 @@
      </div>
     </div>
    </div>
-   <tags-input data-ng-model="project.ProjectTags" display-property="Name" key-property="TermId">
+   <tags-input data-ng-model="project.ProjectTags" display-property="Name" key-property="TermId" replace-spaces-with-dashes="false">
     <auto-complete source="loadTags($query)" display-property="Name" min-length="2"></auto-complete>
    </tags-input>
 </div>
