@@ -260,8 +260,6 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$filter', '$routeParams', 'proje
 	}
 	$scope.loadTags = function (query) {
 		var res = projectsFactory.loadTags($scope.moduleId, query);
-		// res.unshift({ Name: query, TermId: $scope.newTagId });
-		// res.unshift({ Name: 'AAAAAA', TermId: -2 });
 		return res;
 	}
 	$scope.newTagId = -1;
