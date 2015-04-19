@@ -12,7 +12,7 @@
    <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("Tags")</dt>
    <dd>
-    <span data-ng-repeat="t in project.ProjectTags" class="cp_tag">{{t.Name}}</span>
+    <span data-ng-repeat="t in project.ProjectTags" class="cp_tag">{{t.Name}} ({{t.NrProjects}})</span>
    </dd>
    <div style="clear:both"></div>
    <dt>@Html.GetLocalizedString("LicenseType")</dt>
