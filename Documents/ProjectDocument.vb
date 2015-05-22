@@ -1,4 +1,4 @@
-﻿Imports System.CodeDom
+﻿
 Imports System.Drawing
 Imports System.Linq
 Imports Connect.DNN.Modules.Projects.Common

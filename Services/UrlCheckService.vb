@@ -1,12 +1,9 @@
 ﻿Option Strict Off
 
-Imports System.IO
 Imports System.Net
-Imports System.Threading.Tasks
 Imports Connect.DNN.Modules.Projects.Controllers.Urls
 Imports Connect.DNN.Modules.Projects.Models.Urls
 Imports DotNetNuke.Services.Exceptions
-Imports Newtonsoft.Json
 Imports Octokit
 
 Namespace Services

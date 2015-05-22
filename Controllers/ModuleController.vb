@@ -1,8 +1,7 @@
-Imports System.IO
+
 Imports System.Net
 Imports System.Net.Http
 Imports System.Web.Http
-Imports System.Web.Script.Serialization
 Imports Connect.DNN.Modules.Projects.Common
 Imports DotNetNuke.Web.Api
 

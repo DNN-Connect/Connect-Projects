@@ -1,7 +1,6 @@
 ﻿Imports System.Linq
 Imports Connect.DNN.Modules.Projects.Controllers.Projects
 Imports Connect.DNN.Modules.Projects.Models.Projects
-Imports DotNetNuke.Entities.Modules
 Imports DotNetNuke.Entities.Users
 Imports DotNetNuke.Security.Permissions
 Imports DotNetNuke.Security.Roles

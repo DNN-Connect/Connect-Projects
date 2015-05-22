@@ -1,6 +1,5 @@
 ﻿Imports DotNetNuke.Web.Razor
 Imports System.Web.WebPages
-Imports System.Linq
 Imports DotNetNuke.Entities.Users
 
 Namespace Common
