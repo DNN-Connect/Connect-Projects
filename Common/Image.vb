@@ -1,5 +1,8 @@
-﻿Imports System.Runtime.Serialization
+﻿Imports System.Globalization
+Imports System.IO
+Imports System.Runtime.Serialization
 Imports System.Xml.Serialization
+Imports DotNetNuke.Entities.Users
 Imports DotNetNuke.Services.Tokens
 
 Namespace Common
@@ -32,20 +35,20 @@ Namespace Common
   Public Sub New()
   End Sub
   Public Sub New(filepath As String, title As String, remarks As String)
-   Me.File = IO.Path.GetFileNameWithoutExtension(filepath)
-   Me.Extension = IO.Path.GetExtension(filepath)
+   Me.File = Path.GetFileNameWithoutExtension(filepath)
+   Me.Extension = Path.GetExtension(filepath)
    Me.Title = title
    Me.Remarks = remarks
   End Sub
 
 #Region " IPropertyAccess "
-  Public ReadOnly Property Cacheability As DotNetNuke.Services.Tokens.CacheLevel Implements DotNetNuke.Services.Tokens.IPropertyAccess.Cacheability
+  Public ReadOnly Property Cacheability As CacheLevel Implements IPropertyAccess.Cacheability
    Get
     Return CacheLevel.fullyCacheable
    End Get
   End Property
 
-  Public Function GetProperty(strPropertyName As String, strFormat As String, formatProvider As System.Globalization.CultureInfo, AccessingUser As DotNetNuke.Entities.Users.UserInfo, AccessLevel As DotNetNuke.Services.Tokens.Scope, ByRef PropertyNotFound As Boolean) As String Implements DotNetNuke.Services.Tokens.IPropertyAccess.GetProperty
+  Public Function GetProperty(strPropertyName As String, strFormat As String, formatProvider As CultureInfo, AccessingUser As UserInfo, AccessLevel As Scope, ByRef PropertyNotFound As Boolean) As String Implements IPropertyAccess.GetProperty
    Dim OutputFormat As String = String.Empty
    If strFormat = String.Empty Then
     OutputFormat = "D"

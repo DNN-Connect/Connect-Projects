@@ -1,4 +1,5 @@
-﻿Imports DotNetNuke.Entities.Modules
+﻿Imports System.IO
+Imports DotNetNuke.Entities.Modules
 Imports DotNetNuke.UI.Modules
 Imports DotNetNuke.Web.Razor
 
@@ -28,7 +29,7 @@ Namespace Common
 
   Public Function RenderObject() As String
 
-   Using tw As New IO.StringWriter()
+   Using tw As New StringWriter()
     Engine.Render(tw)
     Return tw.ToString
    End Using
@@ -37,7 +38,7 @@ Namespace Common
 
   Public Function RenderObject(Of T)(model As T) As String
 
-   Using tw As New IO.StringWriter()
+   Using tw As New StringWriter()
     Engine.Render(Of T)(tw, model)
     Return tw.ToString
    End Using

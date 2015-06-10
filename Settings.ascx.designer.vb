@@ -20,7 +20,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents plTnWidth As Global.System.Web.UI.UserControl
+ Protected WithEvents plTnWidth As UserControl
 
  '''<summary>
  '''txtTnWidth control.
@@ -29,7 +29,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents txtTnWidth As Global.System.Web.UI.WebControls.TextBox
+ Protected WithEvents txtTnWidth As TextBox
 
  '''<summary>
  '''Comparevalidator1 control.
@@ -38,7 +38,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Comparevalidator1 As Global.System.Web.UI.WebControls.CompareValidator
+ Protected WithEvents Comparevalidator1 As CompareValidator
 
  '''<summary>
  '''Requiredfieldvalidator1 control.
@@ -47,7 +47,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Requiredfieldvalidator1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+ Protected WithEvents Requiredfieldvalidator1 As RequiredFieldValidator
 
  '''<summary>
  '''plTnHeight control.
@@ -56,7 +56,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents plTnHeight As Global.System.Web.UI.UserControl
+ Protected WithEvents plTnHeight As UserControl
 
  '''<summary>
  '''txtTnHeight control.
@@ -65,7 +65,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents txtTnHeight As Global.System.Web.UI.WebControls.TextBox
+ Protected WithEvents txtTnHeight As TextBox
 
  '''<summary>
  '''Comparevalidator2 control.
@@ -74,7 +74,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Comparevalidator2 As Global.System.Web.UI.WebControls.CompareValidator
+ Protected WithEvents Comparevalidator2 As CompareValidator
 
  '''<summary>
  '''Requiredfieldvalidator2 control.
@@ -83,7 +83,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Requiredfieldvalidator2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+ Protected WithEvents Requiredfieldvalidator2 As RequiredFieldValidator
 
  '''<summary>
  '''plTnFit control.
@@ -92,7 +92,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents plTnFit As Global.System.Web.UI.UserControl
+ Protected WithEvents plTnFit As UserControl
 
  '''<summary>
  '''ddTnFit control.
@@ -101,7 +101,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents ddTnFit As Global.System.Web.UI.WebControls.DropDownList
+ Protected WithEvents ddTnFit As DropDownList
 
  '''<summary>
  '''plMedWidth control.
@@ -110,7 +110,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents plMedWidth As Global.System.Web.UI.UserControl
+ Protected WithEvents plMedWidth As UserControl
 
  '''<summary>
  '''txtMedWidth control.
@@ -119,7 +119,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents txtMedWidth As Global.System.Web.UI.WebControls.TextBox
+ Protected WithEvents txtMedWidth As TextBox
 
  '''<summary>
  '''Comparevalidator3 control.
@@ -128,7 +128,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Comparevalidator3 As Global.System.Web.UI.WebControls.CompareValidator
+ Protected WithEvents Comparevalidator3 As CompareValidator
 
  '''<summary>
  '''Requiredfieldvalidator3 control.
@@ -137,7 +137,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Requiredfieldvalidator3 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+ Protected WithEvents Requiredfieldvalidator3 As RequiredFieldValidator
 
  '''<summary>
  '''plMedHeight control.
@@ -146,7 +146,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents plMedHeight As Global.System.Web.UI.UserControl
+ Protected WithEvents plMedHeight As UserControl
 
  '''<summary>
  '''txtMedHeight control.
@@ -155,7 +155,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents txtMedHeight As Global.System.Web.UI.WebControls.TextBox
+ Protected WithEvents txtMedHeight As TextBox
 
  '''<summary>
  '''Comparevalidator4 control.
@@ -164,7 +164,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Comparevalidator4 As Global.System.Web.UI.WebControls.CompareValidator
+ Protected WithEvents Comparevalidator4 As CompareValidator
 
  '''<summary>
  '''Requiredfieldvalidator4 control.
@@ -173,7 +173,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Requiredfieldvalidator4 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+ Protected WithEvents Requiredfieldvalidator4 As RequiredFieldValidator
 
  '''<summary>
  '''plMedFit control.
@@ -182,7 +182,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents plMedFit As Global.System.Web.UI.UserControl
+ Protected WithEvents plMedFit As UserControl
 
  '''<summary>
  '''ddMedFit control.
@@ -191,7 +191,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents ddMedFit As Global.System.Web.UI.WebControls.DropDownList
+ Protected WithEvents ddMedFit As DropDownList
 
  '''<summary>
  '''plZoomWidth control.
@@ -200,7 +200,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents plZoomWidth As Global.System.Web.UI.UserControl
+ Protected WithEvents plZoomWidth As UserControl
 
  '''<summary>
  '''txtZoomWidth control.
@@ -209,7 +209,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents txtZoomWidth As Global.System.Web.UI.WebControls.TextBox
+ Protected WithEvents txtZoomWidth As TextBox
 
  '''<summary>
  '''Comparevalidator5 control.
@@ -218,7 +218,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Comparevalidator5 As Global.System.Web.UI.WebControls.CompareValidator
+ Protected WithEvents Comparevalidator5 As CompareValidator
 
  '''<summary>
  '''Requiredfieldvalidator5 control.
@@ -227,7 +227,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Requiredfieldvalidator5 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+ Protected WithEvents Requiredfieldvalidator5 As RequiredFieldValidator
 
  '''<summary>
  '''plZoomHeight control.
@@ -236,7 +236,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents plZoomHeight As Global.System.Web.UI.UserControl
+ Protected WithEvents plZoomHeight As UserControl
 
  '''<summary>
  '''txtZoomHeight control.
@@ -245,7 +245,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents txtZoomHeight As Global.System.Web.UI.WebControls.TextBox
+ Protected WithEvents txtZoomHeight As TextBox
 
  '''<summary>
  '''Comparevalidator6 control.
@@ -254,7 +254,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Comparevalidator6 As Global.System.Web.UI.WebControls.CompareValidator
+ Protected WithEvents Comparevalidator6 As CompareValidator
 
  '''<summary>
  '''Requiredfieldvalidator6 control.
@@ -263,7 +263,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents Requiredfieldvalidator6 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+ Protected WithEvents Requiredfieldvalidator6 As RequiredFieldValidator
 
  '''<summary>
  '''plZoomFit control.
@@ -272,7 +272,7 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents plZoomFit As Global.System.Web.UI.UserControl
+ Protected WithEvents plZoomFit As UserControl
 
  '''<summary>
  '''ddZoomFit control.
@@ -281,5 +281,5 @@ Partial Public Class Settings
  '''Auto-generated field.
  '''To modify move field declaration from designer file to code-behind file.
  '''</remarks>
- Protected WithEvents ddZoomFit As Global.System.Web.UI.WebControls.DropDownList
+ Protected WithEvents ddZoomFit As DropDownList
 End Class

@@ -1,4 +1,6 @@
-﻿Imports System.Linq
+﻿Imports System.Diagnostics.CodeAnalysis
+Imports System.IO
+Imports System.Linq
 Imports System.Runtime.Serialization
 Imports System.Xml.Serialization
 
@@ -8,7 +10,7 @@ Namespace Common
  <DataContract>
  Public Class ImageCollection
 
-  <System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists"), XmlElement("image")>
+  <SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists"), XmlElement("image")>
   <DataMember()>
   Public Property Images As New List(Of Image)
 
@@ -23,9 +25,9 @@ Namespace Common
    ImagePath = imagesPath
    AlbumFile = imagesMapPath & "album.xml"
    _imagesMapPath = imagesMapPath
-   Dim x As New System.Xml.Serialization.XmlSerializer(GetType(ImageCollection))
-   If IO.File.Exists(AlbumFile) Then
-    Using rdr As New IO.StreamReader(AlbumFile)
+   Dim x As New XmlSerializer(GetType(ImageCollection))
+   If File.Exists(AlbumFile) Then
+    Using rdr As New StreamReader(AlbumFile)
      Dim a As ImageCollection = CType(x.Deserialize(rdr), ImageCollection)
      Me.Images = a.Images
     End Using
@@ -39,8 +41,8 @@ Namespace Common
   End Sub
 
   Public Sub Save(filePath As String)
-   Dim x As New System.Xml.Serialization.XmlSerializer(GetType(ImageCollection))
-   Using w As New IO.StreamWriter(filePath, False, System.Text.Encoding.UTF8)
+   Dim x As New XmlSerializer(GetType(ImageCollection))
+   Using w As New StreamWriter(filePath, False, Encoding.UTF8)
     x.Serialize(w, Me)
    End Using
   End Sub
@@ -83,7 +85,7 @@ Namespace Common
    Dim registered As New List(Of String)
    Dim disappeared As New List(Of Image)
    For Each i As Image In Images
-    If Not IO.File.Exists(_imagesMapPath & i.File & i.Extension) Then
+    If Not File.Exists(_imagesMapPath & i.File & i.Extension) Then
      disappeared.Add(i)
     Else
      registered.Add(i.File)
@@ -95,12 +97,12 @@ Namespace Common
     Images.Remove(i)
    Next
    ' pick up new images
-   For Each f As String In IO.Directory.GetFiles(_imagesMapPath, "*.*")
+   For Each f As String In Directory.GetFiles(_imagesMapPath, "*.*")
     Dim m As Match = Regex.Match(f, "(?i)(\d{8}-\d{6,})\.(?-i)")
     If m.Success Then
      Dim fname As String = m.Groups(1).Value
      If Not registered.Contains(fname) Then
-      Dim i As New Image With {.Extension = IO.Path.GetExtension(f), .File = fname, .Title = fname, .Order = Images.Count + 1}
+      Dim i As New Image With {.Extension = Path.GetExtension(f), .File = fname, .Title = fname, .Order = Images.Count + 1}
       Images.Add(i)
       registered.Add(fname)
       hasChanges = True
@@ -108,13 +110,13 @@ Namespace Common
     End If
    Next
    ' remove orphaned thumbnails/zooms
-   For Each f As String In IO.Directory.GetFiles(_imagesMapPath, "*.*")
+   For Each f As String In Directory.GetFiles(_imagesMapPath, "*.*")
     Dim m As Match = Regex.Match(f, "(?i)([^_\\\.]+)(_tn|_zoom)\.(?-i)")
     If m.Success Then
      Dim fname As String = m.Groups(1).Value
      If Not registered.Contains(fname) Then
       Try
-       IO.File.Delete(f)
+       File.Delete(f)
       Catch ex As Exception
       End Try
      End If

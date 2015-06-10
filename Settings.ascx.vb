@@ -1,8 +1,10 @@
-﻿Imports Connect.DNN.Modules.Projects.Controllers.Projects
+﻿Imports System.IO
+Imports Connect.DNN.Modules.Projects.Controllers.Projects
 Imports Connect.DNN.Modules.Projects.Models.Projects
+Imports DotNetNuke.Entities.Modules
 
 Public Class Settings
- Inherits DotNetNuke.Entities.Modules.ModuleSettingsBase
+ Inherits ModuleSettingsBase
 
  Private _settings As ModuleSettings
  Public Shadows Property Settings() As ModuleSettings
@@ -17,7 +19,7 @@ Public Class Settings
   End Set
  End Property
 
- Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+ Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
  End Sub
 
@@ -66,23 +68,23 @@ Public Class Settings
   For Each p As Project In ProjectsController.GetProjects(ModuleId)
    Dim imagesPath As String = imageBasePath & p.ProjectId.ToString() & "\"
    Dim killList As New List(Of String)
-   For Each f As String In IO.Directory.GetFiles(imagesPath, "*_tn.*")
+   For Each f As String In Directory.GetFiles(imagesPath, "*_tn.*")
     killList.Add(f)
    Next
-   For Each f As String In IO.Directory.GetFiles(imagesPath, "*_med.*")
+   For Each f As String In Directory.GetFiles(imagesPath, "*_med.*")
     killList.Add(f)
    Next
-   For Each f As String In IO.Directory.GetFiles(imagesPath, "*_zoom.*")
+   For Each f As String In Directory.GetFiles(imagesPath, "*_zoom.*")
     killList.Add(f)
    Next
    For Each f As String In killList
     Try
-     IO.File.Delete(f)
+     File.Delete(f)
     Catch ex As Exception
     End Try
    Next
    Dim r As New Resizer(Settings)
-   For Each f As String In IO.Directory.GetFiles(imagesPath, "*.*")
+   For Each f As String In Directory.GetFiles(imagesPath, "*.*")
     Try
      If Not f.EndsWith(".xml") And Not f.EndsWith(".resources") Then
       r.Process(f)

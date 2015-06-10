@@ -1,4 +1,5 @@
-﻿Imports DotNetNuke.Entities.Users
+﻿Imports System.IO
+Imports DotNetNuke.Entities.Users
 Imports DotNetNuke.Web.Api
 
 Namespace Common
@@ -54,7 +55,7 @@ Namespace Common
 
   Public Function GetImageMapPath(projectId As Integer) As String
    Dim res As String = String.Format("{0}{1}\", ImageMapPath, projectId)
-   If Not IO.Directory.Exists(res) Then IO.Directory.CreateDirectory(res)
+   If Not Directory.Exists(res) Then Directory.CreateDirectory(res)
    Return res
   End Function
  End Class

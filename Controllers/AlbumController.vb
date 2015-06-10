@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Net
 Imports System.Net.Http
+Imports System.Threading
 Imports System.Web.Http
 Imports System.Web.Script.Serialization
 Imports Connect.DNN.Modules.Projects.Common
@@ -17,7 +18,7 @@ Namespace Controllers
 
 #Region " Service Methods "
   <HttpGet()>
-  <DnnModuleAuthorize(AccessLevel:=DotNetNuke.Security.SecurityAccessLevel.View)>
+  <DnnModuleAuthorize(AccessLevel:=SecurityAccessLevel.View)>
   Public Function [Get](id As Integer) As HttpResponseMessage
    If id = -1 Then Return Request.CreateResponse(HttpStatusCode.BadRequest, False)
    Dim res As New ImageCollection(GetImageMapPath(id), GetImagePath(id))
@@ -50,9 +51,9 @@ Namespace Controllers
   Public Function DeleteImage(id As Integer, image As String) As HttpResponseMessage
    Dim p As ProjectBase = CheckPermission(id)
    If p Is Nothing Then Return New HttpResponseMessage(HttpStatusCode.BadRequest)
-   For Each f As String In IO.Directory.GetFiles(GetImageMapPath(id), image & "*.*")
+   For Each f As String In Directory.GetFiles(GetImageMapPath(id), image & "*.*")
     Try
-     IO.File.Delete(f)
+     File.Delete(f)
     Catch ex As Exception
     End Try
    Next
@@ -78,9 +79,9 @@ Namespace Controllers
    If p Is Nothing Then Return New HttpResponseMessage(HttpStatusCode.BadRequest)
    Dim res As New HttpResponseMessage(HttpStatusCode.OK)
    Dim statuses As New List(Of FilesStatus)
-   HandleUploadFile(System.Web.HttpContext.Current, id, statuses)
-   System.Web.HttpContext.Current.Response.ContentType = "text/plain"
-   res.Content = New StringContent(WriteJsonIframeSafe(System.Web.HttpContext.Current, statuses))
+   HandleUploadFile(HttpContext.Current, id, statuses)
+   HttpContext.Current.Response.ContentType = "text/plain"
+   res.Content = New StringContent(WriteJsonIframeSafe(HttpContext.Current, statuses))
    Return res
   End Function
 
@@ -91,7 +92,7 @@ Namespace Controllers
    Dim p As ProjectBase = CheckPermission(id)
    If p Is Nothing Then Return New HttpResponseMessage(HttpStatusCode.BadRequest)
    Dim localFile As String = GetImageMapPath(id) & fileName
-   If IO.File.Exists(localFile) Then
+   If File.Exists(localFile) Then
     Dim r As New Resizer(Settings)
     r.Process(localFile)
    End If
@@ -174,7 +175,7 @@ Namespace Controllers
     file.SaveAs(fullName)
     WriteTextToFile(GetImageMapPath(projectId) & newFile & ".resources", file.FileName)
    Catch ioex As IOException
-    Threading.Thread.Sleep(500)
+    Thread.Sleep(500)
     UploadWholeFile(projectId, file, statuses, retries - 1)
    Catch ex As Exception
     '
@@ -184,9 +185,9 @@ Namespace Controllers
 
   Private Function GetNewFilekey(projectId As Integer, extension As String) As String
    Dim res As String = String.Format("{0:yyyyMMdd}-{0:HHmmss}", Now)
-   If IO.File.Exists(GetImageMapPath(projectId) & res & extension) Then
+   If File.Exists(GetImageMapPath(projectId) & res & extension) Then
     Dim i As Integer = 0
-    Do While IO.File.Exists(GetImageMapPath(projectId) & res & i.ToString & extension)
+    Do While File.Exists(GetImageMapPath(projectId) & res & i.ToString & extension)
      i += 1
     Loop
     res &= i.ToString

@@ -1,4 +1,8 @@
 Imports DotNetNuke.Entities.Users
+Imports DotNetNuke.Framework
+Imports DotNetNuke.Services.Localization
+Imports DotNetNuke.UI.Utilities
+Imports DotNetNuke.Web.Client
 Imports DotNetNuke.Web.Client.ClientResourceManagement
 Imports DotNetNuke.Web.Razor
 
@@ -32,7 +36,7 @@ Namespace Common
 #End Region
 
 #Region " Event Handlers "
-  Private Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+  Private Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
   End Sub
 #End Region
 
@@ -42,11 +46,11 @@ Namespace Common
    If Context.Items("ServiceAdded") Is Nothing Then
 
     ' Announce at DNN
-    DotNetNuke.Framework.jQuery.RequestRegistration()
-    DotNetNuke.Framework.jQuery.RequestDnnPluginsRegistration()
-    DotNetNuke.Framework.jQuery.RequestUIRegistration()
-    DotNetNuke.Framework.ServicesFramework.Instance.RequestAjaxScriptSupport()
-    DotNetNuke.Framework.ServicesFramework.Instance.RequestAjaxAntiForgerySupport()
+    jQuery.RequestRegistration()
+    jQuery.RequestDnnPluginsRegistration()
+    jQuery.RequestUIRegistration()
+    ServicesFramework.Instance.RequestAjaxScriptSupport()
+    ServicesFramework.Instance.RequestAjaxAntiForgerySupport()
 
     ' Scripts
     AddJavascriptFile("angular.min.js", 50)
@@ -73,15 +77,15 @@ Namespace Common
   End Sub
 
   Public Sub AddCssFile(cssFilename As String)
-   ClientResourceManager.RegisterStyleSheet(Page, ResolveUrl("~/DesktopModules/Connect/Projects/css/" & cssFilename), DotNetNuke.Web.Client.FileOrder.Css.ModuleCss)
+   ClientResourceManager.RegisterStyleSheet(Page, ResolveUrl("~/DesktopModules/Connect/Projects/css/" & cssFilename), FileOrder.Css.ModuleCss)
   End Sub
 
   Public Function LocalizeJSString(resourceKey As String) As String
-   Return DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(LocalizeString(resourceKey))
+   Return ClientAPI.GetSafeJSString(LocalizeString(resourceKey))
   End Function
 
   Public Function LocalizeJSString(resourceKey As String, resourceFile As String) As String
-   Return DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(DotNetNuke.Services.Localization.Localization.GetString(resourceKey, resourceFile))
+   Return ClientAPI.GetSafeJSString(Localization.GetString(resourceKey, resourceFile))
   End Function
 #End Region
 

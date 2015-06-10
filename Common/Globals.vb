@@ -1,6 +1,8 @@
 ﻿Imports System.Drawing
+Imports System.IO
 Imports System.Linq
 Imports System.Runtime.CompilerServices
+Imports System.Threading
 
 Namespace Common
  Public Module Globals
@@ -53,9 +55,9 @@ Namespace Common
   End Function
 
   Public Function GetUploadedFileName(folder As String, originalFilename As String) As String
-   For Each f As String In IO.Directory.GetFiles(folder, "*.resources")
+   For Each f As String In Directory.GetFiles(folder, "*.resources")
     If ReadFile(f) = originalFilename Then
-     Return IO.Path.GetFileNameWithoutExtension(f)
+     Return Path.GetFileNameWithoutExtension(f)
     End If
    Next
    Return ""
@@ -65,14 +67,14 @@ Namespace Common
    Return ReadFile(fileName, 10)
   End Function
   Public Function ReadFile(ByVal fileName As String, retries As Integer) As String
-   If Not IO.File.Exists(fileName) Then Return ""
+   If Not File.Exists(fileName) Then Return ""
    If retries = 0 Then Return ""
    Try
-    Using sr As New IO.StreamReader(fileName)
+    Using sr As New StreamReader(fileName)
      Return sr.ReadToEnd
     End Using
-   Catch ioex As IO.IOException
-    Threading.Thread.Sleep(200)
+   Catch ioex As IOException
+    Thread.Sleep(200)
     Return ReadFile(fileName, retries - 1)
    Catch ex As Exception
     Return ""
@@ -84,12 +86,12 @@ Namespace Common
   Public Sub WriteTextToFile(filePath As String, textToWrite As String, retries As Integer)
    If retries = 0 Then Exit Sub
    Try
-    Using sw As New IO.StreamWriter(filePath)
+    Using sw As New StreamWriter(filePath)
      sw.Write(textToWrite)
      sw.Flush()
     End Using
-   Catch ioex As IO.IOException
-    Threading.Thread.Sleep(200)
+   Catch ioex As IOException
+    Thread.Sleep(200)
     WriteTextToFile(filePath, textToWrite, retries - 1)
    Catch ex As Exception
    End Try

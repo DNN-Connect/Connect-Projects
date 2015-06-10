@@ -1,5 +1,7 @@
 ﻿Imports System.Drawing
+Imports System.Drawing.Drawing2D
 Imports System.Drawing.Imaging
+Imports System.IO
 
 Namespace Common
  Public Class Resizer
@@ -20,7 +22,7 @@ Namespace Common
     Dim originalHeight As Integer = thisImage.Height
     Dim imgRatio As Single = Convert.ToSingle(originalHeight / originalWidth)
 
-    Dim ext As String = IO.Path.GetExtension(originalFile)
+    Dim ext As String = Path.GetExtension(originalFile)
     Dim saveFilename As String = Left(originalFile, originalFile.Length - ext.Length)
 
     ' Resize Image
@@ -61,10 +63,10 @@ Namespace Common
      ' Stretch
    End Select
 
-   Using backBuffer As Bitmap = New Bitmap(newWidth, newHeight, Drawing.Imaging.PixelFormat.Format24bppRgb)
+   Using backBuffer As Bitmap = New Bitmap(newWidth, newHeight, PixelFormat.Format24bppRgb)
     Using backBufferGraphics As Graphics = Graphics.FromImage(backBuffer)
-     backBufferGraphics.InterpolationMode = Drawing.Drawing2D.InterpolationMode.HighQualityBicubic
-     backBufferGraphics.SmoothingMode = Drawing.Drawing2D.SmoothingMode.AntiAlias
+     backBufferGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic
+     backBufferGraphics.SmoothingMode = SmoothingMode.AntiAlias
      backBufferGraphics.DrawImage(thisImage, newX - 1, newY - 1, Convert.ToInt32(originalWidth * scaleX) + 2, Convert.ToInt32(originalHeight * scaleY) + 2)
      backBuffer.Save(SaveAs, imgFormat)
     End Using

@@ -1,4 +1,6 @@
 
+Imports DotNetNuke.Common.Utilities
+Imports DotNetNuke.Entities.Modules
 
 Namespace Common
  Public Class ModuleSettings
@@ -21,7 +23,7 @@ Namespace Common
   Public Sub New(moduleId As Integer)
 
    Me.ModuleId = moduleId
-   Settings = (New DotNetNuke.Entities.Modules.ModuleController).GetModuleSettings(moduleId)
+   Settings = (New ModuleController).GetModuleSettings(moduleId)
    Settings.ReadValue("TnWidth", TnWidth)
    Settings.ReadValue("TnHeight", TnHeight)
    Settings.ReadValue("MedWidth", MedWidth)
@@ -38,7 +40,7 @@ Namespace Common
 #Region " Public Members "
   Public Sub SaveSettings()
 
-   Dim objModules As New DotNetNuke.Entities.Modules.ModuleController
+   Dim objModules As New ModuleController
    objModules.UpdateModuleSetting(ModuleId, "TnWidth", Me.TnWidth.ToString)
    objModules.UpdateModuleSetting(ModuleId, "TnHeight", Me.TnHeight.ToString)
    objModules.UpdateModuleSetting(ModuleId, "MedWidth", Me.MedWidth.ToString)
@@ -48,7 +50,7 @@ Namespace Common
    objModules.UpdateModuleSetting(ModuleId, "TnFit", Me.TnFit)
    objModules.UpdateModuleSetting(ModuleId, "MedFit", Me.MedFit)
    objModules.UpdateModuleSetting(ModuleId, "ZoomFit", Me.ZoomFit)
-   DotNetNuke.Common.Utilities.DataCache.SetCache(CacheKey(ModuleId), Me)
+   DataCache.SetCache(CacheKey(ModuleId), Me)
 
   End Sub
 
@@ -56,12 +58,12 @@ Namespace Common
 
    Dim res As ModuleSettings = Nothing
    Try
-    res = CType(DotNetNuke.Common.Utilities.DataCache.GetCache(CacheKey(moduleId)), ModuleSettings)
+    res = CType(DataCache.GetCache(CacheKey(moduleId)), ModuleSettings)
    Catch ex As Exception
    End Try
    If res Is Nothing Then
     res = New ModuleSettings(moduleId)
-    DotNetNuke.Common.Utilities.DataCache.SetCache(CacheKey(moduleId), res)
+    DataCache.SetCache(CacheKey(moduleId), res)
    End If
    Return res
 

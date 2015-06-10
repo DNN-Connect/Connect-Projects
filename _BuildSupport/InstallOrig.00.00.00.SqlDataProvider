@@ -54,6 +54,7 @@ BEGIN
 CREATE TABLE [dbo].[Connect_Projects_ProjectTags](
 	[ProjectId] [int] NOT NULL,
 	[TermId] [int] NOT NULL,
+	[NrProjects] [int] NULL,
  CONSTRAINT [PK_Connect_Projects_ProjectTags] PRIMARY KEY CLUSTERED 
 (
 	[ProjectId] ASC,
@@ -232,15 +233,14 @@ GO
 
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
-
-CREATE VIEW [dbo].[vw_Connect_Projects_ProjectTags]
+CREATE VIEW dbo.vw_Connect_Projects_ProjectTags
 AS
 SELECT
  pt.ProjectId,
+ pt.NrProjects,
  t.*
 FROM dbo.Connect_Projects_ProjectTags pt
  INNER JOIN dbo.Taxonomy_Terms t ON pt.TermId=t.TermID
-
 GO
 
 
@@ -288,6 +288,29 @@ GO
 
 
 
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_ResetTagTotals]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[Connect_Projects_ResetTagTotals]
+GO
+
+
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+CREATE PROCEDURE dbo.Connect_Projects_ResetTagTotals
+AS
+UPDATE dbo.Connect_Projects_ProjectTags
+SET NrProjects = tots.NrProjects
+FROM dbo.Connect_Projects_ProjectTags pt INNER JOIN
+(SELECT
+ t.TermId,
+ COUNT(t.ProjectId) NrProjects
+FROM dbo.Connect_Projects_ProjectTags t
+GROUP BY t.TermId) tots ON tots.TermId=pt.TermId
+
+GO
+
+
+
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Connect_Projects_SetProjectTags]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[Connect_Projects_SetProjectTags]
 GO
@@ -308,7 +331,8 @@ SELECT
  @ProjectId,
  ids.RecordID
 FROM
- dbo.SplitDelimitedIDs(@ProjectTagIds, ',') ids
+ dbo.SplitDelimitedIDs(@ProjectTagIds, ',') ids;
+EXEC dbo.Connect_Projects_ResetTagTotals;
 GO
 
 

@@ -1,18 +1,20 @@
 ﻿Option Strict Off
 
 Imports System.Net
+Imports System.Threading.Tasks
 Imports Connect.DNN.Modules.Projects.Controllers.Urls
 Imports Connect.DNN.Modules.Projects.Models.Urls
 Imports DotNetNuke.Services.Exceptions
+Imports DotNetNuke.Services.Scheduling
 Imports Octokit
 
 Namespace Services
  Public Class UrlCheckService
-  Inherits DotNetNuke.Services.Scheduling.SchedulerClient
+  Inherits SchedulerClient
 
   Private Log As New StringBuilder
 
-  Public Sub New(objScheduleHistoryItem As DotNetNuke.Services.Scheduling.ScheduleHistoryItem)
+  Public Sub New(objScheduleHistoryItem As ScheduleHistoryItem)
    MyBase.New()
    Me.ScheduleHistoryItem = objScheduleHistoryItem
   End Sub
@@ -79,7 +81,7 @@ Namespace Services
 
   End Sub
 
-  Async Function GetSomething() As Threading.Tasks.Task(Of String)
+  Async Function GetSomething() As Task(Of String)
 
   End Function
 
