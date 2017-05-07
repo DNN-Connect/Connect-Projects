@@ -1,195 +1,572 @@
 ﻿.dnnFormItem .help-block {
- display: none;
- color: red;
- font-weight: bold;
- margin-left: 32.075%;
- padding-left: 40px;
+    display: none;
+    color: red;
+    font-weight: bold;
+    margin-left: 32.075%;
+    padding-left: 40px;
 }
 
 .dnnFormItem.has-error .help-block {
- display: block;
+    display: block;
 }
+
 .dnnFormItemValue {
- margin-left: 32.075%;
- padding-left:38px;
+    margin-left: 32.075%;
+    padding-left: 38px;
 }
+
 .cp_checkboxList {
- list-style: none;
+    list-style: none;
 }
 
 .btnright {
- width: 100%;
- text-align: right;
+    width: 100%;
+    text-align: right;
 }
 
 .cp_dropzone {
- min-height: 200px;
- min-width: 400px;
- background-color: #eee;
- border: 2px dotted #666;
- margin: 10px;
+    min-height: 200px;
+    min-width: 400px;
+    background-color: #eee;
+    border: 2px dotted #666;
+    margin: 10px;
 }
 
 .cp_dropzone_hover {
- background-color: #a3d3f6;
+    background-color: #a3d3f6;
 }
 
 .cp_sortable {
- list-style-type: none;
- margin: 0;
- padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.cp_sortable li {
- display: inline-block;
- width: 160px;
- padding: 10px;
- border: 1px solid #999;
- border-radius: 5px;
- margin: 10px;
- background-color: #eee;
-}
+    .cp_sortable li {
+        display: inline-block;
+        width: 160px;
+        padding: 10px;
+        border: 1px solid #999;
+        border-radius: 5px;
+        margin: 10px;
+        background-color: #eee;
+    }
 
-.cp_sortable li div.delbutton {
- width: 100%;
- text-align: right;
-}
+        .cp_sortable li div.delbutton {
+            width: 100%;
+            text-align: right;
+        }
 
 .delbutton a, .delbutton a:hover {
- text-decoration: none;
+    text-decoration: none;
 }
 
 .cp_sortable div.imagetn {
- width: 100%;
- text-align: center;
- padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 .cp_sortable textarea {
- width: 140px;
- margin-bottom: 10px;
+    width: 140px;
+    margin-bottom: 10px;
 }
 
 .cp_album_droptext {
- width: 100%;
- text-align: center;
- padding: 20px;
- font-size: large;
- color: #999;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: large;
+    color: #999;
 }
 
 .cp_container {
- width: 100%;
- margin-bottom: 30px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .cp_column {
- width: 50%;
- float: left;
- vertical-align: top;
+    width: 50%;
+    float: left;
+    vertical-align: top;
 }
 
 dl.cp_dl_horizontal {
- margin-bottom: 15px;
- overflow: hidden;
+    margin-bottom: 15px;
+    overflow: hidden;
 }
 
-dl.cp_dl_horizontal dt {
- float: left;
- font-weight: bold;
- margin-right: 10px;
- padding: 5px;
- width: 100px;
- display: inline-block;
-}
+    dl.cp_dl_horizontal dt {
+        float: left;
+        font-weight: bold;
+        margin-right: 10px;
+        padding: 5px;
+        width: 100px;
+        display: inline-block;
+    }
 
-dl.cp_dl_horizontal dd {
- margin: 2px 0;
- padding: 5px 0;
- display: inline-block;
-}
+    dl.cp_dl_horizontal dd {
+        margin: 2px 0;
+        padding: 5px 0;
+        display: inline-block;
+    }
 
 .cp_tag {
- margin: 0 10px 0 0;
- border-bottom: 1px dotted #999;
+    margin: 0 10px 0 0;
+    border-bottom: 1px dotted #999;
 }
 
 .cp_img {
- width: 100%;
- padding: 20px;
- text-align: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
 }
 
-.cp_img span {
- display: block;
- font-size: smaller;
- font-weight: bold;
-}
+    .cp_img span {
+        display: block;
+        font-size: smaller;
+        font-weight: bold;
+    }
 
 .cp_pl_project {
- display: list-item;
- width: 390px;
- height: 100px;
- overflow: hidden;
- float: left;
- padding: 10px;
- cursor: pointer;
+    display: list-item;
+    width: 390px;
+    height: 100px;
+    overflow: hidden;
+    float: left;
+    padding: 10px;
+    cursor: pointer;
 }
+
 .cp_pl_title {
- color: white;
- font-weight: bold;
- font-size: larger;
- padding-left: 110px;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    padding-left: 110px;
 }
+
 .cp_pl_other {
- color: white;
- padding-left: 110px;
+    color: white;
+    padding-left: 110px;
 }
+
 .cp_pl_img {
- float: left;
+    float: left;
 }
+
 .cp_pl_other a, .cp_pl_other a:hover, .cp_pl_other a:active, .cp_pl_other a:visited {
- color: white;
- text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
-.cp_pl_other a:hover {
- color: #ddd;
-}
+
+    .cp_pl_other a:hover {
+        color: #ddd;
+    }
+
 .cp_pl_edit {
- text-align: right;
+    text-align: right;
 }
+
 .cp_pl_btns {
- padding-top: 30px;
- clear: both;
+    padding-top: 30px;
+    clear: both;
 }
+
 div.cp_pl_invisible {
- border-right: 10px solid #666;
- padding-right: 20px;
+    border-right: 10px solid #666;
+    padding-right: 20px;
 }
+
 div.cp_pl_nolinks {
- border-right: 10px solid #ddd;
- padding-right: 20px;
+    border-right: 10px solid #ddd;
+    padding-right: 20px;
 }
+
 .cp_editurl {
- width: 100%;
+    width: 100%;
 }
-.cp_editurl input, .cp_editurl div {
- width: 340px;
- padding: 4px;
- display: inline-block;
-}
+
+    .cp_editurl input, .cp_editurl div {
+        width: 340px;
+        padding: 4px;
+        display: inline-block;
+    }
+
 .cp_warning {
- color: red;
- font-weight: bold;
+    color: red;
+    font-weight: bold;
 }
+
 span.cp_note {
- font-size: small;
- color: #aaa;
+    font-size: small;
+    color: #aaa;
 }
+
 .cp_audit {
- width: 100%;
- text-align: center;
- color: #ccc;
- font-size: smaller;
- padding: 10px;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+    font-size: smaller;
+    padding: 10px;
+}
+
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    outline: 0 !important;
+}
+/* entire container, keeps perspective */
+.card-container {
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+    margin-bottom: 30px;
+}
+    /* flip the pane when hovered */
+    .card-container:not(.manual-flip):hover .card,
+    .card-container.hover.manual-flip .card {
+        -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+        -o-transform: rotateY( 180deg );
+        transform: rotateY( 180deg );
+    }
+
+
+    .card-container.static:hover .card,
+    .card-container.static.hover .card {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+/* flip speed goes here */
+.card {
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: -moz-transform .5s;
+    -o-transition: -o-transform .5s;
+    transition: transform .5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+    z-index: 3;
+}
+
+    .back .btn-simple {
+        position: absolute;
+        left: 0;
+        bottom: 4px;
+    }
+/*        Style       */
+
+
+.card {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px;
+    color: #444444;
+}
+
+.card-container, .front, .back {
+    width: 100%;
+    height: 420px;
+    border-radius: 4px;
+}
+
+.card .cover {
+    height: 105px;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+}
+
+    .card .cover img {
+        width: 100%;
+    }
+
+.card .user {
+    border-radius: 50%;
+    display: block;
+    height: 120px;
+    margin: -55px auto 0;
+    overflow: hidden;
+    width: 120px;
+}
+
+    .card .user img {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 4px solid #FFFFFF;
+        width: 100%;
+    }
+
+.card .content {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    padding: 10px 20px 20px;
+}
+
+    .card .content .main {
+        min-height: 160px;
+    }
+
+.card .back .content .main {
+    height: 215px;
+}
+
+.card .name {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 10px 0 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card h5 {
+    margin: 5px 0;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.card .profession {
+    color: #999999;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card .footer {
+    border-top: 1px solid #EEEEEE;
+    color: #fff;
+    margin: 30px -20px -20px -20px;
+    padding: 10px 20px 20px 20px;
+    text-align: center;
+    background-color: #666;
+    border-radius: 0 0 4px 4px;
+}
+
+.card .back .footer {
+    margin: 30px 0 -20px 0;
+    padding: 10px 0 20px 0;
+}
+
+.card .footer .social-links {
+    font-size: 18px;
+    padding-top: 6px;
+}
+
+.card .footer .social-links a {
+    margin: 0 7px;
+    color: #fff;
+}
+
+.card .footer .btn-simple {
+    margin-top: -6px;
+}
+
+.card .header {
+    padding: 15px 20px;
+    height: 90px;
+}
+
+.card .motto {
+    border-bottom: 1px solid #EEEEEE;
+    color: #999999;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.card .stats-container {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.card .stats {
+    display: block;
+    float: left;
+    width: 33.333333%;
+    text-align: center;
+}
+
+.card .stats:first-child {
+    border-right: 1px solid #EEEEEE;
+}
+
+.card .stats:last-child {
+    border-left: 1px solid #EEEEEE;
+}
+
+.card .stats h4 {
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.card .stats p {
+    color: #777777;
+}
+/*      Just for presentation        */
+
+.title {
+    color: #506A85;
+    text-align: center;
+    font-weight: 300;
+    font-size: 44px;
+    margin-bottom: 90px;
+    line-height: 90%;
+}
+
+.title small {
+    font-size: 17px;
+    color: #999;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.space-30 {
+    height: 30px;
+    display: block;
+}
+
+.space-50 {
+    height: 50px;
+    display: block;
+}
+
+.space-200 {
+    height: 200px;
+    display: block;
+}
+
+.white-board {
+    background-color: #FFFFFF;
+    min-height: 200px;
+    padding: 60px 60px 20px;
+}
+
+.ct-heart {
+    color: #F74933;
+}
+
+pre.prettyprint {
+    background-color: #ffffff;
+    border: 1px solid #999;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.atv, .str {
+    color: #05AE0E;
+}
+
+.tag, .pln, .kwd {
+    color: #3472F7;
+}
+
+.atn {
+    color: #2C93FF;
+}
+
+.pln {
+    color: #333;
+}
+
+.com {
+    color: #999;
+}
+
+.btn-simple {
+    opacity: .8;
+    color: #666666;
+    background-color: transparent;
+}
+
+    .btn-simple:hover,
+    .btn-simple:focus {
+        background-color: transparent;
+        box-shadow: none;
+        opacity: 1;
+    }
+
+    .btn-simple i {
+        font-size: 16px;
+    }
+
+.navbar-brand-logo {
+    padding: 0;
+}
+
+    .navbar-brand-logo .logo {
+        border: 1px solid #333333;
+        border-radius: 50%;
+        float: left;
+        overflow: hidden;
+        width: 60px;
+    }
+
+.navbar .navbar-brand-logo .brand {
+    color: #FFFFFF;
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 60px;
+}
+
+.navbar-default .navbar-brand-logo .brand {
+    color: #555;
+}
+
+
+/*       Fix bug for IE      */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .front, .back {
+        -ms-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .back {
+        visibility: hidden;
+        -ms-transition: all 0.2s cubic-bezier(.92,.01,.83,.67);
+    }
+
+    .front {
+        z-index: 4;
+    }
+
+    .card-container:not(.manual-flip):hover .back,
+    .card-container.manual-flip.hover .back {
+        z-index: 5;
+        visibility: visible;
+    }
 }
