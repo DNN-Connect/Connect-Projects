@@ -4,7 +4,7 @@
  Dim imgPath As String = String.Format("{0}Connect/Projects/{1}/", Dnn.Portal.HomeDirectory, Dnn.Module.ModuleID)
 End Code
 
-<div data-ng-repeat="project in projects | orderBy: random" class="cp_pl">
+<div data-ng-repeat="project in projects | orderBy: ProjectId" class="cp_pl">
  <div class="col-md-4 col-sm-6" data-project-id="{{project.ProjectId}}" data-ng-click="gotoProject(project.ProjectId)">
   <div class="card-container">
    <div class="card">
