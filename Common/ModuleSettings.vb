@@ -70,7 +70,7 @@ Namespace Common
   End Function
 
   Public Shared Function CacheKey(moduleId As Integer) As String
-   Return String.Format("SettingsModule{0}", moduleId)
+   Return String.Format("SettingsProjectsModule{0}", moduleId)
   End Function
 #End Region
 

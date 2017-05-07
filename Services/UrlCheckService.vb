@@ -81,9 +81,5 @@ Namespace Services
 
   End Sub
 
-  Async Function GetSomething() As Task(Of String)
-
-  End Function
-
  End Class
 End Namespace
