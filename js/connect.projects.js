@@ -104,6 +104,9 @@ mod.factory('projectsFactory', [function () {
 			}
 			dataCall(moduleId, 'Projects', 'Project', { id: projectId }, success, fail);
 		},
+        approveProject: function (moduleId, projectId, success, fail) {
+            apiPostCall(moduleId, 'Projects', 'ApproveProject', projectId, { }, success, fail);
+        },
 		updateProject: function (moduleId, project, success, fail) {
 			apiPostCall(moduleId, 'Projects', 'Put', null, {
 				project: JSON.stringify(project)
@@ -241,6 +244,11 @@ mod.controller('ProjectDetailCtrl', ['$scope', '$filter', '$routeParams', 'proje
 			});
 		};
 	};
+    $scope.approveProject = function (projectId) {
+        projectsFactory.approveProject($scope.moduleId, $scope.projectId, function (data) {
+            window.location.reload();
+        });
+    };
 	$scope.selection = [];
 	$scope.$watch('project.ProjectTypes|filter:{IsSelected:true}', function (nv) {
 		$scope.selection = nv.map(function (pt) {
