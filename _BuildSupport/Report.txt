@@ -30,7 +30,7 @@ set.buildvars:
 
 set.versions:
 
-     [echo] Set Version 01.02.06 on Connect.Projects.vbproj
+     [echo] Set Version 01.02.07 on Connect.Projects.vbproj
 Checking ..\My Project\AssemblyInfo.vb
 Checking ..\_Installation\Connect.Projects.dnn
 Reset References to _References\
@@ -66,8 +66,8 @@ Adjusting 'Newtonsoft.Json, Version=4.5.6.14930, Culture=neutral, PublicKeyToken
 Adjusting Path 'Newtonsoft.Json, Version=4.5.6.14930, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL'
 Adjusting 'Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL'
 Adjusting Path 'Syncfusion.Compression.Base, Version=12.4400.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL'
-Adjusting 'System.Net.Http, Version=4.6.1586.0 built by: NETFXREL2 built by: NETFXREL2 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
-Adjusting Path 'System.Net.Http, Version=4.6.1586.0 built by: NETFXREL2 built by: NETFXREL2 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
+Adjusting 'System.Net.Http, Version=4.6.1586.0 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
+Adjusting Path 'System.Net.Http, Version=4.6.1586.0 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL'
 Adjusting 'System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
 Adjusting Path 'System.Web.Http, Version=4.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
 Adjusting 'System.Web.WebPages, Version=2.0.20710.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL'
@@ -80,7 +80,7 @@ clean.bindirectory:
 compile.projects:
 
      [echo] Building Connect.Projects.vbproj
-  [msbuild] Build started 09-May-17 12:30:21.
+  [msbuild] Build started 21-May-17 23:58:25.
   [msbuild] Overriding target "GetFrameworkPaths" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "GetFrameworkPaths" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.NetFramework.targets".
   [msbuild] Overriding target "SatelliteDllsProjectOutputGroup" in project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" with target "SatelliteDllsProjectOutputGroup" from project "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFx.targets".
   [msbuild] Project "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\Connect.Projects.vbproj" on node 1 (Rebuild target(s)).
@@ -302,7 +302,7 @@ compile.projects:
   [msbuild]       System.Data
   [msbuild]       System.Data.DataSetExtensions
   [msbuild]       System.Drawing
-  [msbuild]       System.Net.Http, Version=4.6.1586.0 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
+  [msbuild]       System.Net.Http, Version=4.6.1586.0 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
   [msbuild]           Private = 'False'
   [msbuild]           HintPath = '_References\System.Net.Http.dll'
   [msbuild]           SpecificVersion = 'False'
@@ -1511,7 +1511,7 @@ compile.projects:
   [msbuild]       References which depend on "System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" [D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll].
   [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll
   [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\System.Net.Http.dll".
-  [msbuild]               System.Net.Http, Version=4.6.1586.0 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
+  [msbuild]               System.Net.Http, Version=4.6.1586.0 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: NETFXREL2 built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL built by: FX45W81RTMREL, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
   [msbuild]       References which depend on "System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" [C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Net.Http.dll].
   [msbuild]           D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll
   [msbuild]             Project file item includes which caused reference "D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_References\DotNetNuke.Web.dll".
@@ -1963,7 +1963,7 @@ compile.projects:
   [msbuild]     1 Warning(s)
   [msbuild]     0 Error(s)
   [msbuild] 
-  [msbuild] Time Elapsed 00:00:01.67
+  [msbuild] Time Elapsed 00:00:03.60
 
 make.doc:
 
@@ -1977,11 +1977,11 @@ package:
 
 read.version:
 
-     [echo] shortVersion: 01.02.06
-     [echo] version: 1.2.6.0
+     [echo] shortVersion: 01.02.07
+     [echo] version: 1.2.7.0
      [echo] major: 01
      [echo] minor: 02
-     [echo] build: 06
+     [echo] build: 07
 
 make.codestats:
 
@@ -2079,7 +2079,7 @@ make.codestats:
 
 check.sqlscripts:
 
-     [echo] Version: 01.02.06
+     [echo] Version: 01.02.07
 
 make.package:
 
@@ -2098,7 +2098,7 @@ make.package:
      [copy] Copying 5 files to 'D:\Programs\Nant\Build\Package'.
      [copy] Copying 8 files to 'D:\Programs\Nant\Build\Package'.
      [echo] Transforming D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Installation\Connect.Projects.dnn with dnn5.xsl
-      [zip] Zipping 15 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.02.06_Install.zip'.
+      [zip] Zipping 15 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.02.07_Install.zip'.
    [delete] Deleting directory 'D:\Programs\Nant\Build\Package'.
      [echo] Building SOURCE
 
@@ -2110,7 +2110,7 @@ make.package:
      [copy] Copying 5 files to 'D:\Programs\Nant\Build\Package'.
      [copy] Copying 8 files to 'D:\Programs\Nant\Build\Package'.
      [echo] Transforming D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Installation\Connect.Projects.dnn with dnn5.xsl
-      [zip] Zipping 15 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.02.06_Source.zip'.
+      [zip] Zipping 15 files to 'D:\Websites\www.dnnconnect.dev\www\DesktopModules\Connect\Projects\_Packages\Connect.Projects_01.02.07_Source.zip'.
    [delete] Deleting directory 'D:\Programs\Nant\Build\Package'.
 
 all:
@@ -2120,12 +2120,12 @@ backup.project:
 
      [echo] Backing Up to D:\src
      [echo] Backing Up Install
-     [copy] Copying 1 file to 'D:\src\Projects\2017-5-9\Connect.Projects_01.02.06_Install.zip'.
+     [copy] Copying 1 file to 'D:\src\Projects\2017-5-21\Connect.Projects_01.02.07_Install.zip'.
      [echo] Backing Up Source
-     [copy] Copying 1 file to 'D:\src\Projects\2017-5-9\Connect.Projects_01.02.06_Source.zip'.
+     [copy] Copying 1 file to 'D:\src\Projects\2017-5-21\Connect.Projects_01.02.07_Source.zip'.
      [echo] Backing Up to W:\src
 
 BUILD SUCCEEDED
 
-Total time: 16.9 seconds.
+Total time: 21.2 seconds.
 
